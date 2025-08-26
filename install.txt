@@ -1,0 +1,7 @@
+#library dasar
+pip install pandas numpy tensorflow opencv-python librosa yt-dlp scikit-learn tqdm
+#simulasi real-time
+pip install confluent-kafka matplotlib seaborn
+#library tambahan
+pip install yt-dlp
+pip install ffmpeg-python
