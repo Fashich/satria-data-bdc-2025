@@ -1,0 +1,42 @@
+1. Structure:
+
+satria-data-bdc/
+├── data/
+│   ├── datatrain.csv       # File data train yang diberikan
+│   ├── datatest.csv        # File data test yang diberikan
+│   └── raw_videos/         # Folder untuk menyimpan video yang diunduh
+├── src/
+│   ├── data_preparation/
+│   │   ├── __init__.py
+│   │   ├── data_parser.py  # Script untuk parsing CSV
+│   │   └── video_downloader.py  # Script untuk download video
+│   ├── feature_extraction/
+│   │   ├── __init__.py
+│   │   ├── visual_features.py  # Ekstraksi fitur visual
+│   │   └── audio_features.py   # Ekstraksi fitur audio
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── custom_cnn.py   # Model CNN dari nol untuk fitur visual
+│   │   ├── custom_rnn.py   # Model RNN dari nol untuk fitur audio
+│   │   └── fusion_model.py # Model gabungan (fusion)
+│   ├── training/
+│   │   ├── __init__.py
+│   │   └── train.py        # Script pelatihan model
+│   ├── inference/
+│   │   ├── __init__.py
+│   │   └── predict.py      # Script prediksi data test
+│   ├── real_time/
+│   │   ├── __init__.py
+│   │   ├── kafka_producer.py  # Simulasi producer Kafka
+│   │   └── kafka_consumer.py  # Simulasi consumer Kafka
+│   └── utils.py            # Fungsi utilitas umum
+├── outputs/
+│   ├── models/             # Folder untuk menyimpan model
+│   └── submissions/        # Folder untuk menyimpan hasil prediksi
+├── requirements.txt        # Daftar library yang diperlukan
+├── README.md               # Panduan penggunaan
+└── run_pipeline.sh         # Script untuk menjalankan seluruh pipeline
+
+2. How to run
+
+.\run_pipeline.bat
