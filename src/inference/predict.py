@@ -1,7 +1,9 @@
+# src/inference/predict.py
 import os
 import numpy as np
 import pandas as pd
 from tensorflow.keras.models import load_model
+import openpyxl
 
 from ..data_preparation.data_parser import parse_data_csv
 from ..data_preparation.video_downloader import download_video
@@ -11,21 +13,42 @@ from ..utils import load_label_encoder
 
 def predict_test_data():
     """Prediksi data test dan buat file submission"""
-    # 1. Muat data test
-    print("Memuat dan mem-parse data test...")
-    test_df = parse_data_csv('../data/datatest.csv')
-    test_df.to_csv('../data/test_parsed.csv', index=False)
+    # 1. Muat data test yang sudah diparse
+    print("Memuat data test yang sudah diparse...")
+    test_parsed_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data', 'test_parsed.csv')
+    if not os.path.exists(test_parsed_path):
+        print(f"ERROR: File test_parsed.csv tidak ditemukan di {test_parsed_path}")
+        print("Jalankan data_parser.py terlebih dahulu")
+        return None
+    test_df = pd.read_csv(test_parsed_path)
+    print(f"Jumlah data test yang akan diproses: {len(test_df)}")
     
     # 2. Muat model
     print("Memuat model...")
-    model = load_model('../outputs/models/emotion_model_final.h5')
+    model_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'outputs', 'models', 'emotion_model_final.h5')
+    if not os.path.exists(model_path):
+        print(f"ERROR: Model tidak ditemukan di {model_path}")
+        print("Jalankan pelatihan model terlebih dahulu")
+        return None
+    model = load_model(model_path)
     label_encoder = load_label_encoder()
     
-    # 3. Prediksi untuk setiap video
+    # 3. Mapping emosi ke angka sesuai aturan kompetisi
+    emotion_to_num = {
+        'Proud': 0,
+        'Trust': 1,
+        'Joy': 2,
+        'Surprise': 3,
+        'Fear': 4,
+        'Sadness': 5,
+        'Disgust': 6,
+        'Anger': 7
+    }
+    # 4. Prediksi untuk setiap video
     predictions = []
     
     for idx, row in test_df.iterrows():
-        print(f"\nMemproses video {idx+1}/{len(test_df)}: {row['id']}")
+        print(f"\nMemproses video {idx+1}/{len(test_df)}: ID {row['id']}")
         
         # Unduh video
         video_path = download_video(row['video_url'])
@@ -58,24 +81,41 @@ def predict_test_data():
         )
         
         pred_class = np.argmax(pred, axis=1)[0]
-        predictions.append(pred_class)
+        # Konversi ke format numerik sesuai aturan kompetisi
+        # Pastikan kita mengembalikan angka sesuai mapping
+        emotion_name = label_encoder.classes_[pred_class]
+        if emotion_name in emotion_to_num:
+            pred_num = emotion_to_num[emotion_name]
+        else:
+            # Jika emosi tidak sesuai, gunakan Surprise sebagai fallback
+            pred_num = 3
+        predictions.append(pred_num)
         
         # Cleanup video
         if os.path.exists(video_path):
             os.remove(video_path)
     
-    # 4. Buat submission file
+    # 5. Buat submission file dalam format yang benar
     submission = pd.DataFrame({
         'id': test_df['id'],
         'predicted': predictions
     })
     
-    os.makedirs('../outputs/submissions', exist_ok=True)
-    submission_path = '../outputs/submissions/submission.csv'
-    submission.to_csv(submission_path, index=False)
+    # Pastikan urutan sesuai dengan data test asli
+    submission = submission.sort_values('id')
+    # Simpan ke CSV
+    outputs_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'outputs', 'submissions')
+    os.makedirs(outputs_dir, exist_ok=True)
+    csv_path = os.path.join(outputs_dir, 'submission.csv')
+    submission.to_csv(csv_path, index=False)
+    print(f"\nFile submission CSV berhasil dibuat di {csv_path}")
+    # Simpan ke Excel
+    excel_path = os.path.join(outputs_dir, 'submission.xlsx')
+    submission.to_excel(excel_path, index=False)
+    print(f"File submission Excel berhasil dibuat di {excel_path}")
     
-    print(f"\nFile submission berhasil dibuat di {submission_path}")
-    print("5 prediksi pertama:")
+    # Tampilkan contoh hasil
+    print("\n5 Prediksi pertama:")
     print(submission.head())
     
     return submission

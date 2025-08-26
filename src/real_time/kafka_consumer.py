@@ -9,14 +9,7 @@ from ..feature_extraction.audio_features import extract_audio_features
 from ..utils import load_label_encoder
 
 def process_message(message, model, label_encoder):
-    """
-    Proses pesan dari Kafka dan lakukan prediksi
-    
-    Args:
-        message (dict): Pesan dari Kafka
-        model: Model prediksi
-        label_encoder: Label encoder
-    """
+
     video_url = message['video_url']
     print(f"\nMenerima video baru: {video_url}")
     
@@ -59,8 +52,6 @@ def start_consumer():
         'group.id': 'emotion-detection-group',
         'auto.offset.reset': 'earliest'
     }
-    
-    # Muat model
     model = load_model('../outputs/models/emotion_model_final.h5')
     label_encoder = load_label_encoder()
     

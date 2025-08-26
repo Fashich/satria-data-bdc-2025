@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 echo ===== MEMULAI PIPELINE BDC Satria Data 2025 =====
 echo Pastikan file datatrain.csv dan datatest.csv sudah ditempatkan di folder data/
 
@@ -38,8 +38,8 @@ if not exist "%PROJECT_ROOT%\data\test_parsed.csv" (
 )
 
 echo.
-echo 2. Mengunduh video (contoh 10 video pertama)...
-python -m src.data_preparation.video_downloader --max-videos 10
+echo 2. Mengunduh video (contoh 5 video pertama untuk pengujian)...
+python -m src.data_preparation.video_downloader --max-videos 5
 
 echo.
 echo 3. Melatih model...
@@ -50,11 +50,7 @@ echo 4. Membuat prediksi untuk data test...
 python -m src.inference.predict
 
 echo.
-echo 5. Menjalankan simulasi real-time (consumer)...
-echo Silakan buka terminal baru dan jalankan: python -m src.real_time.kafka_producer
-echo Untuk menghentikan consumer, tekan CTRL+C
-python -m src.real_time.kafka_consumer
-
-echo.
 echo ===== PIPELINE SELESAI =====
+echo File submission telah dibuat di outputs/submissions/
+echo Format: submission.csv (CSV) dan submission.xlsx (Excel)
 pause

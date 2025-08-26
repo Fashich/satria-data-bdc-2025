@@ -1,0 +1,1617 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install pandas numpy tensorflow opencv-python librosa yt-dlp scikit-learn tqdm
+Collecting pandas
+  Downloading pandas-2.3.2-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Collecting numpy
+  Downloading numpy-2.3.2-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Collecting tensorflow
+  Downloading tensorflow-2.20.0-cp312-cp312-win_amd64.whl.metadata (4.6 kB)
+Collecting opencv-python
+  Downloading opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl.metadata (19 kB)
+Collecting librosa
+  Downloading librosa-0.11.0-py3-none-any.whl.metadata (8.7 kB)
+Collecting yt-dlp
+  Downloading yt_dlp-2025.8.22-py3-none-any.whl.metadata (175 kB)
+Collecting scikit-learn
+  Downloading scikit_learn-1.7.1-cp312-cp312-win_amd64.whl.metadata (11 kB)
+Collecting tqdm
+  Using cached tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting python-dateutil>=2.8.2 (from pandas)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas)
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas)
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting absl-py>=1.0.0 (from tensorflow)
+  Downloading absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting astunparse>=1.6.0 (from tensorflow)
+  Downloading astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting flatbuffers>=24.3.25 (from tensorflow)
+  Downloading flatbuffers-25.2.10-py2.py3-none-any.whl.metadata (875 bytes)
+Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow)
+  Using cached gast-0.6.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting google_pasta>=0.1.1 (from tensorflow)
+  Downloading google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+Collecting libclang>=13.0.0 (from tensorflow)
+  Downloading libclang-18.1.1-py2.py3-none-win_amd64.whl.metadata (5.3 kB)
+Collecting opt_einsum>=2.3.2 (from tensorflow)
+  Downloading opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+Requirement already satisfied: packaging in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from tensorflow) (25.0)
+Collecting protobuf>=5.28.0 (from tensorflow)
+  Downloading protobuf-6.32.0-cp310-abi3-win_amd64.whl.metadata (593 bytes)
+Requirement already satisfied: requests<3,>=2.21.0 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from tensorflow) (2.32.3)
+Collecting setuptools (from tensorflow)
+  Using cached setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting six>=1.12.0 (from tensorflow)
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting termcolor>=1.1.0 (from tensorflow)
+  Downloading termcolor-3.1.0-py3-none-any.whl.metadata (6.4 kB)
+Requirement already satisfied: typing_extensions>=3.6.6 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from tensorflow) (4.14.0)
+Collecting wrapt>=1.11.0 (from tensorflow)
+  Downloading wrapt-1.17.3-cp312-cp312-win_amd64.whl.metadata (6.5 kB)
+Collecting grpcio<2.0,>=1.24.3 (from tensorflow)
+  Downloading grpcio-1.74.0-cp312-cp312-win_amd64.whl.metadata (4.0 kB)
+Collecting tensorboard~=2.20.0 (from tensorflow)
+  Downloading tensorboard-2.20.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting keras>=3.10.0 (from tensorflow)
+  Downloading keras-3.11.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting h5py>=3.11.0 (from tensorflow)
+  Downloading h5py-3.14.0-cp312-cp312-win_amd64.whl.metadata (2.7 kB)
+Collecting ml_dtypes<1.0.0,>=0.5.1 (from tensorflow)
+  Downloading ml_dtypes-0.5.3-cp312-cp312-win_amd64.whl.metadata (9.2 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.21.0->tensorflow) (3.4.2)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.21.0->tensorflow) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.21.0->tensorflow) (2.4.0)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from requests<3,>=2.21.0->tensorflow) (2025.4.26)
+Collecting markdown>=2.6.8 (from tensorboard~=2.20.0->tensorflow)
+  Using cached markdown-3.8.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting pillow (from tensorboard~=2.20.0->tensorflow)
+  Downloading pillow-11.3.0-cp312-cp312-win_amd64.whl.metadata (9.2 kB)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard~=2.20.0->tensorflow)
+  Downloading tensorboard_data_server-0.7.2-py3-none-any.whl.metadata (1.1 kB)
+Collecting werkzeug>=1.0.1 (from tensorboard~=2.20.0->tensorflow)
+  Using cached werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting numpy
+  Downloading numpy-2.2.6-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Collecting audioread>=2.1.9 (from librosa)
+  Downloading audioread-3.0.1-py3-none-any.whl.metadata (8.4 kB)
+Collecting numba>=0.51.0 (from librosa)
+  Downloading numba-0.61.2-cp312-cp312-win_amd64.whl.metadata (2.9 kB)
+Collecting scipy>=1.6.0 (from librosa)
+  Downloading scipy-1.16.1-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Collecting joblib>=1.0 (from librosa)
+  Downloading joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting decorator>=4.3.0 (from librosa)
+  Using cached decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting soundfile>=0.12.1 (from librosa)
+  Downloading soundfile-0.13.1-py2.py3-none-win_amd64.whl.metadata (16 kB)
+Collecting pooch>=1.1 (from librosa)
+  Downloading pooch-1.8.2-py3-none-any.whl.metadata (10 kB)
+Collecting soxr>=0.3.2 (from librosa)
+  Downloading soxr-0.5.0.post1-cp312-abi3-win_amd64.whl.metadata (5.6 kB)
+Collecting lazy_loader>=0.1 (from librosa)
+  Downloading lazy_loader-0.4-py3-none-any.whl.metadata (7.6 kB)
+Collecting msgpack>=1.0 (from librosa)
+  Downloading msgpack-1.1.1-cp312-cp312-win_amd64.whl.metadata (8.6 kB)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: colorama in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from tqdm) (0.4.6)
+Collecting wheel<1.0,>=0.23.0 (from astunparse>=1.6.0->tensorflow)
+  Using cached wheel-0.45.1-py3-none-any.whl.metadata (2.3 kB)
+Collecting rich (from keras>=3.10.0->tensorflow)
+  Downloading rich-14.1.0-py3-none-any.whl.metadata (18 kB)
+Collecting namex (from keras>=3.10.0->tensorflow)
+  Downloading namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+Collecting optree (from keras>=3.10.0->tensorflow)
+  Downloading optree-0.17.0-cp312-cp312-win_amd64.whl.metadata (34 kB)
+Collecting llvmlite<0.45,>=0.44.0dev0 (from numba>=0.51.0->librosa)
+  Downloading llvmlite-0.44.0-cp312-cp312-win_amd64.whl.metadata (5.0 kB)
+Collecting platformdirs>=2.5.0 (from pooch>=1.1->librosa)
+  Using cached platformdirs-4.3.8-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: cffi>=1.0 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from soundfile>=0.12.1->librosa) (1.17.1)
+Requirement already satisfied: pycparser in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from cffi>=1.0->soundfile>=0.12.1->librosa) (2.22)
+Collecting MarkupSafe>=2.1.1 (from werkzeug>=1.0.1->tensorboard~=2.20.0->tensorflow)
+  Downloading MarkupSafe-3.0.2-cp312-cp312-win_amd64.whl.metadata (4.1 kB)
+Collecting markdown-it-py>=2.2.0 (from rich->keras>=3.10.0->tensorflow)
+  Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich->keras>=3.10.0->tensorflow)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras>=3.10.0->tensorflow)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading pandas-2.3.2-cp312-cp312-win_amd64.whl (11.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.0/11.0 MB 2.6 MB/s  0:00:04
+Downloading tensorflow-2.20.0-cp312-cp312-win_amd64.whl (331.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.9/331.9 MB 5.7 MB/s  0:00:57
+Downloading grpcio-1.74.0-cp312-cp312-win_amd64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 6.4 MB/s  0:00:00
+Downloading ml_dtypes-0.5.3-cp312-cp312-win_amd64.whl (208 kB)
+Downloading tensorboard-2.20.0-py3-none-any.whl (5.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 4.6 MB/s  0:00:01
+Downloading tensorboard_data_server-0.7.2-py3-none-any.whl (2.4 kB)
+Downloading opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl (39.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.0/39.0 MB 6.0 MB/s  0:00:06
+Downloading numpy-2.2.6-cp312-cp312-win_amd64.whl (12.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 5.8 MB/s  0:00:02
+Downloading librosa-0.11.0-py3-none-any.whl (260 kB)
+Downloading yt_dlp-2025.8.22-py3-none-any.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 5.5 MB/s  0:00:00
+Downloading scikit_learn-1.7.1-cp312-cp312-win_amd64.whl (8.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 5.9 MB/s  0:00:01
+Using cached tqdm-4.67.1-py3-none-any.whl (78 kB)
+Downloading absl_py-2.3.1-py3-none-any.whl (135 kB)
+Downloading astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading wheel-0.45.1-py3-none-any.whl (72 kB)
+Downloading audioread-3.0.1-py3-none-any.whl (23 kB)
+Using cached decorator-5.2.1-py3-none-any.whl (9.2 kB)
+Downloading flatbuffers-25.2.10-py2.py3-none-any.whl (30 kB)
+Using cached gast-0.6.0-py3-none-any.whl (21 kB)
+Downloading google_pasta-0.2.0-py3-none-any.whl (57 kB)
+Downloading h5py-3.14.0-cp312-cp312-win_amd64.whl (2.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 5.7 MB/s  0:00:00
+Downloading joblib-1.5.1-py3-none-any.whl (307 kB)
+Downloading keras-3.11.3-py3-none-any.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 2.8 MB/s  0:00:00
+Downloading lazy_loader-0.4-py3-none-any.whl (12 kB)
+Downloading libclang-18.1.1-py2.py3-none-win_amd64.whl (26.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 26.4/26.4 MB 6.1 MB/s  0:00:04
+Using cached markdown-3.8.2-py3-none-any.whl (106 kB)
+Downloading msgpack-1.1.1-cp312-cp312-win_amd64.whl (72 kB)
+Downloading numba-0.61.2-cp312-cp312-win_amd64.whl (2.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 6.6 MB/s  0:00:00
+Downloading llvmlite-0.44.0-cp312-cp312-win_amd64.whl (30.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 30.3/30.3 MB 5.8 MB/s  0:00:05
+Downloading opt_einsum-3.4.0-py3-none-any.whl (71 kB)
+Downloading pooch-1.8.2-py3-none-any.whl (64 kB)
+Using cached platformdirs-4.3.8-py3-none-any.whl (18 kB)
+Downloading protobuf-6.32.0-cp310-abi3-win_amd64.whl (435 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Downloading scipy-1.16.1-cp312-cp312-win_amd64.whl (38.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.5/38.5 MB 5.9 MB/s  0:00:07
+Using cached setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+Downloading soundfile-0.13.1-py2.py3-none-win_amd64.whl (1.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 6.9 MB/s  0:00:00
+Downloading soxr-0.5.0.post1-cp312-abi3-win_amd64.whl (164 kB)
+Downloading termcolor-3.1.0-py3-none-any.whl (7.7 kB)
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Using cached werkzeug-3.1.3-py3-none-any.whl (224 kB)
+Downloading MarkupSafe-3.0.2-cp312-cp312-win_amd64.whl (15 kB)
+Downloading wrapt-1.17.3-cp312-cp312-win_amd64.whl (38 kB)
+Downloading namex-0.1.0-py3-none-any.whl (5.9 kB)
+Downloading optree-0.17.0-cp312-cp312-win_amd64.whl (314 kB)
+Downloading pillow-11.3.0-cp312-cp312-win_amd64.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 6.2 MB/s  0:00:01
+Downloading rich-14.1.0-py3-none-any.whl (243 kB)
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 15.5 MB/s  0:00:00
+Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: pytz, namex, libclang, flatbuffers, yt-dlp, wrapt, wheel, tzdata, tqdm, threadpoolctl, termcolor, tensorboard-data-server, six, setuptools, pygments, protobuf, platformdirs, pillow, optree, opt_einsum, numpy, msgpack, mdurl, MarkupSafe, markdown, llvmlite, lazy_loader, joblib, grpcio, gast, decorator, audioread, absl-py, werkzeug, soxr, soundfile, scipy, python-dateutil, pooch, opencv-python, numba, ml_dtypes, markdown-it-py, h5py, google_pasta, astunparse, tensorboard, scikit-learn, rich, pandas, librosa, keras, tensorflow
+Successfully installed MarkupSafe-3.0.2 absl-py-2.3.1 astunparse-1.6.3 audioread-3.0.1 decorator-5.2.1 flatbuffers-25.2.10 gast-0.6.0 google_pasta-0.2.0 grpcio-1.74.0 h5py-3.14.0 joblib-1.5.1 keras-3.11.3 lazy_loader-0.4 libclang-18.1.1 librosa-0.11.0 llvmlite-0.44.0 markdown-3.8.2 markdown-it-py-4.0.0 mdurl-0.1.2 ml_dtypes-0.5.3 msgpack-1.1.1 namex-0.1.0 numba-0.61.2 numpy-2.2.6 opencv-python-4.12.0.88 opt_einsum-3.4.0 optree-0.17.0 pandas-2.3.2 pillow-11.3.0 platformdirs-4.3.8 pooch-1.8.2 protobuf-6.32.0 pygments-2.19.2 python-dateutil-2.9.0.post0 pytz-2025.2 rich-14.1.0 scikit-learn-1.7.1 scipy-1.16.1 setuptools-80.9.0 six-1.17.0 soundfile-0.13.1 soxr-0.5.0.post1 tensorboard-2.20.0 tensorboard-data-server-0.7.2 tensorflow-2.20.0 termcolor-3.1.0 threadpoolctl-3.6.0 tqdm-4.67.1 tzdata-2025.2 werkzeug-3.1.3 wheel-0.45.1 wrapt-1.17.3 yt-dlp-2025.8.22
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install confluent-kafka matplotlib seaborn
+Collecting confluent-kafka
+  Downloading confluent_kafka-2.11.1-cp312-cp312-win_amd64.whl.metadata (24 kB)
+Collecting matplotlib
+  Downloading matplotlib-3.10.5-cp312-cp312-win_amd64.whl.metadata (11 kB)
+Collecting seaborn
+  Using cached seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Downloading contourpy-1.3.3-cp312-cp312-win_amd64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib)
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Downloading fonttools-4.59.1-cp312-cp312-win_amd64.whl.metadata (111 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib)
+  Downloading kiwisolver-1.4.9-cp312-cp312-win_amd64.whl.metadata (6.4 kB)
+Requirement already satisfied: numpy>=1.23 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from matplotlib) (2.2.6)
+Requirement already satisfied: packaging>=20.0 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from matplotlib) (25.0)
+Requirement already satisfied: pillow>=8 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from matplotlib) (11.3.0)
+Collecting pyparsing>=2.3.1 (from matplotlib)
+  Using cached pyparsing-3.2.3-py3-none-any.whl.metadata (5.0 kB)
+Requirement already satisfied: python-dateutil>=2.7 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: pandas>=1.2 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from seaborn) (2.3.2)
+Requirement already satisfied: pytz>=2020.1 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from pandas>=1.2->seaborn) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from pandas>=1.2->seaborn) (2025.2)
+Requirement already satisfied: six>=1.5 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+Downloading confluent_kafka-2.11.1-cp312-cp312-win_amd64.whl (4.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 1.9 MB/s  0:00:02
+Downloading matplotlib-3.10.5-cp312-cp312-win_amd64.whl (8.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.1/8.1 MB 3.4 MB/s  0:00:02
+Using cached seaborn-0.13.2-py3-none-any.whl (294 kB)
+Downloading contourpy-1.3.3-cp312-cp312-win_amd64.whl (226 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.59.1-cp312-cp312-win_amd64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 2.1 MB/s  0:00:01
+Downloading kiwisolver-1.4.9-cp312-cp312-win_amd64.whl (73 kB)
+Using cached pyparsing-3.2.3-py3-none-any.whl (111 kB)
+Installing collected packages: pyparsing, kiwisolver, fonttools, cycler, contourpy, confluent-kafka, matplotlib, seaborn
+Successfully installed confluent-kafka-2.11.1 contourpy-1.3.3 cycler-0.12.1 fonttools-4.59.1 kiwisolver-1.4.9 matplotlib-3.10.5 pyparsing-3.2.3 seaborn-0.13.2
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install yt-dlp
+Requirement already satisfied: yt-dlp in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (2025.8.22)
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install ffmpeg-python
+Collecting ffmpeg-python
+  Downloading ffmpeg_python-0.2.0-py3-none-any.whl.metadata (1.7 kB)
+Collecting future (from ffmpeg-python)
+  Using cached future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+Downloading ffmpeg_python-0.2.0-py3-none-any.whl (25 kB)
+Using cached future-1.0.0-py3-none-any.whl (491 kB)
+Installing collected packages: future, ffmpeg-python
+Successfully installed ffmpeg-python-0.2.0 future-1.0.0
+PS C:\laragon\www\Project.Self\satria-data-bdc> .\run_pipeline.bat
+===== MEMULAI PIPELINE BDC Satria Data 2025 =====
+Pastikan file datatrain.csv dan datatest.csv sudah ditempatkan di folder data/
+1. Mem-parse data CSV...
+Path absolut ke datatrain.csv: C:\laragon\www\Project.Self\satria-data-bdc\data\datatrain.csv
+Path absolut ke datatest.csv: C:\laragon\www\Project.Self\satria-data-bdc\data\datatest.csv
+
+Jumlah data train yang berhasil diparse: 790
+Distribusi emosi:
+emotion
+Surprise    326
+Trust       181
+Proud       156
+Joy          53
+Anger        34
+Sadness      16
+Fear         16
+Neutral       8
+Name: count, dtype: int64
+Hasil parsing disimpan di: C:\laragon\www\Project.Self\satria-data-bdc\data\train_parsed.csv
+PERINGATAN: Tidak ada data yang berhasil diparse. Periksa format file CSV.
+
+Jumlah data test yang berhasil diparse: 0
+Tidak ada data test yang berhasil diparse.
+ERROR: Parsing data test gagal. Proses dihentikan.
+Press any key to continue . . .
+PS C:\laragon\www\Project.Self\satria-data-bdc> git init
+Initialized empty Git repository in C:/laragon/www/Project.Self/satria-data-bdc/.git/
+PS C:\laragon\www\Project.Self\satria-data-bdc> git remote add origin https://github.com/Fashich/satria-data-bdc-2025.git
+PS C:\laragon\www\Project.Self\satria-data-bdc> git branch -M main
+PS C:\laragon\www\Project.Self\satria-data-bdc> git add .
+warning: in the working copy of 'run_pipeline.sh', LF will be replaced by CRLF the next time Git touches it
+PS C:\laragon\www\Project.Self\satria-data-bdc> git rm run_pipeline.sh
+error: the following file has changes staged in the index:
+    run_pipeline.sh
+(use --cached to keep the file, or -f to force removal)
+PS C:\laragon\www\Project.Self\satria-data-bdc> git rm run_pipeline.sh -f
+rm 'run_pipeline.sh'
+PS C:\laragon\www\Project.Self\satria-data-bdc> git add run_pipeline.bat
+PS C:\laragon\www\Project.Self\satria-data-bdc> git add .
+PS C:\laragon\www\Project.Self\satria-data-bdc> git commit -m "initial commit"
+[main (root-commit) f567353] initial commit
+ 42 files changed, 2742 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 data/datatest.csv
+ create mode 100644 data/datatrain.csv
+ create mode 100644 data/train_parsed.csv
+ create mode 100644 install.txt
+ create mode 100644 requirements.txt
+ create mode 100644 run_pipeline.bat
+ create mode 100644 src/__pycache__/utils.cpython-312.pyc
+ create mode 100644 src/data_preparation/__init__.py
+ create mode 100644 src/data_preparation/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 src/data_preparation/__pycache__/data_parser.cpython-312.pyc
+ create mode 100644 src/data_preparation/__pycache__/video_downloader.cpython-312.pyc
+ create mode 100644 src/data_preparation/data_parser.py
+ create mode 100644 src/data_preparation/video_downloader.py
+ create mode 100644 src/feature_extraction/__init__.py
+ create mode 100644 src/feature_extraction/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 src/feature_extraction/__pycache__/audio_features.cpython-312.pyc
+ create mode 100644 src/feature_extraction/__pycache__/visual_features.cpython-312.pyc
+ create mode 100644 src/feature_extraction/audio_features.py
+ create mode 100644 src/feature_extraction/visual_features.py
+ create mode 100644 src/inference/__init__.py
+ create mode 100644 src/inference/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 src/inference/__pycache__/predict.cpython-312.pyc
+ create mode 100644 src/inference/predict.py
+ create mode 100644 src/models/__init__.py
+ create mode 100644 src/models/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 src/models/__pycache__/custom_cnn.cpython-312.pyc
+ create mode 100644 src/models/__pycache__/custom_rnn.cpython-312.pyc
+ create mode 100644 src/models/__pycache__/fusion_model.cpython-312.pyc
+ create mode 100644 src/models/custom_cnn.py
+ create mode 100644 src/models/custom_rnn.py
+ create mode 100644 src/models/fusion_model.py
+ create mode 100644 src/real_time/__init__.py
+ create mode 100644 src/real_time/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 src/real_time/__pycache__/kafka_consumer.cpython-312.pyc
+ create mode 100644 src/real_time/kafka_consumer.py
+ create mode 100644 src/real_time/kafka_producer.py
+ create mode 100644 src/training/__init__.py
+ create mode 100644 src/training/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 src/training/__pycache__/train.cpython-312.pyc
+ create mode 100644 src/training/train.py
+ create mode 100644 src/utils.py
+PS C:\laragon\www\Project.Self\satria-data-bdc> git push -u origin main
+Enumerating objects: 54, done.
+Counting objects: 100% (54/54), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (52/52), done.
+Writing objects: 100% (54/54), 68.18 KiB | 872.00 KiB/s, done.
+Total 54 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/Fashich/satria-data-bdc-2025.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\laragon\www\Project.Self\satria-data-bdc> git add .
+PS C:\laragon\www\Project.Self\satria-data-bdc> git commit "change description"
+error: pathspec 'change description' did not match any file(s) known to git
+PS C:\laragon\www\Project.Self\satria-data-bdc> git commit -m "change description"
+[main 7747f5a] change description
+ 2 files changed, 57 insertions(+), 3 deletions(-)
+ create mode 100644 note.txt
+PS C:\laragon\www\Project.Self\satria-data-bdc> git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 3.03 KiB | 776.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Fashich/satria-data-bdc-2025.git
+   f567353..7747f5a  main -> main
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install openpyxl
+Collecting openpyxl
+  Using cached openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting et-xmlfile (from openpyxl)
+  Using cached et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+Using cached openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+Using cached et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Installing collected packages: et-xmlfile, openpyxl
+Successfully installed et-xmlfile-2.0.0 openpyxl-3.1.5
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install -r requirements.txt
+Collecting pandas==2.0.3 (from -r requirements.txt (line 1))
+  Using cached pandas-2.0.3.tar.gz (5.3 MB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... canceled
+ERROR: Operation cancelled by user
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install -r requirements.txt
+Collecting pandas==2.0.3 (from -r requirements.txt (line 1))
+  Using cached pandas-2.0.3.tar.gz (5.3 MB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting numpy==1.24.3 (from -r requirements.txt (line 2))
+  Using cached numpy-1.24.3.tar.gz (10.9 MB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... error
+  error: subprocess-exited-with-error
+
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [33 lines of output]
+      Traceback (most recent call last):
+        File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 389, in <module>
+          main()
+        File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 373, in main
+          json_out["return_val"] = hook(**hook_input["kwargs"])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 137, in get_requires_for_build_wheel
+          backend = _build_backend()
+                    ^^^^^^^^^^^^^^^^
+        File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 70, in _build_backend
+          obj = import_module(mod_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+          return _bootstrap._gcd_import(name[level:], package, level)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+        File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+        File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+        File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+        File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+        File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+        File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+        File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+        File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+        File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+        File "C:\Users\USER\AppData\Local\Temp\pip-build-env-6bq9buo0\overlay\Lib\site-packages\setuptools\__init__.py", line 16, in <module>
+          import setuptools.version
+        File "C:\Users\USER\AppData\Local\Temp\pip-build-env-6bq9buo0\overlay\Lib\site-packages\setuptools\version.py", line 1, in <module>
+          import pkg_resources
+        File "C:\Users\USER\AppData\Local\Temp\pip-build-env-6bq9buo0\overlay\Lib\site-packages\pkg_resources\__init__.py", line 2172, in <module>
+          register_finder(pkgutil.ImpImporter, find_on_path)
+                          ^^^^^^^^^^^^^^^^^^^
+      AttributeError: module 'pkgutil' has no attribute 'ImpImporter'. Did you mean: 'zipimporter'?
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install --upgrade setuptools wheel
+Requirement already satisfied: setuptools in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (80.9.0)
+Requirement already satisfied: wheel in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (0.45.1)
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install -r requirements.txt
+Collecting pandas==2.0.3 (from -r requirements.txt (line 1))
+  Using cached pandas-2.0.3.tar.gz (5.3 MB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting numpy==1.24.3 (from -r requirements.txt (line 2))
+  Using cached numpy-1.24.3.tar.gz (10.9 MB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... error
+  error: subprocess-exited-with-error
+
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [33 lines of output]
+      Traceback (most recent call last):
+        File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 389, in <module>
+          main()
+        File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 373, in main
+          json_out["return_val"] = hook(**hook_input["kwargs"])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 137, in get_requires_for_build_wheel
+          backend = _build_backend()
+                    ^^^^^^^^^^^^^^^^
+        File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 70, in _build_backend
+          obj = import_module(mod_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+          return _bootstrap._gcd_import(name[level:], package, level)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+        File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+        File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+        File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+        File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+        File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+        File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+        File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+        File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+        File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+        File "C:\Users\USER\AppData\Local\Temp\pip-build-env-d_byf5_c\overlay\Lib\site-packages\setuptools\__init__.py", line 16, in <module>
+          import setuptools.version
+        File "C:\Users\USER\AppData\Local\Temp\pip-build-env-d_byf5_c\overlay\Lib\site-packages\setuptools\version.py", line 1, in <module>
+          import pkg_resources
+        File "C:\Users\USER\AppData\Local\Temp\pip-build-env-d_byf5_c\overlay\Lib\site-packages\pkg_resources\__init__.py", line 2172, in <module>
+          register_finder(pkgutil.ImpImporter, find_on_path)
+                          ^^^^^^^^^^^^^^^^^^^
+      AttributeError: module 'pkgutil' has no attribute 'ImpImporter'. Did you mean: 'zipimporter'?
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install --only-binary=:all: numpy==1.26.4
+Collecting numpy==1.26.4
+  Using cached numpy-1.26.4-cp312-cp312-win_amd64.whl.metadata (61 kB)
+Using cached numpy-1.26.4-cp312-cp312-win_amd64.whl (15.5 MB)
+Installing collected packages: numpy
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.2.6
+    Uninstalling numpy-2.2.6:
+      Successfully uninstalled numpy-2.2.6
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+opencv-python 4.12.0.88 requires numpy<2.3.0,>=2; python_version >= "3.9", but you have numpy 1.26.4 which is incompatible.
+Successfully installed numpy-1.26.4
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip uninstall numpy -y
+Found existing installation: numpy 1.26.4
+Uninstalling numpy-1.26.4:
+  Successfully uninstalled numpy-1.26.4
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install numpy==2.0.0
+Collecting numpy==2.0.0
+  Downloading numpy-2.0.0-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Downloading numpy-2.0.0-cp312-cp312-win_amd64.whl (16.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.2/16.2 MB 3.0 MB/s  0:00:05
+Installing collected packages: numpy
+Successfully installed numpy-2.0.0
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip uninstall numpy pandas opencv-python -y
+Found existing installation: numpy 2.0.0
+Uninstalling numpy-2.0.0:
+  Successfully uninstalled numpy-2.0.0
+Found existing installation: pandas 2.3.2
+Uninstalling pandas-2.3.2:
+  Successfully uninstalled pandas-2.3.2
+Found existing installation: opencv-python 4.12.0.88
+Uninstalling opencv-python-4.12.0.88:
+  Successfully uninstalled opencv-python-4.12.0.88
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install "numpy>=2.0.0,<2.3.0"
+Collecting numpy<2.3.0,>=2.0.0
+  Using cached numpy-2.2.6-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Using cached numpy-2.2.6-cp312-cp312-win_amd64.whl (12.6 MB)
+Installing collected packages: numpy
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+seaborn 0.13.2 requires pandas>=1.2, which is not installed.
+Successfully installed numpy-2.2.6
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip uninstall numpy pandas opencv-python tensorflow scikit-learn seaborn -y
+Found existing installation: numpy 2.2.6
+Uninstalling numpy-2.2.6:
+  Successfully uninstalled numpy-2.2.6
+WARNING: Skipping pandas as it is not installed.
+WARNING: Skipping opencv-python as it is not installed.
+Found existing installation: tensorflow 2.20.0
+Uninstalling tensorflow-2.20.0:
+  Successfully uninstalled tensorflow-2.20.0
+Found existing installation: scikit-learn 1.7.1
+Uninstalling scikit-learn-1.7.1:
+  Successfully uninstalled scikit-learn-1.7.1
+Found existing installation: seaborn 0.13.2
+Uninstalling seaborn-0.13.2:
+  Successfully uninstalled seaborn-0.13.2
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip cache purge
+Files removed: 3227 (2469.4 MB)
+PS C:\laragon\www\Project.Self\satria-data-bdc> pip install virtualenv
+Collecting virtualenv
+  Downloading virtualenv-20.34.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv)
+  Downloading distlib-0.4.0-py2.py3-none-any.whl.metadata (5.2 kB)
+Collecting filelock<4,>=3.12.2 (from virtualenv)
+  Downloading filelock-3.19.1-py3-none-any.whl.metadata (2.1 kB)
+Requirement already satisfied: platformdirs<5,>=3.9.1 in c:\users\user\appdata\local\programs\python\python312\lib\site-packages (from virtualenv) (4.3.8)
+Downloading virtualenv-20.34.0-py3-none-any.whl (6.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 2.2 MB/s  0:00:02
+Downloading distlib-0.4.0-py2.py3-none-any.whl (469 kB)
+Downloading filelock-3.19.1-py3-none-any.whl (15 kB)
+Installing collected packages: distlib, filelock, virtualenv
+Successfully installed distlib-0.4.0 filelock-3.19.1 virtualenv-20.34.0
+PS C:\laragon\www\Project.Self\satria-data-bdc> virtualenv -p python3.11 bdc_env
+RuntimeError: failed to find interpreter for Builtin discover of python_spec='python3.11'
+PS C:\laragon\www\Project.Self\satria-data-bdc> py -3.11 --version
+No suitable Python runtime found
+Pass --list (-0) to see all detected environments on your machine
+or set environment variable PYLAUNCHER_ALLOW_INSTALL to use winget
+or open the Microsoft Store to the requested version.
+PS C:\laragon\www\Project.Self\satria-data-bdc> where python
+PS C:\laragon\www\Project.Self\satria-data-bdc> where py.exe
+PS C:\laragon\www\Project.Self\satria-data-bdc> virtualenv -p "C:\Users\USER\AppData\Local\Programs\Python\Python311\python.exe" bdc_env
+RuntimeError: failed to find interpreter for Builtin discover of python_spec='C:\\Users\\USER\\AppData\\Local\\Programs\\Python\\Python311\\python.exe'
+PS C:\laragon\www\Project.Self\satria-data-bdc> Set-ExecutionPolicy Bypass -Scope Process -Force; .\install_bdc.ps1
+===== MEMULAI INSTALASI LENGKAP BDC Satria Data 2025 =====
+
+[1/5] Memeriksa/menginstal Chocolatey...
+Chocolatey sudah terinstal.
+
+[2/5] Menginstal Python 3.11...
+Chocolatey v2.5.0
+Chocolatey detected you are not running from an elevated command shell
+ (cmd/powershell).
+
+ You may experience errors - many functions/packages
+ require admin rights. Only advanced users should run choco w/out an
+ elevated shell. When you open the command shell, you should ensure
+ that you do so with "Run as Administrator" selected. If you are
+ attempting to use Chocolatey in a non-administrator setting, you
+ must select a different location other than the default install
+ location. See
+ https://docs.chocolatey.org/en-us/choco/setup#non-administrative-install
+ for details.
+
+For the question below, you have 20 seconds to make a selection.
+
+ Do you want to continue?([Y]es/[N]o): Y
+
+Installing the following packages:
+python311
+By installing, you accept licenses for the packages.
+python311 not installed. The package was not found with the source(s) listed.
+ Source(s): 'https://community.chocolatey.org/api/v2/'
+ NOTE: When you specify explicit sources, it overrides default sources.
+If the package version is a prerelease and you didn't specify `--pre`,
+ the package may not be found.
+Version was specified as '3.11.10'. It is possible that version
+ does not exist for 'python311' at the source specified.
+Please see https://docs.chocolatey.org/en-us/troubleshooting for more
+ assistance.
+
+Chocolatey installed 0/1 packages. 1 packages failed.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+Failures
+ - python311 - python311 not installed. The package was not found with the source(s) listed.
+ Source(s): 'https://community.chocolatey.org/api/v2/'
+ NOTE: When you specify explicit sources, it overrides default sources.
+If the package version is a prerelease and you didn't specify `--pre`,
+ the package may not be found.
+Version was specified as '3.11.10'. It is possible that version
+ does not exist for 'python311' at the source specified.
+Please see https://docs.chocolatey.org/en-us/troubleshooting for more
+ assistance.
+RefreshEnv.cmd does not work when run from this process. If you're in PowerShell, please 'Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1' and try again.
+Python berhasil diinstal di: C:\Users\USER\AppData\Local\Programs\Python\Python312\python.exe
+
+[3/5] Menginstal FFmpeg...
+Chocolatey v2.5.0
+Chocolatey detected you are not running from an elevated command shell
+ (cmd/powershell).
+
+ You may experience errors - many functions/packages
+ require admin rights. Only advanced users should run choco w/out an
+ elevated shell. When you open the command shell, you should ensure
+ that you do so with "Run as Administrator" selected. If you are
+ attempting to use Chocolatey in a non-administrator setting, you
+ must select a different location other than the default install
+ location. See
+ https://docs.chocolatey.org/en-us/choco/setup#non-administrative-install
+ for details.
+
+For the question below, you have 20 seconds to make a selection.
+
+ Do you want to continue?([Y]es/[N]o): Y
+
+Installing the following packages:
+ffmpeg
+By installing, you accept licenses for the packages.
+Downloading package from source 'https://community.chocolatey.org/api/v2/'
+Progress: Downloading ffmpeg 8.0.0... 100%
+ffmpeg not installed. An error occurred during installation:
+ Unable to obtain lock file access on 'C:\ProgramData\chocolatey\lib\c00565a56f0e64a50f2ea5badcb97694d43e0755' for operations on 'C:\ProgramData\chocolatey\lib\ffmpeg'. This may mean that a different user or administrator is holding this lock and that this process does not have permission to access it. If no other process is currently performing an operation on this file it may mean that an earlier NuGet process crashed and left an inaccessible lock file, in this case removing the file 'C:\ProgramData\chocolatey\lib\c00565a56f0e64a50f2ea5badcb97694d43e0755' will allow NuGet to continue.
+ffmpeg package files install failed with exit code 1. Performing other installation steps.
+The install of ffmpeg was NOT successful.
+ffmpeg not installed. An error occurred during installation:
+ Unable to obtain lock file access on 'C:\ProgramData\chocolatey\lib\c00565a56f0e64a50f2ea5badcb97694d43e0755' for operations on 'C:\ProgramData\chocolatey\lib\ffmpeg'. This may mean that a different user or administrator is holding this lock and that this process does not have permission to access it. If no other process is currently performing an operation on this file it may mean that an earlier NuGet process crashed and left an inaccessible lock file, in this case removing the file 'C:\ProgramData\chocolatey\lib\c00565a56f0e64a50f2ea5badcb97694d43e0755' will allow NuGet to continue.
+This is try 1/3. Retrying after 300 milliseconds.
+ Error converted to warning:
+ Access to the path 'C:\ProgramData\chocolatey\lib-bad' is denied.
+This is try 2/3. Retrying after 400 milliseconds.
+ Error converted to warning:
+ Access to the path 'C:\ProgramData\chocolatey\lib-bad' is denied.
+Maximum tries of 3 reached. Throwing error.
+Cannot create directory "C:\ProgramData\chocolatey\lib-bad". Error was:
+System.UnauthorizedAccessException: Access to the path 'C:\ProgramData\chocolatey\lib-bad' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   at System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   at chocolatey.infrastructure.filesystem.DotNetFileSystem.<>c__DisplayClass63_0.<CreateDirectory>b__1()
+   at chocolatey.infrastructure.tolerance.FaultTolerance.<>c__DisplayClass1_0.<Retry>b__0()
+   at chocolatey.infrastructure.tolerance.FaultTolerance.Retry[T](Int32 numberOfTries, Func`1 function, Int32 waitDurationMilliseconds, Int32 increaseRetryByMilliseconds, Boolean isSilent)
+   at chocolatey.infrastructure.tolerance.FaultTolerance.Retry(Int32 numberOfTries, Action action, Int32 waitDurationMilliseconds, Int32 increaseRetryByMilliseconds, Boolean isSilent)
+   at chocolatey.infrastructure.filesystem.DotNetFileSystem.CreateDirectory(String directoryPath, Boolean isSilent)
+   at chocolatey.infrastructure.filesystem.DotNetFileSystem.EnsureDirectoryExists(String directoryPath, Boolean ignoreError, Boolean isSilent)
+
+Chocolatey installed 0/0 packages.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+Access to the path 'C:\ProgramData\chocolatey\lib-bad' is denied.
+RefreshEnv.cmd does not work when run from this process. If you're in PowerShell, please 'Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1' and try again.
+FFmpeg berhasil diinstal di: C:\Users\USER\AppData\Local\Microsoft\WinGet\Links\ffmpeg.exe
+
+[4/5] Mempersiapkan virtual environment...
+Requirement already satisfied: pip in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (24.0)
+Collecting pip
+  Downloading pip-25.2-py3-none-any.whl.metadata (4.7 kB)
+Collecting setuptools
+  Downloading setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting wheel
+  Downloading wheel-0.45.1-py3-none-any.whl.metadata (2.3 kB)
+Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 1.1 MB/s eta 0:00:00
+Downloading setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 2.5 MB/s eta 0:00:00
+Downloading wheel-0.45.1-py3-none-any.whl (72 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.5/72.5 kB 1.3 MB/s eta 0:00:00
+ERROR: To modify pip, please run the following command:
+C:\laragon\www\Project.Self\satria-data-bdc\bdc_env\Scripts\python.exe -m pip install --upgrade pip setuptools wheel
+
+[notice] A new release of pip is available: 24.0 -> 25.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+[5/5] Menginstal dependencies...
+Collecting numpy==1.26.4 (from -r C:\laragon\www\Project.Self\satria-data-bdc\requirements.txt (line 1))
+  Downloading numpy-1.26.4-cp312-cp312-win_amd64.whl.metadata (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 546.2 kB/s eta 0:00:00
+Collecting pandas==2.2.2 (from -r C:\laragon\www\Project.Self\satria-data-bdc\requirements.txt (line 2))
+  Downloading pandas-2.2.2-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Collecting tensorflow==2.16.1 (from -r C:\laragon\www\Project.Self\satria-data-bdc\requirements.txt (line 3))
+  Downloading tensorflow-2.16.1-cp312-cp312-win_amd64.whl.metadata (3.5 kB)
+Collecting opencv-python==4.12.0.88 (from -r C:\laragon\www\Project.Self\satria-data-bdc\requirements.txt (line 4))
+  Downloading opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl.metadata (19 kB)
+Collecting librosa==0.10.1 (from -r C:\laragon\www\Project.Self\satria-data-bdc\requirements.txt (line 5))
+  Downloading librosa-0.10.1-py3-none-any.whl.metadata (8.3 kB)
+ERROR: Ignored the following yanked versions: 2021.1.15, 2021.1.15.post1, 2021.3.3, 2021.3.3.1, 2021.3.24, 2021.6.8
+ERROR: Ignored the following versions that require a different python version: 1.21.2 Requires-Python >=3.7,<3.11; 1.21.3 Requires-Python >=3.7,<3.11; 1.21.4 Requires-Python >=3.7,<3.11; 1.21.5 Requires-Python >=3.7,<3.11; 1.21.6 Requires-Python >=3.7,<3.11
+ERROR: Could not find a version that satisfies the requirement yt-dlp==2024.5.21 (from versions: 2021.1.16, 2021.1.20, 2021.1.24, 2021.1.24.post1, 2021.1.29, 2021.2.4, 2021.2.9, 2021.2.15, 2021.2.19, 2021.2.24, 2021.3.1, 2021.3.3.2, 2021.3.7, 2021.3.15, 2021.3.21, 2021.3.24.1, 2021.4.3, 2021.4.11, 2021.4.22, 2021.5.11, 2021.5.20, 2021.6.1, 2021.6.9, 2021.6.23, 2021.7.7, 2021.7.21, 2021.7.24, 2021.8.2, 2021.8.10, 2021.9.1, 2021.9.2, 2021.9.25, 2021.10.9, 2021.10.10, 2021.10.22, 2021.11.10, 2021.11.10.1, 2021.12.1, 2021.12.25, 2021.12.27, 2022.1.21, 2022.2.3, 2022.2.4, 2022.3.8, 2022.3.8.1, 2022.3.8.2, 2022.4.8, 2022.5.18, 2022.6.22, 2022.6.22.1, 2022.6.29, 2022.7.17, 2022.7.18, 2022.8.8, 2022.8.14, 2022.8.19, 2022.9.1, 2022.10.4, 2022.11.11, 2023.1.2, 2023.1.6, 2023.2.17, 2023.3.3, 2023.3.4, 2023.6.21, 2023.6.22, 2023.7.6, 2023.9.24, 2023.10.7, 2023.10.13, 2023.11.13.5826.dev0, 2023.11.13.232715.dev0, 2023.11.14, 2023.11.15.232826.dev0, 2023.11.16, 2023.11.16.232727.dev0, 2023.11.18.232705.dev0, 2023.11.19.232719.dev0, 2023.11.20.232729.dev0, 2023.11.26.232703.dev0, 2023.11.28.232715.dev0, 2023.11.29.232714.dev0, 2023.12.5.232702.dev0, 2023.12.6.232721.dev0, 2023.12.12.232727.dev0, 2023.12.13.232710.dev0, 2023.12.17.232710.dev0, 2023.12.18.232711.dev0, 2023.12.19.232701.dev0, 2023.12.20.232717.dev0, 2023.12.21.232720.dev0, 2023.12.22.232735.dev0, 2023.12.24.232657.dev0, 2023.12.26.232752.dev0, 2023.12.30, 2023.12.30.232719.dev0, 2023.12.31.232713.dev0, 2024.1.2.232714.dev0, 2024.1.5.232702.dev0, 2024.1.8.232709.dev0, 2024.1.9.232723.dev0, 2024.1.14.232710.dev0, 2024.1.18.232658.dev0, 2024.1.19.232708.dev0, 2024.1.20.232722.dev0, 2024.1.21.232719.dev0, 2024.1.22.232713.dev0, 2024.1.23.232723.dev0, 2024.1.28.232706.dev0, 2024.1.29.232706.dev0, 2024.1.31.232703.dev0, 2024.2.2.232707.dev0, 2024.2.3.232712.dev0, 2024.2.4.232659.dev0, 2024.2.5.232712.dev0, 2024.2.9.232659.dev0, 2024.2.13.232701.dev0, 2024.2.14.232704.dev0, 2024.2.15.232705.dev0, 2024.2.16.232705.dev0, 2024.2.17.232706.dev0, 2024.2.18.232707.dev0, 2024.2.19.232703.dev0, 2024.2.20.232712.dev0, 2024.2.21.232721.dev0, 2024.2.22.232849.dev0, 2024.2.23.232656.dev0, 2024.2.24.232815.dev0, 2024.2.25.232703.dev0, 2024.2.28.232744.dev0, 2024.2.29.232658.dev0, 2024.3.2.232720.dev0, 2024.3.3.232706.dev0, 2024.3.4.232716.dev0, 2024.3.6.232659.dev0, 2024.3.7.232716.dev0, 2024.3.8.232718.dev0, 2024.3.9.232714.dev0, 2024.3.10, 2024.3.10.232703.dev0, 2024.3.14.232657.dev0, 2024.3.17.232657.dev0, 2024.3.18.232707.dev0, 2024.3.19.232701.dev0, 2024.3.20.232704.dev0, 2024.3.22.232703.dev0, 2024.3.29.232706.dev0, 2024.3.30.232704.dev0, 2024.3.31.232706.dev0, 2024.4.1.232704.dev0, 2024.4.3.233315.dev0, 2024.4.4.232729.dev0, 2024.4.6.232655.dev0, 2024.4.7.232657.dev0, 2024.4.8.232708.dev0, 2024.4.9, 2024.4.9.232723.dev0, 2024.4.13.232802.dev0, 2024.4.18.232703.dev0, 2024.4.20.232659.dev0, 2024.4.21.232710.dev0, 2024.4.28.232723.dev0, 2024.5.4.232706.dev0, 2024.5.5.232701.dev0, 2024.5.8.232715.dev0, 2024.5.10.232705.dev0, 2024.5.11.232654.dev0, 2024.5.12.232709.dev0, 2024.5.13.232704.dev0, 2024.5.16.232713.dev0, 2024.5.17.232726.dev0, 2024.5.18.232655.dev0, 2024.5.20.232721.dev0, 2024.5.22.232749.dev0, 2024.5.23.232707.dev0, 2024.5.25.232709.dev0, 2024.5.26, 2024.5.26.232731.dev0, 2024.5.27, 2024.5.27.232744.dev0, 2024.5.29.232700.dev0, 2024.5.30.232720.dev0, 2024.6.1.232725.dev0, 2024.6.11.232712.dev0, 2024.6.13.232720.dev0, 2024.6.15.232712.dev0, 2024.6.16.232832.dev0, 2024.6.17.232743.dev0, 2024.6.20.232815.dev0, 2024.6.21.232706.dev0, 2024.6.22.232706.dev0, 2024.6.24.232830.dev0, 2024.6.27.232805.dev0, 2024.6.29.232730.dev0, 2024.6.30.232744.dev0, 2024.7.1, 2024.7.1.232715.dev0, 2024.7.2, 2024.7.2.232715.dev0, 2024.7.3.232825.dev0, 2024.7.5.232716.dev0, 2024.7.6.232701.dev0, 2024.7.7, 2024.7.7.232743.dev0, 2024.7.8, 2024.7.8.232708.dev0, 2024.7.9, 2024.7.9.232843.dev0, 2024.7.10.232707.dev0, 2024.7.11.232833.dev0, 2024.7.12.232729.dev0, 2024.7.13.232701.dev0, 2024.7.14.232743.dev0, 2024.7.15.232803.dev0, 2024.7.16, 2024.7.16.232919.dev0, 2024.7.19.25855.dev0, 2024.7.23.232906.dev0, 2024.7.24.232745.dev0, 2024.7.25, 2024.7.25.232820.dev0, 2024.7.29.232758.dev0, 2024.7.30.232707.dev0, 2024.7.31.232733.dev0, 2024.8.1, 2024.8.1.232808.dev0, 2024.8.4.232814.dev0, 2024.8.5.232823.dev0, 2024.8.6, 2024.8.6.232802.dev0, 2024.8.12.232840.dev0, 2024.8.13.232739.dev0, 2024.8.15.233031.dev0, 2024.8.18.232809.dev0, 2024.8.19.232821.dev0, 2024.8.21.232751.dev0, 2024.8.26.232811.dev0, 2024.9.1.235933.dev0, 2024.9.2.232855.dev0, 2024.9.5.232840.dev0, 2024.9.7.232731.dev0, 2024.9.8.232909.dev0, 2024.9.13.232912.dev0, 2024.9.14.232748.dev0, 2024.9.17.232940.dev0, 2024.9.24.232842.dev0, 2024.9.25.232842.dev0, 2024.9.26.232938.dev0, 2024.9.27, 2024.9.27.232842.dev0, 2024.9.29.232819.dev0, 2024.9.30.232929.dev0, 2024.10.1.232843.dev0, 2024.10.7, 2024.10.7.232845.dev0, 2024.10.10.232848.dev0, 2024.10.11.232837.dev0, 2024.10.12.232856.dev0, 2024.10.13.232959.dev0, 2024.10.14.232841.dev0, 2024.10.15.232919.dev0, 2024.10.16.232911.dev0, 2024.10.19.232833.dev0, 2024.10.20.232914.dev0, 2024.10.22, 2024.10.22.51025.dev0, 2024.10.22.232922.dev0, 2024.10.23.232902.dev0, 2024.10.24.232910.dev0, 2024.10.25.232902.dev0, 2024.10.26.232826.dev0, 2024.10.27.232921.dev0, 2024.10.28.232846.dev0, 2024.10.29.232854.dev0, 2024.10.31.232951.dev0, 2024.11.2.232942.dev0, 2024.11.3.232912.dev0, 2024.11.4, 2024.11.4.232933.dev0, 2024.11.6.232826.dev0, 2024.11.9.232836.dev0, 2024.11.10.232816.dev0, 2024.11.11.232805.dev0, 2024.11.12.232900.dev0, 2024.11.15.232903.dev0, 2024.11.16.232922.dev0, 2024.11.17.232856.dev0, 2024.11.18, 2024.11.18.232921.dev0, 2024.11.23.232923.dev0, 2024.11.24.232931.dev0, 2024.11.26.232922.dev0, 2024.11.27.232921.dev0, 2024.12.1.232904.dev0, 2024.12.2.233010.dev0, 2024.12.3, 2024.12.3.232932.dev0, 2024.12.4.232942.dev0, 2024.12.6, 2024.12.6.161513.dev0, 2024.12.12.232950.dev0, 2024.12.13, 2024.12.13.232928.dev0, 2024.12.15.232913.dev0, 2024.12.23, 2024.12.23.232812.dev0, 2024.12.26.232815.dev0, 2025.1.11.232806.dev0, 2025.1.12, 2025.1.12.232754.dev0, 2025.1.15, 2025.1.15.232837.dev0, 2025.1.16.232854.dev0, 2025.1.19.232735.dev0, 2025.1.20.232744.dev0, 2025.1.21.232800.dev0, 2025.1.23.232810.dev0, 2025.1.26, 2025.1.26.34637.dev0, 2025.1.28.232803.dev0, 2025.1.29.232818.dev0, 2025.1.30.232843.dev0, 2025.2.8.232844.dev0, 2025.2.9.232824.dev0, 2025.2.10.232934.dev0, 2025.2.11.232920.dev0, 2025.2.19, 2025.2.19.23542.dev0, 2025.2.20.232914.dev0, 2025.2.21.232913.dev0, 2025.2.22.232738.dev0, 2025.2.23.232748.dev0, 2025.2.26.232946.dev0, 2025.2.28.232826.dev0, 2025.3.2.232817.dev0, 2025.3.3.232847.dev0, 2025.3.4.232844.dev0, 2025.3.5.232947.dev0, 2025.3.7.232704.dev0, 2025.3.13.232844.dev0, 2025.3.15.232805.dev0, 2025.3.16.232921.dev0, 2025.3.21, 2025.3.21.232842.dev0, 2025.3.22.232834.dev0, 2025.3.23.232844.dev0, 2025.3.25, 2025.3.25.703.dev0, 2025.3.26, 2025.3.26.420.dev0, 2025.3.27, 2025.3.27.233514.dev0, 2025.3.28.232920.dev0, 2025.3.30.232927.dev0, 2025.3.31, 2025.3.31.214356.dev0, 2025.4.5.232914.dev0, 2025.4.6.232826.dev0, 2025.4.18.232954.dev0, 2025.4.19.232942.dev0, 2025.4.23.1659.dev0, 2025.4.23.232926.dev0, 2025.4.24.232927.dev0, 2025.4.25.232910.dev0, 2025.4.26.232923.dev0, 2025.4.27.233024.dev0, 2025.4.28.232934.dev0, 2025.4.29.232920.dev0, 2025.4.30, 2025.4.30.232944.dev0, 2025.5.3.232917.dev0, 2025.5.5.232943.dev0, 2025.5.6.232932.dev0, 2025.5.10.232848.dev0, 2025.5.11.232911.dev0, 2025.5.16.232928.dev0, 2025.5.17.232915.dev0, 2025.5.18.232948.dev0, 2025.5.20.232932.dev0, 2025.5.21.232935.dev0, 2025.5.22, 2025.5.22.93922.dev0, 2025.5.22.232956.dev0, 2025.5.23.233016.dev0, 2025.5.26.232937.dev0, 2025.5.27.232941.dev0, 2025.5.28.232948.dev0, 2025.5.30.233011.dev0, 2025.6.1.232947.dev0, 2025.6.3.233020.dev0, 2025.6.5.233116.dev0, 2025.6.6.233002.dev0, 2025.6.7.233023.dev0, 2025.6.8.232939.dev0, 2025.6.9, 2025.6.9.234059.dev0, 2025.6.12.233004.dev0, 2025.6.25, 2025.6.25.235247.dev0, 2025.6.26.233029.dev0, 2025.6.27.233026.dev0, 2025.6.28.234349.dev0, 2025.6.29.233002.dev0, 2025.6.30, 2025.6.30.233919.dev0, 2025.7.1.235725.dev0, 2025.7.2.233055.dev0, 2025.7.5.233013.dev0, 2025.7.6.233008.dev0, 2025.7.7.233044.dev0, 2025.7.8.233037.dev0, 2025.7.9.233050.dev0, 2025.7.11.233035.dev0, 2025.7.12.233122.dev0, 2025.7.13.233101.dev0, 2025.7.14.233051.dev0, 2025.7.16.233138.dev0, 2025.7.18.233100.dev0, 2025.7.19.233203.dev0, 2025.7.21, 2025.7.21.234438.dev0, 2025.7.22.233113.dev0, 2025.7.23.233136.dev0, 2025.7.24.233125.dev0, 2025.7.25.233059.dev0, 2025.7.26.233101.dev0, 2025.7.27.233142.dev0, 2025.7.29.233301.dev0, 2025.7.30.233130.dev0, 2025.7.31.233123.dev0, 2025.8.1.233124.dev0, 2025.8.2.233207.dev0, 2025.8.3.233131.dev0, 2025.8.5.233158.dev0, 2025.8.6.233141.dev0, 2025.8.7.233150.dev0, 2025.8.8.233030.dev0, 2025.8.11, 2025.8.11.34503.dev0, 2025.8.12.233030.dev0, 2025.8.13.233032.dev0, 2025.8.16.232932.dev0, 2025.8.18.232943.dev0, 2025.8.19.232936.dev0, 2025.8.20, 2025.8.20.24358.dev0, 2025.8.20.232911.dev0, 2025.8.21.235612.dev0, 2025.8.22, 2025.8.22.31729.dev0, 2025.8.22.235700.dev0, 2025.8.23.234735.dev0)
+ERROR: No matching distribution found for yt-dlp==2024.5.21
+
+[notice] A new release of pip is available: 24.0 -> 25.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+Memperbaiki parser data untuk format CSV yang tidak standar...
+Memperbaiki run_pipeline.bat...
+
+===== INSTALASI SELESAI =====
+Semua dependensi telah terinstal dan file yang diperlukan telah diperbaiki.
+Untuk menjalankan pipeline, ketik: .\run_pipeline.bat
+Pastikan file datatrain.csv dan datatest.csv sudah ada di folder data/
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (25.2)
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install --only-binary=:all: numpy==1.26.4 pandas==2.2.2 tensorflow==2.16.1 opencv-python==4.12.0.88 librosa==0.10.1 yt-dlp==2024.5.22 scikit-learn==1.4.2 tqdm==4.66.2 confluent-kafka==2.4.0 matplotlib==3.8.4 seaborn==0.13.2 openpyxl==3.1.3
+Collecting numpy==1.26.4
+  Using cached numpy-1.26.4-cp312-cp312-win_amd64.whl.metadata (61 kB)
+Collecting pandas==2.2.2
+  Using cached pandas-2.2.2-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Collecting tensorflow==2.16.1
+  Using cached tensorflow-2.16.1-cp312-cp312-win_amd64.whl.metadata (3.5 kB)
+Collecting opencv-python==4.12.0.88
+  Using cached opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl.metadata (19 kB)
+Collecting librosa==0.10.1
+  Using cached librosa-0.10.1-py3-none-any.whl.metadata (8.3 kB)
+ERROR: Ignored the following yanked versions: 2021.1.15, 2021.1.15.post1, 2021.3.3, 2021.3.3.1, 2021.3.24, 2021.6.8
+ERROR: Could not find a version that satisfies the requirement yt-dlp==2024.5.22 (from versions: 2021.1.16, 2021.1.20, 2021.1.24, 2021.1.24.post1, 2021.1.29, 2021.2.4, 2021.2.9, 2021.2.15, 2021.2.19, 2021.2.24, 2021.3.1, 2021.3.3.2, 2021.3.7, 2021.3.15, 2021.3.21, 2021.3.24.1, 2021.4.3, 2021.4.11, 2021.4.22, 2021.5.11, 2021.5.20, 2021.6.1, 2021.6.9, 2021.6.23, 2021.7.7, 2021.7.21, 2021.7.24, 2021.8.2, 2021.8.10, 2021.9.1, 2021.9.2, 2021.9.25, 2021.10.9, 2021.10.10, 2021.10.22, 2021.11.10, 2021.11.10.1, 2021.12.1, 2021.12.25, 2021.12.27, 2022.1.21, 2022.2.3, 2022.2.4, 2022.3.8, 2022.3.8.1, 2022.3.8.2, 2022.4.8, 2022.5.18, 2022.6.22, 2022.6.22.1, 2022.6.29, 2022.7.17, 2022.7.18, 2022.8.8, 2022.8.14, 2022.8.19, 2022.9.1, 2022.10.4, 2022.11.11, 2023.1.2, 2023.1.6, 2023.2.17, 2023.3.3, 2023.3.4, 2023.6.21, 2023.6.22, 2023.7.6, 2023.9.24, 2023.10.7, 2023.10.13, 2023.11.13.5826.dev0, 2023.11.13.232715.dev0, 2023.11.14, 2023.11.15.232826.dev0, 2023.11.16, 2023.11.16.232727.dev0, 2023.11.18.232705.dev0, 2023.11.19.232719.dev0, 2023.11.20.232729.dev0, 2023.11.26.232703.dev0, 2023.11.28.232715.dev0, 2023.11.29.232714.dev0, 2023.12.5.232702.dev0, 2023.12.6.232721.dev0, 2023.12.12.232727.dev0, 2023.12.13.232710.dev0, 2023.12.17.232710.dev0, 2023.12.18.232711.dev0, 2023.12.19.232701.dev0, 2023.12.20.232717.dev0, 2023.12.21.232720.dev0, 2023.12.22.232735.dev0, 2023.12.24.232657.dev0, 2023.12.26.232752.dev0, 2023.12.30, 2023.12.30.232719.dev0, 2023.12.31.232713.dev0, 2024.1.2.232714.dev0, 2024.1.5.232702.dev0, 2024.1.8.232709.dev0, 2024.1.9.232723.dev0, 2024.1.14.232710.dev0, 2024.1.18.232658.dev0, 2024.1.19.232708.dev0, 2024.1.20.232722.dev0, 2024.1.21.232719.dev0, 2024.1.22.232713.dev0, 2024.1.23.232723.dev0, 2024.1.28.232706.dev0, 2024.1.29.232706.dev0, 2024.1.31.232703.dev0, 2024.2.2.232707.dev0, 2024.2.3.232712.dev0, 2024.2.4.232659.dev0, 2024.2.5.232712.dev0, 2024.2.9.232659.dev0, 2024.2.13.232701.dev0, 2024.2.14.232704.dev0, 2024.2.15.232705.dev0, 2024.2.16.232705.dev0, 2024.2.17.232706.dev0, 2024.2.18.232707.dev0, 2024.2.19.232703.dev0, 2024.2.20.232712.dev0, 2024.2.21.232721.dev0, 2024.2.22.232849.dev0, 2024.2.23.232656.dev0, 2024.2.24.232815.dev0, 2024.2.25.232703.dev0, 2024.2.28.232744.dev0, 2024.2.29.232658.dev0, 2024.3.2.232720.dev0, 2024.3.3.232706.dev0, 2024.3.4.232716.dev0, 2024.3.6.232659.dev0, 2024.3.7.232716.dev0, 2024.3.8.232718.dev0, 2024.3.9.232714.dev0, 2024.3.10, 2024.3.10.232703.dev0, 2024.3.14.232657.dev0, 2024.3.17.232657.dev0, 2024.3.18.232707.dev0, 2024.3.19.232701.dev0, 2024.3.20.232704.dev0, 2024.3.22.232703.dev0, 2024.3.29.232706.dev0, 2024.3.30.232704.dev0, 2024.3.31.232706.dev0, 2024.4.1.232704.dev0, 2024.4.3.233315.dev0, 2024.4.4.232729.dev0, 2024.4.6.232655.dev0, 2024.4.7.232657.dev0, 2024.4.8.232708.dev0, 2024.4.9, 2024.4.9.232723.dev0, 2024.4.13.232802.dev0, 2024.4.18.232703.dev0, 2024.4.20.232659.dev0, 2024.4.21.232710.dev0, 2024.4.28.232723.dev0, 2024.5.4.232706.dev0, 2024.5.5.232701.dev0, 2024.5.8.232715.dev0, 2024.5.10.232705.dev0, 2024.5.11.232654.dev0, 2024.5.12.232709.dev0, 2024.5.13.232704.dev0, 2024.5.16.232713.dev0, 2024.5.17.232726.dev0, 2024.5.18.232655.dev0, 2024.5.20.232721.dev0, 2024.5.22.232749.dev0, 2024.5.23.232707.dev0, 2024.5.25.232709.dev0, 2024.5.26, 2024.5.26.232731.dev0, 2024.5.27, 2024.5.27.232744.dev0, 2024.5.29.232700.dev0, 2024.5.30.232720.dev0, 2024.6.1.232725.dev0, 2024.6.11.232712.dev0, 2024.6.13.232720.dev0, 2024.6.15.232712.dev0, 2024.6.16.232832.dev0, 2024.6.17.232743.dev0, 2024.6.20.232815.dev0, 2024.6.21.232706.dev0, 2024.6.22.232706.dev0, 2024.6.24.232830.dev0, 2024.6.27.232805.dev0, 2024.6.29.232730.dev0, 2024.6.30.232744.dev0, 2024.7.1, 2024.7.1.232715.dev0, 2024.7.2, 2024.7.2.232715.dev0, 2024.7.3.232825.dev0, 2024.7.5.232716.dev0, 2024.7.6.232701.dev0, 2024.7.7, 2024.7.7.232743.dev0, 2024.7.8, 2024.7.8.232708.dev0, 2024.7.9, 2024.7.9.232843.dev0, 2024.7.10.232707.dev0, 2024.7.11.232833.dev0, 2024.7.12.232729.dev0, 2024.7.13.232701.dev0, 2024.7.14.232743.dev0, 2024.7.15.232803.dev0, 2024.7.16, 2024.7.16.232919.dev0, 2024.7.19.25855.dev0, 2024.7.23.232906.dev0, 2024.7.24.232745.dev0, 2024.7.25, 2024.7.25.232820.dev0, 2024.7.29.232758.dev0, 2024.7.30.232707.dev0, 2024.7.31.232733.dev0, 2024.8.1, 2024.8.1.232808.dev0, 2024.8.4.232814.dev0, 2024.8.5.232823.dev0, 2024.8.6, 2024.8.6.232802.dev0, 2024.8.12.232840.dev0, 2024.8.13.232739.dev0, 2024.8.15.233031.dev0, 2024.8.18.232809.dev0, 2024.8.19.232821.dev0, 2024.8.21.232751.dev0, 2024.8.26.232811.dev0, 2024.9.1.235933.dev0, 2024.9.2.232855.dev0, 2024.9.5.232840.dev0, 2024.9.7.232731.dev0, 2024.9.8.232909.dev0, 2024.9.13.232912.dev0, 2024.9.14.232748.dev0, 2024.9.17.232940.dev0, 2024.9.24.232842.dev0, 2024.9.25.232842.dev0, 2024.9.26.232938.dev0, 2024.9.27, 2024.9.27.232842.dev0, 2024.9.29.232819.dev0, 2024.9.30.232929.dev0, 2024.10.1.232843.dev0, 2024.10.7, 2024.10.7.232845.dev0, 2024.10.10.232848.dev0, 2024.10.11.232837.dev0, 2024.10.12.232856.dev0, 2024.10.13.232959.dev0, 2024.10.14.232841.dev0, 2024.10.15.232919.dev0, 2024.10.16.232911.dev0, 2024.10.19.232833.dev0, 2024.10.20.232914.dev0, 2024.10.22, 2024.10.22.51025.dev0, 2024.10.22.232922.dev0, 2024.10.23.232902.dev0, 2024.10.24.232910.dev0, 2024.10.25.232902.dev0, 2024.10.26.232826.dev0, 2024.10.27.232921.dev0, 2024.10.28.232846.dev0, 2024.10.29.232854.dev0, 2024.10.31.232951.dev0, 2024.11.2.232942.dev0, 2024.11.3.232912.dev0, 2024.11.4, 2024.11.4.232933.dev0, 2024.11.6.232826.dev0, 2024.11.9.232836.dev0, 2024.11.10.232816.dev0, 2024.11.11.232805.dev0, 2024.11.12.232900.dev0, 2024.11.15.232903.dev0, 2024.11.16.232922.dev0, 2024.11.17.232856.dev0, 2024.11.18, 2024.11.18.232921.dev0, 2024.11.23.232923.dev0, 2024.11.24.232931.dev0, 2024.11.26.232922.dev0, 2024.11.27.232921.dev0, 2024.12.1.232904.dev0, 2024.12.2.233010.dev0, 2024.12.3, 2024.12.3.232932.dev0, 2024.12.4.232942.dev0, 2024.12.6, 2024.12.6.161513.dev0, 2024.12.12.232950.dev0, 2024.12.13, 2024.12.13.232928.dev0, 2024.12.15.232913.dev0, 2024.12.23, 2024.12.23.232812.dev0, 2024.12.26.232815.dev0, 2025.1.11.232806.dev0, 2025.1.12, 2025.1.12.232754.dev0, 2025.1.15, 2025.1.15.232837.dev0, 2025.1.16.232854.dev0, 2025.1.19.232735.dev0, 2025.1.20.232744.dev0, 2025.1.21.232800.dev0, 2025.1.23.232810.dev0, 2025.1.26, 2025.1.26.34637.dev0, 2025.1.28.232803.dev0, 2025.1.29.232818.dev0, 2025.1.30.232843.dev0, 2025.2.8.232844.dev0, 2025.2.9.232824.dev0, 2025.2.10.232934.dev0, 2025.2.11.232920.dev0, 2025.2.19, 2025.2.19.23542.dev0, 2025.2.20.232914.dev0, 2025.2.21.232913.dev0, 2025.2.22.232738.dev0, 2025.2.23.232748.dev0, 2025.2.26.232946.dev0, 2025.2.28.232826.dev0, 2025.3.2.232817.dev0, 2025.3.3.232847.dev0, 2025.3.4.232844.dev0, 2025.3.5.232947.dev0, 2025.3.7.232704.dev0, 2025.3.13.232844.dev0, 2025.3.15.232805.dev0, 2025.3.16.232921.dev0, 2025.3.21, 2025.3.21.232842.dev0, 2025.3.22.232834.dev0, 2025.3.23.232844.dev0, 2025.3.25, 2025.3.25.703.dev0, 2025.3.26, 2025.3.26.420.dev0, 2025.3.27, 2025.3.27.233514.dev0, 2025.3.28.232920.dev0, 2025.3.30.232927.dev0, 2025.3.31, 2025.3.31.214356.dev0, 2025.4.5.232914.dev0, 2025.4.6.232826.dev0, 2025.4.18.232954.dev0, 2025.4.19.232942.dev0, 2025.4.23.1659.dev0, 2025.4.23.232926.dev0, 2025.4.24.232927.dev0, 2025.4.25.232910.dev0, 2025.4.26.232923.dev0, 2025.4.27.233024.dev0, 2025.4.28.232934.dev0, 2025.4.29.232920.dev0, 2025.4.30, 2025.4.30.232944.dev0, 2025.5.3.232917.dev0, 2025.5.5.232943.dev0, 2025.5.6.232932.dev0, 2025.5.10.232848.dev0, 2025.5.11.232911.dev0, 2025.5.16.232928.dev0, 2025.5.17.232915.dev0, 2025.5.18.232948.dev0, 2025.5.20.232932.dev0, 2025.5.21.232935.dev0, 2025.5.22, 2025.5.22.93922.dev0, 2025.5.22.232956.dev0, 2025.5.23.233016.dev0, 2025.5.26.232937.dev0, 2025.5.27.232941.dev0, 2025.5.28.232948.dev0, 2025.5.30.233011.dev0, 2025.6.1.232947.dev0, 2025.6.3.233020.dev0, 2025.6.5.233116.dev0, 2025.6.6.233002.dev0, 2025.6.7.233023.dev0, 2025.6.8.232939.dev0, 2025.6.9, 2025.6.9.234059.dev0, 2025.6.12.233004.dev0, 2025.6.25, 2025.6.25.235247.dev0, 2025.6.26.233029.dev0, 2025.6.27.233026.dev0, 2025.6.28.234349.dev0, 2025.6.29.233002.dev0, 2025.6.30, 2025.6.30.233919.dev0, 2025.7.1.235725.dev0, 2025.7.2.233055.dev0, 2025.7.5.233013.dev0, 2025.7.6.233008.dev0, 2025.7.7.233044.dev0, 2025.7.8.233037.dev0, 2025.7.9.233050.dev0, 2025.7.11.233035.dev0, 2025.7.12.233122.dev0, 2025.7.13.233101.dev0, 2025.7.14.233051.dev0, 2025.7.16.233138.dev0, 2025.7.18.233100.dev0, 2025.7.19.233203.dev0, 2025.7.21, 2025.7.21.234438.dev0, 2025.7.22.233113.dev0, 2025.7.23.233136.dev0, 2025.7.24.233125.dev0, 2025.7.25.233059.dev0, 2025.7.26.233101.dev0, 2025.7.27.233142.dev0, 2025.7.29.233301.dev0, 2025.7.30.233130.dev0, 2025.7.31.233123.dev0, 2025.8.1.233124.dev0, 2025.8.2.233207.dev0, 2025.8.3.233131.dev0, 2025.8.5.233158.dev0, 2025.8.6.233141.dev0, 2025.8.7.233150.dev0, 2025.8.8.233030.dev0, 2025.8.11, 2025.8.11.34503.dev0, 2025.8.12.233030.dev0, 2025.8.13.233032.dev0, 2025.8.16.232932.dev0, 2025.8.18.232943.dev0, 2025.8.19.232936.dev0, 2025.8.20, 2025.8.20.24358.dev0, 2025.8.20.232911.dev0, 2025.8.21.235612.dev0, 2025.8.22, 2025.8.22.31729.dev0, 2025.8.22.235700.dev0, 2025.8.23.234735.dev0)
+ERROR: No matching distribution found for yt-dlp==2024.5.22
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> Remove-Item requirements.txt
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> $requirements = @"
+>> numpy==1.26.4
+>> pandas==2.2.2
+>> tensorflow==2.16.1
+>> opencv-python==4.12.0.88
+>> librosa==0.10.1
+>> yt-dlp
+>> scikit-learn==1.4.2
+>> tqdm==4.66.2
+>> confluent-kafka==2.4.0
+>> matplotlib==3.8.4
+>> seaborn==0.13.2
+>> openpyxl==3.1.3
+>> "@
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> $requirements | Out-File -FilePath "requirements.txt" -Encoding utf8
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install -r requirements.txt
+Collecting numpy==1.26.4 (from -r requirements.txt (line 1))
+  Using cached numpy-1.26.4-cp312-cp312-win_amd64.whl.metadata (61 kB)
+Collecting pandas==2.2.2 (from -r requirements.txt (line 2))
+  Using cached pandas-2.2.2-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Collecting tensorflow==2.16.1 (from -r requirements.txt (line 3))
+  Using cached tensorflow-2.16.1-cp312-cp312-win_amd64.whl.metadata (3.5 kB)
+Collecting opencv-python==4.12.0.88 (from -r requirements.txt (line 4))
+  Using cached opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl.metadata (19 kB)
+Collecting librosa==0.10.1 (from -r requirements.txt (line 5))
+  Using cached librosa-0.10.1-py3-none-any.whl.metadata (8.3 kB)
+Collecting yt-dlp (from -r requirements.txt (line 6))
+  Downloading yt_dlp-2025.8.22-py3-none-any.whl.metadata (175 kB)
+Collecting scikit-learn==1.4.2 (from -r requirements.txt (line 7))
+  Downloading scikit_learn-1.4.2-cp312-cp312-win_amd64.whl.metadata (11 kB)
+Collecting tqdm==4.66.2 (from -r requirements.txt (line 8))
+  Downloading tqdm-4.66.2-py3-none-any.whl.metadata (57 kB)
+Collecting confluent-kafka==2.4.0 (from -r requirements.txt (line 9))
+  Downloading confluent_kafka-2.4.0-cp312-cp312-win_amd64.whl.metadata (2.4 kB)
+Collecting matplotlib==3.8.4 (from -r requirements.txt (line 10))
+  Downloading matplotlib-3.8.4-cp312-cp312-win_amd64.whl.metadata (5.9 kB)
+Collecting seaborn==0.13.2 (from -r requirements.txt (line 11))
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting openpyxl==3.1.3 (from -r requirements.txt (line 12))
+  Downloading openpyxl-3.1.3-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting python-dateutil>=2.8.2 (from pandas==2.2.2->-r requirements.txt (line 2))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas==2.2.2->-r requirements.txt (line 2))
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas==2.2.2->-r requirements.txt (line 2))
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting tensorflow-intel==2.16.1 (from tensorflow==2.16.1->-r requirements.txt (line 3))
+  Downloading tensorflow_intel-2.16.1-cp312-cp312-win_amd64.whl.metadata (5.0 kB)
+INFO: pip is looking at multiple versions of opencv-python to determine which version is compatible with other requirements. This could take a while.
+ERROR: Cannot install -r requirements.txt (line 2), -r requirements.txt (line 4) and numpy==1.26.4 because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    The user requested numpy==1.26.4
+    pandas 2.2.2 depends on numpy>=1.26.0; python_version >= "3.12"
+    opencv-python 4.12.0.88 depends on numpy<2.3.0 and >=2; python_version >= "3.9"
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip to attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+PS C:\laragon\www\Project.Self\satria-data-bdc> Set-ExecutionPolicy Bypass -Scope Process -Force; .\install_bdc_fixed.ps1
+.\install_bdc_fixed.ps1 : The term '.\install_bdc_fixed.ps1' is not recognized as the name of a cmdlet, function,
+script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is
+correct and try again.
+At line:1 char:51
++ ... ExecutionPolicy Bypass -Scope Process -Force; .\install_bdc_fixed.ps1
++                                                   ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\install_bdc_fixed.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\laragon\www\Project.Self\satria-data-bdc> Set-ExecutionPolicy Bypass -Scope Process -Force; .\install_bdc.ps1
+===== MEMULAI INSTALASI LENGKAP BDC Satria Data 2025 =====
+
+[1/5] Memeriksa/menginstal Chocolatey...
+Chocolatey sudah terinstal.
+
+[2/5] Menginstal Python 3.11...
+Chocolatey v2.5.0
+Uninstalling the following packages:
+python
+python is not installed. Cannot uninstall a non-existent package.
+
+Chocolatey uninstalled 0/1 packages. 1 packages failed.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+Failures
+ - python - python is not installed. Cannot uninstall a non-existent package.
+
+If a package uninstall is failing and/or you've already uninstalled the
+ software outside of Chocolatey, you can attempt to run the command
+ with `-n` to skip running a chocolateyUninstall script, additionally
+ adding `--skip-autouninstaller` to skip an attempt to automatically
+ remove system-installed software. Only the packaging files are removed
+ and not things like software installed to Programs and Features.
+
+If a package is failing because it is a dependency of another package
+ or packages, then you may first need to consider if it needs to be
+ removed as packages have dependencies for a reason. If
+ you decide that you still want to remove it, head into
+ `$env:ChocolateyInstall\lib` and find the package folder you want to
+ be removed. Then delete the folder for the package. You should use
+ this option only as a last resort.
+
+
+Did you know the proceeds of Pro (and some proceeds from other
+ licensed editions) go into bettering the community infrastructure?
+ Your support ensures an active community, keeps Chocolatey tip-top,
+ plus it nets you some awesome features!
+ https://chocolatey.org/compare
+Chocolatey v2.5.0
+Installing the following packages:
+python
+By installing, you accept licenses for the packages.
+python not installed. The package was not found with the source(s) listed.
+ Source(s): 'https://community.chocolatey.org/api/v2/'
+ NOTE: When you specify explicit sources, it overrides default sources.
+If the package version is a prerelease and you didn't specify `--pre`,
+ the package may not be found.
+Version was specified as '3.11.10'. It is possible that version
+ does not exist for 'python' at the source specified.
+Please see https://docs.chocolatey.org/en-us/troubleshooting for more
+ assistance.
+
+Chocolatey installed 0/1 packages. 1 packages failed.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+Failures
+ - python - python not installed. The package was not found with the source(s) listed.
+ Source(s): 'https://community.chocolatey.org/api/v2/'
+ NOTE: When you specify explicit sources, it overrides default sources.
+If the package version is a prerelease and you didn't specify `--pre`,
+ the package may not be found.
+Version was specified as '3.11.10'. It is possible that version
+ does not exist for 'python' at the source specified.
+Please see https://docs.chocolatey.org/en-us/troubleshooting for more
+ assistance.
+RefreshEnv.cmd does not work when run from this process. If you're in PowerShell, please 'Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1' and try again.
+Memverifikasi instalasi Python 3.11...
+ERROR: Python 3.11 tidak terdeteksi dengan benar.
+Coba instal manual dari: https://www.python.org/downloads/release/python-31110/
+PS C:\laragon\www\Project.Self\satria-data-bdc> python --version
+Python 3.12.3
+PS C:\laragon\www\Project.Self\satria-data-bdc> python -m venv bdc_env
+PS C:\laragon\www\Project.Self\satria-data-bdc> bdc_env\Scripts\activate
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> python -m pip install --upgrade pip setuptools wheel
+Requirement already satisfied: pip in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (24.0)
+Collecting pip
+  Using cached pip-25.2-py3-none-any.whl.metadata (4.7 kB)
+Collecting setuptools
+  Using cached setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting wheel
+  Using cached wheel-0.45.1-py3-none-any.whl.metadata (2.3 kB)
+Using cached pip-25.2-py3-none-any.whl (1.8 MB)
+Using cached setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+Using cached wheel-0.45.1-py3-none-any.whl (72 kB)
+Installing collected packages: wheel, setuptools, pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.0
+    Uninstalling pip-24.0:
+      Successfully uninstalled pip-24.0
+Successfully installed pip-25.2 setuptools-80.9.0 wheel-0.45.1
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install -r requirements.txt
+Collecting numpy==1.26.4 (from -r requirements.txt (line 1))
+  Using cached numpy-1.26.4-cp312-cp312-win_amd64.whl.metadata (61 kB)
+Collecting pandas==2.2.2 (from -r requirements.txt (line 2))
+  Using cached pandas-2.2.2-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Collecting tensorflow==2.16.1 (from -r requirements.txt (line 3))
+  Using cached tensorflow-2.16.1-cp312-cp312-win_amd64.whl.metadata (3.5 kB)
+Collecting opencv-python==4.12.0.88 (from -r requirements.txt (line 4))
+  Using cached opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl.metadata (19 kB)
+Collecting librosa==0.10.1 (from -r requirements.txt (line 5))
+  Using cached librosa-0.10.1-py3-none-any.whl.metadata (8.3 kB)
+ERROR: Ignored the following yanked versions: 2021.1.15, 2021.1.15.post1, 2021.3.3, 2021.3.3.1, 2021.3.24, 2021.6.8
+ERROR: Ignored the following versions that require a different python version: 1.21.2 Requires-Python >=3.7,<3.11; 1.21.3 Requires-Python >=3.7,<3.11; 1.21.4 Requires-Python >=3.7,<3.11; 1.21.5 Requires-Python >=3.7,<3.11; 1.21.6 Requires-Python >=3.7,<3.11
+ERROR: Could not find a version that satisfies the requirement yt-dlp==2024.5.20 (from versions: 2021.1.16, 2021.1.20, 2021.1.24, 2021.1.24.post1, 2021.1.29, 2021.2.4, 2021.2.9, 2021.2.15, 2021.2.19, 2021.2.24, 2021.3.1, 2021.3.3.2, 2021.3.7, 2021.3.15, 2021.3.21, 2021.3.24.1, 2021.4.3, 2021.4.11, 2021.4.22, 2021.5.11, 2021.5.20, 2021.6.1, 2021.6.9, 2021.6.23, 2021.7.7, 2021.7.21, 2021.7.24, 2021.8.2, 2021.8.10, 2021.9.1, 2021.9.2, 2021.9.25, 2021.10.9, 2021.10.10, 2021.10.22, 2021.11.10, 2021.11.10.1, 2021.12.1, 2021.12.25, 2021.12.27, 2022.1.21, 2022.2.3, 2022.2.4, 2022.3.8, 2022.3.8.1, 2022.3.8.2, 2022.4.8, 2022.5.18, 2022.6.22, 2022.6.22.1, 2022.6.29, 2022.7.17, 2022.7.18, 2022.8.8, 2022.8.14, 2022.8.19, 2022.9.1, 2022.10.4, 2022.11.11, 2023.1.2, 2023.1.6, 2023.2.17, 2023.3.3, 2023.3.4, 2023.6.21, 2023.6.22, 2023.7.6, 2023.9.24, 2023.10.7, 2023.10.13, 2023.11.13.5826.dev0, 2023.11.13.232715.dev0, 2023.11.14, 2023.11.15.232826.dev0, 2023.11.16, 2023.11.16.232727.dev0, 2023.11.18.232705.dev0, 2023.11.19.232719.dev0, 2023.11.20.232729.dev0, 2023.11.26.232703.dev0, 2023.11.28.232715.dev0, 2023.11.29.232714.dev0, 2023.12.5.232702.dev0, 2023.12.6.232721.dev0, 2023.12.12.232727.dev0, 2023.12.13.232710.dev0, 2023.12.17.232710.dev0, 2023.12.18.232711.dev0, 2023.12.19.232701.dev0, 2023.12.20.232717.dev0, 2023.12.21.232720.dev0, 2023.12.22.232735.dev0, 2023.12.24.232657.dev0, 2023.12.26.232752.dev0, 2023.12.30, 2023.12.30.232719.dev0, 2023.12.31.232713.dev0, 2024.1.2.232714.dev0, 2024.1.5.232702.dev0, 2024.1.8.232709.dev0, 2024.1.9.232723.dev0, 2024.1.14.232710.dev0, 2024.1.18.232658.dev0, 2024.1.19.232708.dev0, 2024.1.20.232722.dev0, 2024.1.21.232719.dev0, 2024.1.22.232713.dev0, 2024.1.23.232723.dev0, 2024.1.28.232706.dev0, 2024.1.29.232706.dev0, 2024.1.31.232703.dev0, 2024.2.2.232707.dev0, 2024.2.3.232712.dev0, 2024.2.4.232659.dev0, 2024.2.5.232712.dev0, 2024.2.9.232659.dev0, 2024.2.13.232701.dev0, 2024.2.14.232704.dev0, 2024.2.15.232705.dev0, 2024.2.16.232705.dev0, 2024.2.17.232706.dev0, 2024.2.18.232707.dev0, 2024.2.19.232703.dev0, 2024.2.20.232712.dev0, 2024.2.21.232721.dev0, 2024.2.22.232849.dev0, 2024.2.23.232656.dev0, 2024.2.24.232815.dev0, 2024.2.25.232703.dev0, 2024.2.28.232744.dev0, 2024.2.29.232658.dev0, 2024.3.2.232720.dev0, 2024.3.3.232706.dev0, 2024.3.4.232716.dev0, 2024.3.6.232659.dev0, 2024.3.7.232716.dev0, 2024.3.8.232718.dev0, 2024.3.9.232714.dev0, 2024.3.10, 2024.3.10.232703.dev0, 2024.3.14.232657.dev0, 2024.3.17.232657.dev0, 2024.3.18.232707.dev0, 2024.3.19.232701.dev0, 2024.3.20.232704.dev0, 2024.3.22.232703.dev0, 2024.3.29.232706.dev0, 2024.3.30.232704.dev0, 2024.3.31.232706.dev0, 2024.4.1.232704.dev0, 2024.4.3.233315.dev0, 2024.4.4.232729.dev0, 2024.4.6.232655.dev0, 2024.4.7.232657.dev0, 2024.4.8.232708.dev0, 2024.4.9, 2024.4.9.232723.dev0, 2024.4.13.232802.dev0, 2024.4.18.232703.dev0, 2024.4.20.232659.dev0, 2024.4.21.232710.dev0, 2024.4.28.232723.dev0, 2024.5.4.232706.dev0, 2024.5.5.232701.dev0, 2024.5.8.232715.dev0, 2024.5.10.232705.dev0, 2024.5.11.232654.dev0, 2024.5.12.232709.dev0, 2024.5.13.232704.dev0, 2024.5.16.232713.dev0, 2024.5.17.232726.dev0, 2024.5.18.232655.dev0, 2024.5.20.232721.dev0, 2024.5.22.232749.dev0, 2024.5.23.232707.dev0, 2024.5.25.232709.dev0, 2024.5.26, 2024.5.26.232731.dev0, 2024.5.27, 2024.5.27.232744.dev0, 2024.5.29.232700.dev0, 2024.5.30.232720.dev0, 2024.6.1.232725.dev0, 2024.6.11.232712.dev0, 2024.6.13.232720.dev0, 2024.6.15.232712.dev0, 2024.6.16.232832.dev0, 2024.6.17.232743.dev0, 2024.6.20.232815.dev0, 2024.6.21.232706.dev0, 2024.6.22.232706.dev0, 2024.6.24.232830.dev0, 2024.6.27.232805.dev0, 2024.6.29.232730.dev0, 2024.6.30.232744.dev0, 2024.7.1, 2024.7.1.232715.dev0, 2024.7.2, 2024.7.2.232715.dev0, 2024.7.3.232825.dev0, 2024.7.5.232716.dev0, 2024.7.6.232701.dev0, 2024.7.7, 2024.7.7.232743.dev0, 2024.7.8, 2024.7.8.232708.dev0, 2024.7.9, 2024.7.9.232843.dev0, 2024.7.10.232707.dev0, 2024.7.11.232833.dev0, 2024.7.12.232729.dev0, 2024.7.13.232701.dev0, 2024.7.14.232743.dev0, 2024.7.15.232803.dev0, 2024.7.16, 2024.7.16.232919.dev0, 2024.7.19.25855.dev0, 2024.7.23.232906.dev0, 2024.7.24.232745.dev0, 2024.7.25, 2024.7.25.232820.dev0, 2024.7.29.232758.dev0, 2024.7.30.232707.dev0, 2024.7.31.232733.dev0, 2024.8.1, 2024.8.1.232808.dev0, 2024.8.4.232814.dev0, 2024.8.5.232823.dev0, 2024.8.6, 2024.8.6.232802.dev0, 2024.8.12.232840.dev0, 2024.8.13.232739.dev0, 2024.8.15.233031.dev0, 2024.8.18.232809.dev0, 2024.8.19.232821.dev0, 2024.8.21.232751.dev0, 2024.8.26.232811.dev0, 2024.9.1.235933.dev0, 2024.9.2.232855.dev0, 2024.9.5.232840.dev0, 2024.9.7.232731.dev0, 2024.9.8.232909.dev0, 2024.9.13.232912.dev0, 2024.9.14.232748.dev0, 2024.9.17.232940.dev0, 2024.9.24.232842.dev0, 2024.9.25.232842.dev0, 2024.9.26.232938.dev0, 2024.9.27, 2024.9.27.232842.dev0, 2024.9.29.232819.dev0, 2024.9.30.232929.dev0, 2024.10.1.232843.dev0, 2024.10.7, 2024.10.7.232845.dev0, 2024.10.10.232848.dev0, 2024.10.11.232837.dev0, 2024.10.12.232856.dev0, 2024.10.13.232959.dev0, 2024.10.14.232841.dev0, 2024.10.15.232919.dev0, 2024.10.16.232911.dev0, 2024.10.19.232833.dev0, 2024.10.20.232914.dev0, 2024.10.22, 2024.10.22.51025.dev0, 2024.10.22.232922.dev0, 2024.10.23.232902.dev0, 2024.10.24.232910.dev0, 2024.10.25.232902.dev0, 2024.10.26.232826.dev0, 2024.10.27.232921.dev0, 2024.10.28.232846.dev0, 2024.10.29.232854.dev0, 2024.10.31.232951.dev0, 2024.11.2.232942.dev0, 2024.11.3.232912.dev0, 2024.11.4, 2024.11.4.232933.dev0, 2024.11.6.232826.dev0, 2024.11.9.232836.dev0, 2024.11.10.232816.dev0, 2024.11.11.232805.dev0, 2024.11.12.232900.dev0, 2024.11.15.232903.dev0, 2024.11.16.232922.dev0, 2024.11.17.232856.dev0, 2024.11.18, 2024.11.18.232921.dev0, 2024.11.23.232923.dev0, 2024.11.24.232931.dev0, 2024.11.26.232922.dev0, 2024.11.27.232921.dev0, 2024.12.1.232904.dev0, 2024.12.2.233010.dev0, 2024.12.3, 2024.12.3.232932.dev0, 2024.12.4.232942.dev0, 2024.12.6, 2024.12.6.161513.dev0, 2024.12.12.232950.dev0, 2024.12.13, 2024.12.13.232928.dev0, 2024.12.15.232913.dev0, 2024.12.23, 2024.12.23.232812.dev0, 2024.12.26.232815.dev0, 2025.1.11.232806.dev0, 2025.1.12, 2025.1.12.232754.dev0, 2025.1.15, 2025.1.15.232837.dev0, 2025.1.16.232854.dev0, 2025.1.19.232735.dev0, 2025.1.20.232744.dev0, 2025.1.21.232800.dev0, 2025.1.23.232810.dev0, 2025.1.26, 2025.1.26.34637.dev0, 2025.1.28.232803.dev0, 2025.1.29.232818.dev0, 2025.1.30.232843.dev0, 2025.2.8.232844.dev0, 2025.2.9.232824.dev0, 2025.2.10.232934.dev0, 2025.2.11.232920.dev0, 2025.2.19, 2025.2.19.23542.dev0, 2025.2.20.232914.dev0, 2025.2.21.232913.dev0, 2025.2.22.232738.dev0, 2025.2.23.232748.dev0, 2025.2.26.232946.dev0, 2025.2.28.232826.dev0, 2025.3.2.232817.dev0, 2025.3.3.232847.dev0, 2025.3.4.232844.dev0, 2025.3.5.232947.dev0, 2025.3.7.232704.dev0, 2025.3.13.232844.dev0, 2025.3.15.232805.dev0, 2025.3.16.232921.dev0, 2025.3.21, 2025.3.21.232842.dev0, 2025.3.22.232834.dev0, 2025.3.23.232844.dev0, 2025.3.25, 2025.3.25.703.dev0, 2025.3.26, 2025.3.26.420.dev0, 2025.3.27, 2025.3.27.233514.dev0, 2025.3.28.232920.dev0, 2025.3.30.232927.dev0, 2025.3.31, 2025.3.31.214356.dev0, 2025.4.5.232914.dev0, 2025.4.6.232826.dev0, 2025.4.18.232954.dev0, 2025.4.19.232942.dev0, 2025.4.23.1659.dev0, 2025.4.23.232926.dev0, 2025.4.24.232927.dev0, 2025.4.25.232910.dev0, 2025.4.26.232923.dev0, 2025.4.27.233024.dev0, 2025.4.28.232934.dev0, 2025.4.29.232920.dev0, 2025.4.30, 2025.4.30.232944.dev0, 2025.5.3.232917.dev0, 2025.5.5.232943.dev0, 2025.5.6.232932.dev0, 2025.5.10.232848.dev0, 2025.5.11.232911.dev0, 2025.5.16.232928.dev0, 2025.5.17.232915.dev0, 2025.5.18.232948.dev0, 2025.5.20.232932.dev0, 2025.5.21.232935.dev0, 2025.5.22, 2025.5.22.93922.dev0, 2025.5.22.232956.dev0, 2025.5.23.233016.dev0, 2025.5.26.232937.dev0, 2025.5.27.232941.dev0, 2025.5.28.232948.dev0, 2025.5.30.233011.dev0, 2025.6.1.232947.dev0, 2025.6.3.233020.dev0, 2025.6.5.233116.dev0, 2025.6.6.233002.dev0, 2025.6.7.233023.dev0, 2025.6.8.232939.dev0, 2025.6.9, 2025.6.9.234059.dev0, 2025.6.12.233004.dev0, 2025.6.25, 2025.6.25.235247.dev0, 2025.6.26.233029.dev0, 2025.6.27.233026.dev0, 2025.6.28.234349.dev0, 2025.6.29.233002.dev0, 2025.6.30, 2025.6.30.233919.dev0, 2025.7.1.235725.dev0, 2025.7.2.233055.dev0, 2025.7.5.233013.dev0, 2025.7.6.233008.dev0, 2025.7.7.233044.dev0, 2025.7.8.233037.dev0, 2025.7.9.233050.dev0, 2025.7.11.233035.dev0, 2025.7.12.233122.dev0, 2025.7.13.233101.dev0, 2025.7.14.233051.dev0, 2025.7.16.233138.dev0, 2025.7.18.233100.dev0, 2025.7.19.233203.dev0, 2025.7.21, 2025.7.21.234438.dev0, 2025.7.22.233113.dev0, 2025.7.23.233136.dev0, 2025.7.24.233125.dev0, 2025.7.25.233059.dev0, 2025.7.26.233101.dev0, 2025.7.27.233142.dev0, 2025.7.29.233301.dev0, 2025.7.30.233130.dev0, 2025.7.31.233123.dev0, 2025.8.1.233124.dev0, 2025.8.2.233207.dev0, 2025.8.3.233131.dev0, 2025.8.5.233158.dev0, 2025.8.6.233141.dev0, 2025.8.7.233150.dev0, 2025.8.8.233030.dev0, 2025.8.11, 2025.8.11.34503.dev0, 2025.8.12.233030.dev0, 2025.8.13.233032.dev0, 2025.8.16.232932.dev0, 2025.8.18.232943.dev0, 2025.8.19.232936.dev0, 2025.8.20, 2025.8.20.24358.dev0, 2025.8.20.232911.dev0, 2025.8.21.235612.dev0, 2025.8.22, 2025.8.22.31729.dev0, 2025.8.22.235700.dev0, 2025.8.23.234735.dev0)
+ERROR: No matching distribution found for yt-dlp==2024.5.20
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install -r requirements.txt --use-deprecated=legacy-resolver
+Collecting numpy==2.0.0 (from -r requirements.txt (line 1))
+  Downloading numpy-2.0.0-cp312-cp312-win_amd64.whl (16.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.2/16.2 MB 3.5 MB/s  0:00:05
+Collecting pandas==2.2.2 (from -r requirements.txt (line 2))
+  Downloading pandas-2.2.2-cp312-cp312-win_amd64.whl (11.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.5/11.5 MB 4.0 MB/s  0:00:03
+Collecting tensorflow==2.16.1 (from -r requirements.txt (line 3))
+  Downloading tensorflow-2.16.1-cp312-cp312-win_amd64.whl (2.1 kB)
+Collecting opencv-python==4.12.0.88 (from -r requirements.txt (line 4))
+  Downloading opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl (39.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.0/39.0 MB 6.0 MB/s  0:00:06
+Collecting librosa==0.10.1 (from -r requirements.txt (line 5))
+  Downloading librosa-0.10.1-py3-none-any.whl (253 kB)
+ERROR: Could not find a version that satisfies the requirement yt-dlp==2024.8.22 (from -r requirements.txt (line 6)) (from versions: 2021.1.15, 2021.1.15.post1, 2021.1.16, 2021.1.20, 2021.1.24, 2021.1.24.post1, 2021.1.29, 2021.2.4, 2021.2.9, 2021.2.15, 2021.2.19, 2021.2.24, 2021.3.1, 2021.3.3, 2021.3.3.1, 2021.3.3.2, 2021.3.7, 2021.3.15, 2021.3.21, 2021.3.24, 2021.3.24.1, 2021.4.3, 2021.4.11, 2021.4.22, 2021.5.11, 2021.5.20, 2021.6.1, 2021.6.8, 2021.6.9, 2021.6.23, 2021.7.7, 2021.7.21, 2021.7.24, 2021.8.2, 2021.8.10, 2021.9.1, 2021.9.2, 2021.9.25, 2021.10.9, 2021.10.10, 2021.10.22, 2021.11.10, 2021.11.10.1, 2021.12.1, 2021.12.25, 2021.12.27, 2022.1.21, 2022.2.3, 2022.2.4, 2022.3.8, 2022.3.8.1, 2022.3.8.2, 2022.4.8, 2022.5.18, 2022.6.22, 2022.6.22.1, 2022.6.29, 2022.7.17, 2022.7.18, 2022.8.8, 2022.8.14, 2022.8.19, 2022.9.1, 2022.10.4, 2022.11.11, 2023.1.2, 2023.1.6, 2023.2.17, 2023.3.3, 2023.3.4, 2023.6.21, 2023.6.22, 2023.7.6, 2023.9.24, 2023.10.7, 2023.10.13, 2023.11.13.5826.dev0, 2023.11.13.232715.dev0, 2023.11.14, 2023.11.15.232826.dev0, 2023.11.16, 2023.11.16.232727.dev0, 2023.11.18.232705.dev0, 2023.11.19.232719.dev0, 2023.11.20.232729.dev0, 2023.11.26.232703.dev0, 2023.11.28.232715.dev0, 2023.11.29.232714.dev0, 2023.12.5.232702.dev0, 2023.12.6.232721.dev0, 2023.12.12.232727.dev0, 2023.12.13.232710.dev0, 2023.12.17.232710.dev0, 2023.12.18.232711.dev0, 2023.12.19.232701.dev0, 2023.12.20.232717.dev0, 2023.12.21.232720.dev0, 2023.12.22.232735.dev0, 2023.12.24.232657.dev0, 2023.12.26.232752.dev0, 2023.12.30, 2023.12.30.232719.dev0, 2023.12.31.232713.dev0, 2024.1.2.232714.dev0, 2024.1.5.232702.dev0, 2024.1.8.232709.dev0, 2024.1.9.232723.dev0, 2024.1.14.232710.dev0, 2024.1.18.232658.dev0, 2024.1.19.232708.dev0, 2024.1.20.232722.dev0, 2024.1.21.232719.dev0, 2024.1.22.232713.dev0, 2024.1.23.232723.dev0, 2024.1.28.232706.dev0, 2024.1.29.232706.dev0, 2024.1.31.232703.dev0, 2024.2.2.232707.dev0, 2024.2.3.232712.dev0, 2024.2.4.232659.dev0, 2024.2.5.232712.dev0, 2024.2.9.232659.dev0, 2024.2.13.232701.dev0, 2024.2.14.232704.dev0, 2024.2.15.232705.dev0, 2024.2.16.232705.dev0, 2024.2.17.232706.dev0, 2024.2.18.232707.dev0, 2024.2.19.232703.dev0, 2024.2.20.232712.dev0, 2024.2.21.232721.dev0, 2024.2.22.232849.dev0, 2024.2.23.232656.dev0, 2024.2.24.232815.dev0, 2024.2.25.232703.dev0, 2024.2.28.232744.dev0, 2024.2.29.232658.dev0, 2024.3.2.232720.dev0, 2024.3.3.232706.dev0, 2024.3.4.232716.dev0, 2024.3.6.232659.dev0, 2024.3.7.232716.dev0, 2024.3.8.232718.dev0, 2024.3.9.232714.dev0, 2024.3.10, 2024.3.10.232703.dev0, 2024.3.14.232657.dev0, 2024.3.17.232657.dev0, 2024.3.18.232707.dev0, 2024.3.19.232701.dev0, 2024.3.20.232704.dev0, 2024.3.22.232703.dev0, 2024.3.29.232706.dev0, 2024.3.30.232704.dev0, 2024.3.31.232706.dev0, 2024.4.1.232704.dev0, 2024.4.3.233315.dev0, 2024.4.4.232729.dev0, 2024.4.6.232655.dev0, 2024.4.7.232657.dev0, 2024.4.8.232708.dev0, 2024.4.9, 2024.4.9.232723.dev0, 2024.4.13.232802.dev0, 2024.4.18.232703.dev0, 2024.4.20.232659.dev0, 2024.4.21.232710.dev0, 2024.4.28.232723.dev0, 2024.5.4.232706.dev0, 2024.5.5.232701.dev0, 2024.5.8.232715.dev0, 2024.5.10.232705.dev0, 2024.5.11.232654.dev0, 2024.5.12.232709.dev0, 2024.5.13.232704.dev0, 2024.5.16.232713.dev0, 2024.5.17.232726.dev0, 2024.5.18.232655.dev0, 2024.5.20.232721.dev0, 2024.5.22.232749.dev0, 2024.5.23.232707.dev0, 2024.5.25.232709.dev0, 2024.5.26, 2024.5.26.232731.dev0, 2024.5.27, 2024.5.27.232744.dev0, 2024.5.29.232700.dev0, 2024.5.30.232720.dev0, 2024.6.1.232725.dev0, 2024.6.11.232712.dev0, 2024.6.13.232720.dev0, 2024.6.15.232712.dev0, 2024.6.16.232832.dev0, 2024.6.17.232743.dev0, 2024.6.20.232815.dev0, 2024.6.21.232706.dev0, 2024.6.22.232706.dev0, 2024.6.24.232830.dev0, 2024.6.27.232805.dev0, 2024.6.29.232730.dev0, 2024.6.30.232744.dev0, 2024.7.1, 2024.7.1.232715.dev0, 2024.7.2, 2024.7.2.232715.dev0, 2024.7.3.232825.dev0, 2024.7.5.232716.dev0, 2024.7.6.232701.dev0, 2024.7.7, 2024.7.7.232743.dev0, 2024.7.8, 2024.7.8.232708.dev0, 2024.7.9, 2024.7.9.232843.dev0, 2024.7.10.232707.dev0, 2024.7.11.232833.dev0, 2024.7.12.232729.dev0, 2024.7.13.232701.dev0, 2024.7.14.232743.dev0, 2024.7.15.232803.dev0, 2024.7.16, 2024.7.16.232919.dev0, 2024.7.19.25855.dev0, 2024.7.23.232906.dev0, 2024.7.24.232745.dev0, 2024.7.25, 2024.7.25.232820.dev0, 2024.7.29.232758.dev0, 2024.7.30.232707.dev0, 2024.7.31.232733.dev0, 2024.8.1, 2024.8.1.232808.dev0, 2024.8.4.232814.dev0, 2024.8.5.232823.dev0, 2024.8.6, 2024.8.6.232802.dev0, 2024.8.12.232840.dev0, 2024.8.13.232739.dev0, 2024.8.15.233031.dev0, 2024.8.18.232809.dev0, 2024.8.19.232821.dev0, 2024.8.21.232751.dev0, 2024.8.26.232811.dev0, 2024.9.1.235933.dev0, 2024.9.2.232855.dev0, 2024.9.5.232840.dev0, 2024.9.7.232731.dev0, 2024.9.8.232909.dev0, 2024.9.13.232912.dev0, 2024.9.14.232748.dev0, 2024.9.17.232940.dev0, 2024.9.24.232842.dev0, 2024.9.25.232842.dev0, 2024.9.26.232938.dev0, 2024.9.27, 2024.9.27.232842.dev0, 2024.9.29.232819.dev0, 2024.9.30.232929.dev0, 2024.10.1.232843.dev0, 2024.10.7, 2024.10.7.232845.dev0, 2024.10.10.232848.dev0, 2024.10.11.232837.dev0, 2024.10.12.232856.dev0, 2024.10.13.232959.dev0, 2024.10.14.232841.dev0, 2024.10.15.232919.dev0, 2024.10.16.232911.dev0, 2024.10.19.232833.dev0, 2024.10.20.232914.dev0, 2024.10.22, 2024.10.22.51025.dev0, 2024.10.22.232922.dev0, 2024.10.23.232902.dev0, 2024.10.24.232910.dev0, 2024.10.25.232902.dev0, 2024.10.26.232826.dev0, 2024.10.27.232921.dev0, 2024.10.28.232846.dev0, 2024.10.29.232854.dev0, 2024.10.31.232951.dev0, 2024.11.2.232942.dev0, 2024.11.3.232912.dev0, 2024.11.4, 2024.11.4.232933.dev0, 2024.11.6.232826.dev0, 2024.11.9.232836.dev0, 2024.11.10.232816.dev0, 2024.11.11.232805.dev0, 2024.11.12.232900.dev0, 2024.11.15.232903.dev0, 2024.11.16.232922.dev0, 2024.11.17.232856.dev0, 2024.11.18, 2024.11.18.232921.dev0, 2024.11.23.232923.dev0, 2024.11.24.232931.dev0, 2024.11.26.232922.dev0, 2024.11.27.232921.dev0, 2024.12.1.232904.dev0, 2024.12.2.233010.dev0, 2024.12.3, 2024.12.3.232932.dev0, 2024.12.4.232942.dev0, 2024.12.6, 2024.12.6.161513.dev0, 2024.12.12.232950.dev0, 2024.12.13, 2024.12.13.232928.dev0, 2024.12.15.232913.dev0, 2024.12.23, 2024.12.23.232812.dev0, 2024.12.26.232815.dev0, 2025.1.11.232806.dev0, 2025.1.12, 2025.1.12.232754.dev0, 2025.1.15, 2025.1.15.232837.dev0, 2025.1.16.232854.dev0, 2025.1.19.232735.dev0, 2025.1.20.232744.dev0, 2025.1.21.232800.dev0, 2025.1.23.232810.dev0, 2025.1.26, 2025.1.26.34637.dev0, 2025.1.28.232803.dev0, 2025.1.29.232818.dev0, 2025.1.30.232843.dev0, 2025.2.8.232844.dev0, 2025.2.9.232824.dev0, 2025.2.10.232934.dev0, 2025.2.11.232920.dev0, 2025.2.19, 2025.2.19.23542.dev0, 2025.2.20.232914.dev0, 2025.2.21.232913.dev0, 2025.2.22.232738.dev0, 2025.2.23.232748.dev0, 2025.2.26.232946.dev0, 2025.2.28.232826.dev0, 2025.3.2.232817.dev0, 2025.3.3.232847.dev0, 2025.3.4.232844.dev0, 2025.3.5.232947.dev0, 2025.3.7.232704.dev0, 2025.3.13.232844.dev0, 2025.3.15.232805.dev0, 2025.3.16.232921.dev0, 2025.3.21, 2025.3.21.232842.dev0, 2025.3.22.232834.dev0, 2025.3.23.232844.dev0, 2025.3.25, 2025.3.25.703.dev0, 2025.3.26, 2025.3.26.420.dev0, 2025.3.27, 2025.3.27.233514.dev0, 2025.3.28.232920.dev0, 2025.3.30.232927.dev0, 2025.3.31, 2025.3.31.214356.dev0, 2025.4.5.232914.dev0, 2025.4.6.232826.dev0, 2025.4.18.232954.dev0, 2025.4.19.232942.dev0, 2025.4.23.1659.dev0, 2025.4.23.232926.dev0, 2025.4.24.232927.dev0, 2025.4.25.232910.dev0, 2025.4.26.232923.dev0, 2025.4.27.233024.dev0, 2025.4.28.232934.dev0, 2025.4.29.232920.dev0, 2025.4.30, 2025.4.30.232944.dev0, 2025.5.3.232917.dev0, 2025.5.5.232943.dev0, 2025.5.6.232932.dev0, 2025.5.10.232848.dev0, 2025.5.11.232911.dev0, 2025.5.16.232928.dev0, 2025.5.17.232915.dev0, 2025.5.18.232948.dev0, 2025.5.20.232932.dev0, 2025.5.21.232935.dev0, 2025.5.22, 2025.5.22.93922.dev0, 2025.5.22.232956.dev0, 2025.5.23.233016.dev0, 2025.5.26.232937.dev0, 2025.5.27.232941.dev0, 2025.5.28.232948.dev0, 2025.5.30.233011.dev0, 2025.6.1.232947.dev0, 2025.6.3.233020.dev0, 2025.6.5.233116.dev0, 2025.6.6.233002.dev0, 2025.6.7.233023.dev0, 2025.6.8.232939.dev0, 2025.6.9, 2025.6.9.234059.dev0, 2025.6.12.233004.dev0, 2025.6.25, 2025.6.25.235247.dev0, 2025.6.26.233029.dev0, 2025.6.27.233026.dev0, 2025.6.28.234349.dev0, 2025.6.29.233002.dev0, 2025.6.30, 2025.6.30.233919.dev0, 2025.7.1.235725.dev0, 2025.7.2.233055.dev0, 2025.7.5.233013.dev0, 2025.7.6.233008.dev0, 2025.7.7.233044.dev0, 2025.7.8.233037.dev0, 2025.7.9.233050.dev0, 2025.7.11.233035.dev0, 2025.7.12.233122.dev0, 2025.7.13.233101.dev0, 2025.7.14.233051.dev0, 2025.7.16.233138.dev0, 2025.7.18.233100.dev0, 2025.7.19.233203.dev0, 2025.7.21, 2025.7.21.234438.dev0, 2025.7.22.233113.dev0, 2025.7.23.233136.dev0, 2025.7.24.233125.dev0, 2025.7.25.233059.dev0, 2025.7.26.233101.dev0, 2025.7.27.233142.dev0, 2025.7.29.233301.dev0, 2025.7.30.233130.dev0, 2025.7.31.233123.dev0, 2025.8.1.233124.dev0, 2025.8.2.233207.dev0, 2025.8.3.233131.dev0, 2025.8.5.233158.dev0, 2025.8.6.233141.dev0, 2025.8.7.233150.dev0, 2025.8.8.233030.dev0, 2025.8.11, 2025.8.11.34503.dev0, 2025.8.12.233030.dev0, 2025.8.13.233032.dev0, 2025.8.16.232932.dev0, 2025.8.18.232943.dev0, 2025.8.19.232936.dev0, 2025.8.20, 2025.8.20.24358.dev0, 2025.8.20.232911.dev0, 2025.8.21.235612.dev0, 2025.8.22, 2025.8.22.31729.dev0, 2025.8.22.235700.dev0, 2025.8.23.234735.dev0)
+ERROR: No matching distribution found for yt-dlp==2024.8.22 (from -r requirements.txt (line 6))
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> Remove-Item requirements.txt -Force
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> $requirements = @"
+>> numpy==2.0.0
+>> pandas==2.2.2
+>> tensorflow==2.16.1
+>> opencv-python==4.12.0.88
+>> librosa==0.10.1
+>> yt-dlp==2024.8.22
+>> scikit-learn==1.4.2
+>> tqdm==4.66.2
+>> confluent-kafka==2.4.0
+>> matplotlib==3.8.4
+>> seaborn==0.13.2
+>> openpyxl==3.1.3
+>> "@
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> $requirements | Out-File -FilePath "requirements.txt" -Encoding utf8
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install -r requirements.txt
+Collecting numpy==2.0.0 (from -r requirements.txt (line 1))
+  Downloading numpy-2.0.0-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Collecting pandas==2.2.2 (from -r requirements.txt (line 2))
+  Using cached pandas-2.2.2-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Collecting tensorflow==2.16.1 (from -r requirements.txt (line 3))
+  Using cached tensorflow-2.16.1-cp312-cp312-win_amd64.whl.metadata (3.5 kB)
+Collecting opencv-python==4.12.0.88 (from -r requirements.txt (line 4))
+  Using cached opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl.metadata (19 kB)
+Collecting librosa==0.10.1 (from -r requirements.txt (line 5))
+  Using cached librosa-0.10.1-py3-none-any.whl.metadata (8.3 kB)
+ERROR: Ignored the following yanked versions: 2021.1.15, 2021.1.15.post1, 2021.3.3, 2021.3.3.1, 2021.3.24, 2021.6.8
+ERROR: Ignored the following versions that require a different python version: 1.21.2 Requires-Python >=3.7,<3.11; 1.21.3 Requires-Python >=3.7,<3.11; 1.21.4 Requires-Python >=3.7,<3.11; 1.21.5 Requires-Python >=3.7,<3.11; 1.21.6 Requires-Python >=3.7,<3.11
+ERROR: Could not find a version that satisfies the requirement yt-dlp==2024.8.22 (from versions: 2021.1.16, 2021.1.20, 2021.1.24, 2021.1.24.post1, 2021.1.29, 2021.2.4, 2021.2.9, 2021.2.15, 2021.2.19, 2021.2.24, 2021.3.1, 2021.3.3.2, 2021.3.7, 2021.3.15, 2021.3.21, 2021.3.24.1, 2021.4.3, 2021.4.11, 2021.4.22, 2021.5.11, 2021.5.20, 2021.6.1, 2021.6.9, 2021.6.23, 2021.7.7, 2021.7.21, 2021.7.24, 2021.8.2, 2021.8.10, 2021.9.1, 2021.9.2, 2021.9.25, 2021.10.9, 2021.10.10, 2021.10.22, 2021.11.10, 2021.11.10.1, 2021.12.1, 2021.12.25, 2021.12.27, 2022.1.21, 2022.2.3, 2022.2.4, 2022.3.8, 2022.3.8.1, 2022.3.8.2, 2022.4.8, 2022.5.18, 2022.6.22, 2022.6.22.1, 2022.6.29, 2022.7.17, 2022.7.18, 2022.8.8, 2022.8.14, 2022.8.19, 2022.9.1, 2022.10.4, 2022.11.11, 2023.1.2, 2023.1.6, 2023.2.17, 2023.3.3, 2023.3.4, 2023.6.21, 2023.6.22, 2023.7.6, 2023.9.24, 2023.10.7, 2023.10.13, 2023.11.13.5826.dev0, 2023.11.13.232715.dev0, 2023.11.14, 2023.11.15.232826.dev0, 2023.11.16, 2023.11.16.232727.dev0, 2023.11.18.232705.dev0, 2023.11.19.232719.dev0, 2023.11.20.232729.dev0, 2023.11.26.232703.dev0, 2023.11.28.232715.dev0, 2023.11.29.232714.dev0, 2023.12.5.232702.dev0, 2023.12.6.232721.dev0, 2023.12.12.232727.dev0, 2023.12.13.232710.dev0, 2023.12.17.232710.dev0, 2023.12.18.232711.dev0, 2023.12.19.232701.dev0, 2023.12.20.232717.dev0, 2023.12.21.232720.dev0, 2023.12.22.232735.dev0, 2023.12.24.232657.dev0, 2023.12.26.232752.dev0, 2023.12.30, 2023.12.30.232719.dev0, 2023.12.31.232713.dev0, 2024.1.2.232714.dev0, 2024.1.5.232702.dev0, 2024.1.8.232709.dev0, 2024.1.9.232723.dev0, 2024.1.14.232710.dev0, 2024.1.18.232658.dev0, 2024.1.19.232708.dev0, 2024.1.20.232722.dev0, 2024.1.21.232719.dev0, 2024.1.22.232713.dev0, 2024.1.23.232723.dev0, 2024.1.28.232706.dev0, 2024.1.29.232706.dev0, 2024.1.31.232703.dev0, 2024.2.2.232707.dev0, 2024.2.3.232712.dev0, 2024.2.4.232659.dev0, 2024.2.5.232712.dev0, 2024.2.9.232659.dev0, 2024.2.13.232701.dev0, 2024.2.14.232704.dev0, 2024.2.15.232705.dev0, 2024.2.16.232705.dev0, 2024.2.17.232706.dev0, 2024.2.18.232707.dev0, 2024.2.19.232703.dev0, 2024.2.20.232712.dev0, 2024.2.21.232721.dev0, 2024.2.22.232849.dev0, 2024.2.23.232656.dev0, 2024.2.24.232815.dev0, 2024.2.25.232703.dev0, 2024.2.28.232744.dev0, 2024.2.29.232658.dev0, 2024.3.2.232720.dev0, 2024.3.3.232706.dev0, 2024.3.4.232716.dev0, 2024.3.6.232659.dev0, 2024.3.7.232716.dev0, 2024.3.8.232718.dev0, 2024.3.9.232714.dev0, 2024.3.10, 2024.3.10.232703.dev0, 2024.3.14.232657.dev0, 2024.3.17.232657.dev0, 2024.3.18.232707.dev0, 2024.3.19.232701.dev0, 2024.3.20.232704.dev0, 2024.3.22.232703.dev0, 2024.3.29.232706.dev0, 2024.3.30.232704.dev0, 2024.3.31.232706.dev0, 2024.4.1.232704.dev0, 2024.4.3.233315.dev0, 2024.4.4.232729.dev0, 2024.4.6.232655.dev0, 2024.4.7.232657.dev0, 2024.4.8.232708.dev0, 2024.4.9, 2024.4.9.232723.dev0, 2024.4.13.232802.dev0, 2024.4.18.232703.dev0, 2024.4.20.232659.dev0, 2024.4.21.232710.dev0, 2024.4.28.232723.dev0, 2024.5.4.232706.dev0, 2024.5.5.232701.dev0, 2024.5.8.232715.dev0, 2024.5.10.232705.dev0, 2024.5.11.232654.dev0, 2024.5.12.232709.dev0, 2024.5.13.232704.dev0, 2024.5.16.232713.dev0, 2024.5.17.232726.dev0, 2024.5.18.232655.dev0, 2024.5.20.232721.dev0, 2024.5.22.232749.dev0, 2024.5.23.232707.dev0, 2024.5.25.232709.dev0, 2024.5.26, 2024.5.26.232731.dev0, 2024.5.27, 2024.5.27.232744.dev0, 2024.5.29.232700.dev0, 2024.5.30.232720.dev0, 2024.6.1.232725.dev0, 2024.6.11.232712.dev0, 2024.6.13.232720.dev0, 2024.6.15.232712.dev0, 2024.6.16.232832.dev0, 2024.6.17.232743.dev0, 2024.6.20.232815.dev0, 2024.6.21.232706.dev0, 2024.6.22.232706.dev0, 2024.6.24.232830.dev0, 2024.6.27.232805.dev0, 2024.6.29.232730.dev0, 2024.6.30.232744.dev0, 2024.7.1, 2024.7.1.232715.dev0, 2024.7.2, 2024.7.2.232715.dev0, 2024.7.3.232825.dev0, 2024.7.5.232716.dev0, 2024.7.6.232701.dev0, 2024.7.7, 2024.7.7.232743.dev0, 2024.7.8, 2024.7.8.232708.dev0, 2024.7.9, 2024.7.9.232843.dev0, 2024.7.10.232707.dev0, 2024.7.11.232833.dev0, 2024.7.12.232729.dev0, 2024.7.13.232701.dev0, 2024.7.14.232743.dev0, 2024.7.15.232803.dev0, 2024.7.16, 2024.7.16.232919.dev0, 2024.7.19.25855.dev0, 2024.7.23.232906.dev0, 2024.7.24.232745.dev0, 2024.7.25, 2024.7.25.232820.dev0, 2024.7.29.232758.dev0, 2024.7.30.232707.dev0, 2024.7.31.232733.dev0, 2024.8.1, 2024.8.1.232808.dev0, 2024.8.4.232814.dev0, 2024.8.5.232823.dev0, 2024.8.6, 2024.8.6.232802.dev0, 2024.8.12.232840.dev0, 2024.8.13.232739.dev0, 2024.8.15.233031.dev0, 2024.8.18.232809.dev0, 2024.8.19.232821.dev0, 2024.8.21.232751.dev0, 2024.8.26.232811.dev0, 2024.9.1.235933.dev0, 2024.9.2.232855.dev0, 2024.9.5.232840.dev0, 2024.9.7.232731.dev0, 2024.9.8.232909.dev0, 2024.9.13.232912.dev0, 2024.9.14.232748.dev0, 2024.9.17.232940.dev0, 2024.9.24.232842.dev0, 2024.9.25.232842.dev0, 2024.9.26.232938.dev0, 2024.9.27, 2024.9.27.232842.dev0, 2024.9.29.232819.dev0, 2024.9.30.232929.dev0, 2024.10.1.232843.dev0, 2024.10.7, 2024.10.7.232845.dev0, 2024.10.10.232848.dev0, 2024.10.11.232837.dev0, 2024.10.12.232856.dev0, 2024.10.13.232959.dev0, 2024.10.14.232841.dev0, 2024.10.15.232919.dev0, 2024.10.16.232911.dev0, 2024.10.19.232833.dev0, 2024.10.20.232914.dev0, 2024.10.22, 2024.10.22.51025.dev0, 2024.10.22.232922.dev0, 2024.10.23.232902.dev0, 2024.10.24.232910.dev0, 2024.10.25.232902.dev0, 2024.10.26.232826.dev0, 2024.10.27.232921.dev0, 2024.10.28.232846.dev0, 2024.10.29.232854.dev0, 2024.10.31.232951.dev0, 2024.11.2.232942.dev0, 2024.11.3.232912.dev0, 2024.11.4, 2024.11.4.232933.dev0, 2024.11.6.232826.dev0, 2024.11.9.232836.dev0, 2024.11.10.232816.dev0, 2024.11.11.232805.dev0, 2024.11.12.232900.dev0, 2024.11.15.232903.dev0, 2024.11.16.232922.dev0, 2024.11.17.232856.dev0, 2024.11.18, 2024.11.18.232921.dev0, 2024.11.23.232923.dev0, 2024.11.24.232931.dev0, 2024.11.26.232922.dev0, 2024.11.27.232921.dev0, 2024.12.1.232904.dev0, 2024.12.2.233010.dev0, 2024.12.3, 2024.12.3.232932.dev0, 2024.12.4.232942.dev0, 2024.12.6, 2024.12.6.161513.dev0, 2024.12.12.232950.dev0, 2024.12.13, 2024.12.13.232928.dev0, 2024.12.15.232913.dev0, 2024.12.23, 2024.12.23.232812.dev0, 2024.12.26.232815.dev0, 2025.1.11.232806.dev0, 2025.1.12, 2025.1.12.232754.dev0, 2025.1.15, 2025.1.15.232837.dev0, 2025.1.16.232854.dev0, 2025.1.19.232735.dev0, 2025.1.20.232744.dev0, 2025.1.21.232800.dev0, 2025.1.23.232810.dev0, 2025.1.26, 2025.1.26.34637.dev0, 2025.1.28.232803.dev0, 2025.1.29.232818.dev0, 2025.1.30.232843.dev0, 2025.2.8.232844.dev0, 2025.2.9.232824.dev0, 2025.2.10.232934.dev0, 2025.2.11.232920.dev0, 2025.2.19, 2025.2.19.23542.dev0, 2025.2.20.232914.dev0, 2025.2.21.232913.dev0, 2025.2.22.232738.dev0, 2025.2.23.232748.dev0, 2025.2.26.232946.dev0, 2025.2.28.232826.dev0, 2025.3.2.232817.dev0, 2025.3.3.232847.dev0, 2025.3.4.232844.dev0, 2025.3.5.232947.dev0, 2025.3.7.232704.dev0, 2025.3.13.232844.dev0, 2025.3.15.232805.dev0, 2025.3.16.232921.dev0, 2025.3.21, 2025.3.21.232842.dev0, 2025.3.22.232834.dev0, 2025.3.23.232844.dev0, 2025.3.25, 2025.3.25.703.dev0, 2025.3.26, 2025.3.26.420.dev0, 2025.3.27, 2025.3.27.233514.dev0, 2025.3.28.232920.dev0, 2025.3.30.232927.dev0, 2025.3.31, 2025.3.31.214356.dev0, 2025.4.5.232914.dev0, 2025.4.6.232826.dev0, 2025.4.18.232954.dev0, 2025.4.19.232942.dev0, 2025.4.23.1659.dev0, 2025.4.23.232926.dev0, 2025.4.24.232927.dev0, 2025.4.25.232910.dev0, 2025.4.26.232923.dev0, 2025.4.27.233024.dev0, 2025.4.28.232934.dev0, 2025.4.29.232920.dev0, 2025.4.30, 2025.4.30.232944.dev0, 2025.5.3.232917.dev0, 2025.5.5.232943.dev0, 2025.5.6.232932.dev0, 2025.5.10.232848.dev0, 2025.5.11.232911.dev0, 2025.5.16.232928.dev0, 2025.5.17.232915.dev0, 2025.5.18.232948.dev0, 2025.5.20.232932.dev0, 2025.5.21.232935.dev0, 2025.5.22, 2025.5.22.93922.dev0, 2025.5.22.232956.dev0, 2025.5.23.233016.dev0, 2025.5.26.232937.dev0, 2025.5.27.232941.dev0, 2025.5.28.232948.dev0, 2025.5.30.233011.dev0, 2025.6.1.232947.dev0, 2025.6.3.233020.dev0, 2025.6.5.233116.dev0, 2025.6.6.233002.dev0, 2025.6.7.233023.dev0, 2025.6.8.232939.dev0, 2025.6.9, 2025.6.9.234059.dev0, 2025.6.12.233004.dev0, 2025.6.25, 2025.6.25.235247.dev0, 2025.6.26.233029.dev0, 2025.6.27.233026.dev0, 2025.6.28.234349.dev0, 2025.6.29.233002.dev0, 2025.6.30, 2025.6.30.233919.dev0, 2025.7.1.235725.dev0, 2025.7.2.233055.dev0, 2025.7.5.233013.dev0, 2025.7.6.233008.dev0, 2025.7.7.233044.dev0, 2025.7.8.233037.dev0, 2025.7.9.233050.dev0, 2025.7.11.233035.dev0, 2025.7.12.233122.dev0, 2025.7.13.233101.dev0, 2025.7.14.233051.dev0, 2025.7.16.233138.dev0, 2025.7.18.233100.dev0, 2025.7.19.233203.dev0, 2025.7.21, 2025.7.21.234438.dev0, 2025.7.22.233113.dev0, 2025.7.23.233136.dev0, 2025.7.24.233125.dev0, 2025.7.25.233059.dev0, 2025.7.26.233101.dev0, 2025.7.27.233142.dev0, 2025.7.29.233301.dev0, 2025.7.30.233130.dev0, 2025.7.31.233123.dev0, 2025.8.1.233124.dev0, 2025.8.2.233207.dev0, 2025.8.3.233131.dev0, 2025.8.5.233158.dev0, 2025.8.6.233141.dev0, 2025.8.7.233150.dev0, 2025.8.8.233030.dev0, 2025.8.11, 2025.8.11.34503.dev0, 2025.8.12.233030.dev0, 2025.8.13.233032.dev0, 2025.8.16.232932.dev0, 2025.8.18.232943.dev0, 2025.8.19.232936.dev0, 2025.8.20, 2025.8.20.24358.dev0, 2025.8.20.232911.dev0, 2025.8.21.235612.dev0, 2025.8.22, 2025.8.22.31729.dev0, 2025.8.22.235700.dev0, 2025.8.23.234735.dev0)
+ERROR: No matching distribution found for yt-dlp==2024.8.22
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install numpy==2.0.0
+Collecting numpy==2.0.0
+  Using cached numpy-2.0.0-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Using cached numpy-2.0.0-cp312-cp312-win_amd64.whl (16.2 MB)
+Installing collected packages: numpy
+Successfully installed numpy-2.0.0
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install pandas==2.2.2
+Collecting pandas==2.2.2
+  Using cached pandas-2.2.2-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Requirement already satisfied: numpy>=1.26.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from pandas==2.2.2) (2.0.0)
+Collecting python-dateutil>=2.8.2 (from pandas==2.2.2)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas==2.2.2)
+  Using cached pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas==2.2.2)
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas==2.2.2)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Using cached pandas-2.2.2-cp312-cp312-win_amd64.whl (11.5 MB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Installing collected packages: pytz, tzdata, six, python-dateutil, pandas
+Successfully installed pandas-2.2.2 python-dateutil-2.9.0.post0 pytz-2025.2 six-1.17.0 tzdata-2025.2
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install opencv-python==4.12.0.88
+Collecting opencv-python==4.12.0.88
+  Using cached opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl.metadata (19 kB)
+Requirement already satisfied: numpy<2.3.0,>=2 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from opencv-python==4.12.0.88) (2.0.0)
+Using cached opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl (39.0 MB)
+Installing collected packages: opencv-python
+Successfully installed opencv-python-4.12.0.88
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install tensorflow==2.16.1
+Collecting tensorflow==2.16.1
+  Using cached tensorflow-2.16.1-cp312-cp312-win_amd64.whl.metadata (3.5 kB)
+Collecting tensorflow-intel==2.16.1 (from tensorflow==2.16.1)
+  Using cached tensorflow_intel-2.16.1-cp312-cp312-win_amd64.whl.metadata (5.0 kB)
+Collecting absl-py>=1.0.0 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting astunparse>=1.6.0 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting flatbuffers>=23.5.26 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading flatbuffers-25.2.10-py2.py3-none-any.whl.metadata (875 bytes)
+Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading gast-0.6.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting google-pasta>=0.1.1 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+Collecting h5py>=3.10.0 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading h5py-3.14.0-cp312-cp312-win_amd64.whl.metadata (2.7 kB)
+Collecting libclang>=13.0.0 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading libclang-18.1.1-py2.py3-none-win_amd64.whl.metadata (5.3 kB)
+Collecting ml-dtypes~=0.3.1 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading ml_dtypes-0.3.2-cp312-cp312-win_amd64.whl.metadata (20 kB)
+Collecting opt-einsum>=2.3.2 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting packaging (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<5.0.0dev,>=3.20.3 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading protobuf-4.25.8-cp310-abi3-win_amd64.whl.metadata (541 bytes)
+Collecting requests<3,>=2.21.0 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Requirement already satisfied: setuptools in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (80.9.0)
+Requirement already satisfied: six>=1.12.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (1.17.0)
+Collecting termcolor>=1.1.0 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading termcolor-3.1.0-py3-none-any.whl.metadata (6.4 kB)
+Collecting typing-extensions>=3.6.6 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting wrapt>=1.11.0 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading wrapt-1.17.3-cp312-cp312-win_amd64.whl.metadata (6.5 kB)
+Collecting grpcio<2.0,>=1.24.3 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading grpcio-1.74.0-cp312-cp312-win_amd64.whl.metadata (4.0 kB)
+Collecting tensorboard<2.17,>=2.16 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading tensorboard-2.16.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting keras>=3.0.0 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading keras-3.11.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting numpy<2.0.0,>=1.26.0 (from tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Using cached numpy-1.26.4-cp312-cp312-win_amd64.whl.metadata (61 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3,>=2.21.0->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading charset_normalizer-3.4.3-cp312-cp312-win_amd64.whl.metadata (37 kB)
+Collecting idna<4,>=2.5 (from requests<3,>=2.21.0->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting urllib3<3,>=1.21.1 (from requests<3,>=2.21.0->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests<3,>=2.21.0->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+Collecting markdown>=2.6.8 (from tensorboard<2.17,>=2.16->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading markdown-3.8.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard<2.17,>=2.16->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading tensorboard_data_server-0.7.2-py3-none-any.whl.metadata (1.1 kB)
+Collecting werkzeug>=1.0.1 (from tensorboard<2.17,>=2.16->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from astunparse>=1.6.0->tensorflow-intel==2.16.1->tensorflow==2.16.1) (0.45.1)
+Collecting rich (from keras>=3.0.0->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Using cached rich-14.1.0-py3-none-any.whl.metadata (18 kB)
+Collecting namex (from keras>=3.0.0->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+Collecting optree (from keras>=3.0.0->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading optree-0.17.0-cp312-cp312-win_amd64.whl.metadata (34 kB)
+Collecting MarkupSafe>=2.1.1 (from werkzeug>=1.0.1->tensorboard<2.17,>=2.16->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Downloading MarkupSafe-3.0.2-cp312-cp312-win_amd64.whl.metadata (4.1 kB)
+Collecting markdown-it-py>=2.2.0 (from rich->keras>=3.0.0->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Using cached markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich->keras>=3.0.0->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Using cached pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras>=3.0.0->tensorflow-intel==2.16.1->tensorflow==2.16.1)
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Using cached tensorflow-2.16.1-cp312-cp312-win_amd64.whl (2.1 kB)
+Downloading tensorflow_intel-2.16.1-cp312-cp312-win_amd64.whl (377.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 377.1/377.1 MB ?  0:01:38
+Downloading grpcio-1.74.0-cp312-cp312-win_amd64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 7.3 MB/s  0:00:00
+Downloading ml_dtypes-0.3.2-cp312-cp312-win_amd64.whl (128 kB)
+Downloading numpy-1.26.4-cp312-cp312-win_amd64.whl (15.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.5/15.5 MB 6.0 MB/s  0:00:02
+Downloading protobuf-4.25.8-cp310-abi3-win_amd64.whl (413 kB)
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.3-cp312-cp312-win_amd64.whl (107 kB)
+Downloading idna-3.10-py3-none-any.whl (70 kB)
+Downloading tensorboard-2.16.2-py3-none-any.whl (5.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 6.0 MB/s  0:00:00
+Downloading tensorboard_data_server-0.7.2-py3-none-any.whl (2.4 kB)
+Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+Downloading absl_py-2.3.1-py3-none-any.whl (135 kB)
+Downloading astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+Downloading flatbuffers-25.2.10-py2.py3-none-any.whl (30 kB)
+Downloading gast-0.6.0-py3-none-any.whl (21 kB)
+Downloading google_pasta-0.2.0-py3-none-any.whl (57 kB)
+Downloading h5py-3.14.0-cp312-cp312-win_amd64.whl (2.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 5.9 MB/s  0:00:00
+Downloading keras-3.11.3-py3-none-any.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 5.3 MB/s  0:00:00
+Downloading libclang-18.1.1-py2.py3-none-win_amd64.whl (26.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 26.4/26.4 MB 6.0 MB/s  0:00:04
+Downloading markdown-3.8.2-py3-none-any.whl (106 kB)
+Downloading opt_einsum-3.4.0-py3-none-any.whl (71 kB)
+Downloading termcolor-3.1.0-py3-none-any.whl (7.7 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+Downloading MarkupSafe-3.0.2-cp312-cp312-win_amd64.whl (15 kB)
+Downloading wrapt-1.17.3-cp312-cp312-win_amd64.whl (38 kB)
+Downloading namex-0.1.0-py3-none-any.whl (5.9 kB)
+Downloading optree-0.17.0-cp312-cp312-win_amd64.whl (314 kB)
+Using cached packaging-25.0-py3-none-any.whl (66 kB)
+Using cached rich-14.1.0-py3-none-any.whl (243 kB)
+Using cached pygments-2.19.2-py3-none-any.whl (1.2 MB)
+Using cached markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: namex, libclang, flatbuffers, wrapt, urllib3, typing-extensions, termcolor, tensorboard-data-server, pygments, protobuf, packaging, opt-einsum, numpy, mdurl, MarkupSafe, markdown, idna, grpcio, google-pasta, gast, charset_normalizer, certifi, astunparse, absl-py, werkzeug, requests, optree, ml-dtypes, markdown-it-py, h5py, tensorboard, rich, keras, tensorflow-intel, tensorflow
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.0.0
+    Uninstalling numpy-2.0.0:
+      Successfully uninstalled numpy-2.0.0
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+opencv-python 4.12.0.88 requires numpy<2.3.0,>=2; python_version >= "3.9", but you have numpy 1.26.4 which is incompatible.
+Successfully installed MarkupSafe-3.0.2 absl-py-2.3.1 astunparse-1.6.3 certifi-2025.8.3 charset_normalizer-3.4.3 flatbuffers-25.2.10 gast-0.6.0 google-pasta-0.2.0 grpcio-1.74.0 h5py-3.14.0 idna-3.10 keras-3.11.3 libclang-18.1.1 markdown-3.8.2 markdown-it-py-4.0.0 mdurl-0.1.2 ml-dtypes-0.3.2 namex-0.1.0 numpy-1.26.4 opt-einsum-3.4.0 optree-0.17.0 packaging-25.0 protobuf-4.25.8 pygments-2.19.2 requests-2.32.5 rich-14.1.0 tensorboard-2.16.2 tensorboard-data-server-0.7.2 tensorflow-2.16.1 tensorflow-intel-2.16.1 termcolor-3.1.0 typing-extensions-4.15.0 urllib3-2.5.0 werkzeug-3.1.3 wrapt-1.17.3
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install yt-dlp==2024.8.22
+ERROR: Ignored the following yanked versions: 2021.1.15, 2021.1.15.post1, 2021.3.3, 2021.3.3.1, 2021.3.24, 2021.6.8
+ERROR: Could not find a version that satisfies the requirement yt-dlp==2024.8.22 (from versions: 2021.1.16, 2021.1.20, 2021.1.24, 2021.1.24.post1, 2021.1.29, 2021.2.4, 2021.2.9, 2021.2.15, 2021.2.19, 2021.2.24, 2021.3.1, 2021.3.3.2, 2021.3.7, 2021.3.15, 2021.3.21, 2021.3.24.1, 2021.4.3, 2021.4.11, 2021.4.22, 2021.5.11, 2021.5.20, 2021.6.1, 2021.6.9, 2021.6.23, 2021.7.7, 2021.7.21, 2021.7.24, 2021.8.2, 2021.8.10, 2021.9.1, 2021.9.2, 2021.9.25, 2021.10.9, 2021.10.10, 2021.10.22, 2021.11.10, 2021.11.10.1, 2021.12.1, 2021.12.25, 2021.12.27, 2022.1.21, 2022.2.3, 2022.2.4, 2022.3.8, 2022.3.8.1, 2022.3.8.2, 2022.4.8, 2022.5.18, 2022.6.22, 2022.6.22.1, 2022.6.29, 2022.7.17, 2022.7.18, 2022.8.8, 2022.8.14, 2022.8.19, 2022.9.1, 2022.10.4, 2022.11.11, 2023.1.2, 2023.1.6, 2023.2.17, 2023.3.3, 2023.3.4, 2023.6.21, 2023.6.22, 2023.7.6, 2023.9.24, 2023.10.7, 2023.10.13, 2023.11.13.5826.dev0, 2023.11.13.232715.dev0, 2023.11.14, 2023.11.15.232826.dev0, 2023.11.16, 2023.11.16.232727.dev0, 2023.11.18.232705.dev0, 2023.11.19.232719.dev0, 2023.11.20.232729.dev0, 2023.11.26.232703.dev0, 2023.11.28.232715.dev0, 2023.11.29.232714.dev0, 2023.12.5.232702.dev0, 2023.12.6.232721.dev0, 2023.12.12.232727.dev0, 2023.12.13.232710.dev0, 2023.12.17.232710.dev0, 2023.12.18.232711.dev0, 2023.12.19.232701.dev0, 2023.12.20.232717.dev0, 2023.12.21.232720.dev0, 2023.12.22.232735.dev0, 2023.12.24.232657.dev0, 2023.12.26.232752.dev0, 2023.12.30, 2023.12.30.232719.dev0, 2023.12.31.232713.dev0, 2024.1.2.232714.dev0, 2024.1.5.232702.dev0, 2024.1.8.232709.dev0, 2024.1.9.232723.dev0, 2024.1.14.232710.dev0, 2024.1.18.232658.dev0, 2024.1.19.232708.dev0, 2024.1.20.232722.dev0, 2024.1.21.232719.dev0, 2024.1.22.232713.dev0, 2024.1.23.232723.dev0, 2024.1.28.232706.dev0, 2024.1.29.232706.dev0, 2024.1.31.232703.dev0, 2024.2.2.232707.dev0, 2024.2.3.232712.dev0, 2024.2.4.232659.dev0, 2024.2.5.232712.dev0, 2024.2.9.232659.dev0, 2024.2.13.232701.dev0, 2024.2.14.232704.dev0, 2024.2.15.232705.dev0, 2024.2.16.232705.dev0, 2024.2.17.232706.dev0, 2024.2.18.232707.dev0, 2024.2.19.232703.dev0, 2024.2.20.232712.dev0, 2024.2.21.232721.dev0, 2024.2.22.232849.dev0, 2024.2.23.232656.dev0, 2024.2.24.232815.dev0, 2024.2.25.232703.dev0, 2024.2.28.232744.dev0, 2024.2.29.232658.dev0, 2024.3.2.232720.dev0, 2024.3.3.232706.dev0, 2024.3.4.232716.dev0, 2024.3.6.232659.dev0, 2024.3.7.232716.dev0, 2024.3.8.232718.dev0, 2024.3.9.232714.dev0, 2024.3.10, 2024.3.10.232703.dev0, 2024.3.14.232657.dev0, 2024.3.17.232657.dev0, 2024.3.18.232707.dev0, 2024.3.19.232701.dev0, 2024.3.20.232704.dev0, 2024.3.22.232703.dev0, 2024.3.29.232706.dev0, 2024.3.30.232704.dev0, 2024.3.31.232706.dev0, 2024.4.1.232704.dev0, 2024.4.3.233315.dev0, 2024.4.4.232729.dev0, 2024.4.6.232655.dev0, 2024.4.7.232657.dev0, 2024.4.8.232708.dev0, 2024.4.9, 2024.4.9.232723.dev0, 2024.4.13.232802.dev0, 2024.4.18.232703.dev0, 2024.4.20.232659.dev0, 2024.4.21.232710.dev0, 2024.4.28.232723.dev0, 2024.5.4.232706.dev0, 2024.5.5.232701.dev0, 2024.5.8.232715.dev0, 2024.5.10.232705.dev0, 2024.5.11.232654.dev0, 2024.5.12.232709.dev0, 2024.5.13.232704.dev0, 2024.5.16.232713.dev0, 2024.5.17.232726.dev0, 2024.5.18.232655.dev0, 2024.5.20.232721.dev0, 2024.5.22.232749.dev0, 2024.5.23.232707.dev0, 2024.5.25.232709.dev0, 2024.5.26, 2024.5.26.232731.dev0, 2024.5.27, 2024.5.27.232744.dev0, 2024.5.29.232700.dev0, 2024.5.30.232720.dev0, 2024.6.1.232725.dev0, 2024.6.11.232712.dev0, 2024.6.13.232720.dev0, 2024.6.15.232712.dev0, 2024.6.16.232832.dev0, 2024.6.17.232743.dev0, 2024.6.20.232815.dev0, 2024.6.21.232706.dev0, 2024.6.22.232706.dev0, 2024.6.24.232830.dev0, 2024.6.27.232805.dev0, 2024.6.29.232730.dev0, 2024.6.30.232744.dev0, 2024.7.1, 2024.7.1.232715.dev0, 2024.7.2, 2024.7.2.232715.dev0, 2024.7.3.232825.dev0, 2024.7.5.232716.dev0, 2024.7.6.232701.dev0, 2024.7.7, 2024.7.7.232743.dev0, 2024.7.8, 2024.7.8.232708.dev0, 2024.7.9, 2024.7.9.232843.dev0, 2024.7.10.232707.dev0, 2024.7.11.232833.dev0, 2024.7.12.232729.dev0, 2024.7.13.232701.dev0, 2024.7.14.232743.dev0, 2024.7.15.232803.dev0, 2024.7.16, 2024.7.16.232919.dev0, 2024.7.19.25855.dev0, 2024.7.23.232906.dev0, 2024.7.24.232745.dev0, 2024.7.25, 2024.7.25.232820.dev0, 2024.7.29.232758.dev0, 2024.7.30.232707.dev0, 2024.7.31.232733.dev0, 2024.8.1, 2024.8.1.232808.dev0, 2024.8.4.232814.dev0, 2024.8.5.232823.dev0, 2024.8.6, 2024.8.6.232802.dev0, 2024.8.12.232840.dev0, 2024.8.13.232739.dev0, 2024.8.15.233031.dev0, 2024.8.18.232809.dev0, 2024.8.19.232821.dev0, 2024.8.21.232751.dev0, 2024.8.26.232811.dev0, 2024.9.1.235933.dev0, 2024.9.2.232855.dev0, 2024.9.5.232840.dev0, 2024.9.7.232731.dev0, 2024.9.8.232909.dev0, 2024.9.13.232912.dev0, 2024.9.14.232748.dev0, 2024.9.17.232940.dev0, 2024.9.24.232842.dev0, 2024.9.25.232842.dev0, 2024.9.26.232938.dev0, 2024.9.27, 2024.9.27.232842.dev0, 2024.9.29.232819.dev0, 2024.9.30.232929.dev0, 2024.10.1.232843.dev0, 2024.10.7, 2024.10.7.232845.dev0, 2024.10.10.232848.dev0, 2024.10.11.232837.dev0, 2024.10.12.232856.dev0, 2024.10.13.232959.dev0, 2024.10.14.232841.dev0, 2024.10.15.232919.dev0, 2024.10.16.232911.dev0, 2024.10.19.232833.dev0, 2024.10.20.232914.dev0, 2024.10.22, 2024.10.22.51025.dev0, 2024.10.22.232922.dev0, 2024.10.23.232902.dev0, 2024.10.24.232910.dev0, 2024.10.25.232902.dev0, 2024.10.26.232826.dev0, 2024.10.27.232921.dev0, 2024.10.28.232846.dev0, 2024.10.29.232854.dev0, 2024.10.31.232951.dev0, 2024.11.2.232942.dev0, 2024.11.3.232912.dev0, 2024.11.4, 2024.11.4.232933.dev0, 2024.11.6.232826.dev0, 2024.11.9.232836.dev0, 2024.11.10.232816.dev0, 2024.11.11.232805.dev0, 2024.11.12.232900.dev0, 2024.11.15.232903.dev0, 2024.11.16.232922.dev0, 2024.11.17.232856.dev0, 2024.11.18, 2024.11.18.232921.dev0, 2024.11.23.232923.dev0, 2024.11.24.232931.dev0, 2024.11.26.232922.dev0, 2024.11.27.232921.dev0, 2024.12.1.232904.dev0, 2024.12.2.233010.dev0, 2024.12.3, 2024.12.3.232932.dev0, 2024.12.4.232942.dev0, 2024.12.6, 2024.12.6.161513.dev0, 2024.12.12.232950.dev0, 2024.12.13, 2024.12.13.232928.dev0, 2024.12.15.232913.dev0, 2024.12.23, 2024.12.23.232812.dev0, 2024.12.26.232815.dev0, 2025.1.11.232806.dev0, 2025.1.12, 2025.1.12.232754.dev0, 2025.1.15, 2025.1.15.232837.dev0, 2025.1.16.232854.dev0, 2025.1.19.232735.dev0, 2025.1.20.232744.dev0, 2025.1.21.232800.dev0, 2025.1.23.232810.dev0, 2025.1.26, 2025.1.26.34637.dev0, 2025.1.28.232803.dev0, 2025.1.29.232818.dev0, 2025.1.30.232843.dev0, 2025.2.8.232844.dev0, 2025.2.9.232824.dev0, 2025.2.10.232934.dev0, 2025.2.11.232920.dev0, 2025.2.19, 2025.2.19.23542.dev0, 2025.2.20.232914.dev0, 2025.2.21.232913.dev0, 2025.2.22.232738.dev0, 2025.2.23.232748.dev0, 2025.2.26.232946.dev0, 2025.2.28.232826.dev0, 2025.3.2.232817.dev0, 2025.3.3.232847.dev0, 2025.3.4.232844.dev0, 2025.3.5.232947.dev0, 2025.3.7.232704.dev0, 2025.3.13.232844.dev0, 2025.3.15.232805.dev0, 2025.3.16.232921.dev0, 2025.3.21, 2025.3.21.232842.dev0, 2025.3.22.232834.dev0, 2025.3.23.232844.dev0, 2025.3.25, 2025.3.25.703.dev0, 2025.3.26, 2025.3.26.420.dev0, 2025.3.27, 2025.3.27.233514.dev0, 2025.3.28.232920.dev0, 2025.3.30.232927.dev0, 2025.3.31, 2025.3.31.214356.dev0, 2025.4.5.232914.dev0, 2025.4.6.232826.dev0, 2025.4.18.232954.dev0, 2025.4.19.232942.dev0, 2025.4.23.1659.dev0, 2025.4.23.232926.dev0, 2025.4.24.232927.dev0, 2025.4.25.232910.dev0, 2025.4.26.232923.dev0, 2025.4.27.233024.dev0, 2025.4.28.232934.dev0, 2025.4.29.232920.dev0, 2025.4.30, 2025.4.30.232944.dev0, 2025.5.3.232917.dev0, 2025.5.5.232943.dev0, 2025.5.6.232932.dev0, 2025.5.10.232848.dev0, 2025.5.11.232911.dev0, 2025.5.16.232928.dev0, 2025.5.17.232915.dev0, 2025.5.18.232948.dev0, 2025.5.20.232932.dev0, 2025.5.21.232935.dev0, 2025.5.22, 2025.5.22.93922.dev0, 2025.5.22.232956.dev0, 2025.5.23.233016.dev0, 2025.5.26.232937.dev0, 2025.5.27.232941.dev0, 2025.5.28.232948.dev0, 2025.5.30.233011.dev0, 2025.6.1.232947.dev0, 2025.6.3.233020.dev0, 2025.6.5.233116.dev0, 2025.6.6.233002.dev0, 2025.6.7.233023.dev0, 2025.6.8.232939.dev0, 2025.6.9, 2025.6.9.234059.dev0, 2025.6.12.233004.dev0, 2025.6.25, 2025.6.25.235247.dev0, 2025.6.26.233029.dev0, 2025.6.27.233026.dev0, 2025.6.28.234349.dev0, 2025.6.29.233002.dev0, 2025.6.30, 2025.6.30.233919.dev0, 2025.7.1.235725.dev0, 2025.7.2.233055.dev0, 2025.7.5.233013.dev0, 2025.7.6.233008.dev0, 2025.7.7.233044.dev0, 2025.7.8.233037.dev0, 2025.7.9.233050.dev0, 2025.7.11.233035.dev0, 2025.7.12.233122.dev0, 2025.7.13.233101.dev0, 2025.7.14.233051.dev0, 2025.7.16.233138.dev0, 2025.7.18.233100.dev0, 2025.7.19.233203.dev0, 2025.7.21, 2025.7.21.234438.dev0, 2025.7.22.233113.dev0, 2025.7.23.233136.dev0, 2025.7.24.233125.dev0, 2025.7.25.233059.dev0, 2025.7.26.233101.dev0, 2025.7.27.233142.dev0, 2025.7.29.233301.dev0, 2025.7.30.233130.dev0, 2025.7.31.233123.dev0, 2025.8.1.233124.dev0, 2025.8.2.233207.dev0, 2025.8.3.233131.dev0, 2025.8.5.233158.dev0, 2025.8.6.233141.dev0, 2025.8.7.233150.dev0, 2025.8.8.233030.dev0, 2025.8.11, 2025.8.11.34503.dev0, 2025.8.12.233030.dev0, 2025.8.13.233032.dev0, 2025.8.16.232932.dev0, 2025.8.18.232943.dev0, 2025.8.19.232936.dev0, 2025.8.20, 2025.8.20.24358.dev0, 2025.8.20.232911.dev0, 2025.8.21.235612.dev0, 2025.8.22, 2025.8.22.31729.dev0, 2025.8.22.235700.dev0, 2025.8.23.234735.dev0)
+ERROR: No matching distribution found for yt-dlp==2024.8.2pip uninstall tensorflow opencv-python -y
+Found existing installation: tensorflow 2.16.1a-data-bdc>
+Uninstalling tensorflow-2.16.1:
+  Successfully uninstalled tensorflow-2.16.1
+Found existing installation: opencv-python 4.12.0.88
+Uninstalling opencv-python-4.12.0.88:
+  Successfully uninstalled opencv-python-4.12.0.88
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install numpy==2.0.0 --force-reinstall
+Collecting numpy==2.0.0
+  Using cached numpy-2.0.0-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Using cached numpy-2.0.0-cp312-cp312-win_amd64.whl (16.2 MB)
+Installing collected packages: numpy
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.26.4
+    Uninstalling numpy-1.26.4:
+      Successfully uninstalled numpy-1.26.4
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+tensorflow-intel 2.16.1 requires numpy<2.0.0,>=1.26.0; python_version >= "3.12", but you have numpy 2.0.0 which is incompatible.
+Successfully installed numpy-2.0.0
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip uninstall numpy pandas tensorflow opencv-python -y
+Found existing installation: numpy 2.0.0
+Uninstalling numpy-2.0.0:
+  Successfully uninstalled numpy-2.0.0
+Found existing installation: pandas 2.2.2
+Uninstalling pandas-2.2.2:
+  Successfully uninstalled pandas-2.2.2
+WARNING: Skipping tensorflow as it is not installed.
+WARNING: Skipping opencv-python as it is not installed.
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install numpy==1.26.4
+Collecting numpy==1.26.4
+  Using cached numpy-1.26.4-cp312-cp312-win_amd64.whl.metadata (61 kB)
+Using cached numpy-1.26.4-cp312-cp312-win_amd64.whl (15.5 MB)
+Installing collected packages: numpy
+Successfully installed numpy-1.26.4
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install pandas==2.2.2
+Collecting pandas==2.2.2
+  Using cached pandas-2.2.2-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Requirement already satisfied: numpy>=1.26.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from pandas==2.2.2) (1.26.4)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from pandas==2.2.2) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from pandas==2.2.2) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from pandas==2.2.2) (2025.2)
+Requirement already satisfied: six>=1.5 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from python-dateutil>=2.8.2->pandas==2.2.2) (1.17.0)
+Using cached pandas-2.2.2-cp312-cp312-win_amd64.whl (11.5 MB)
+Installing collected packages: pandas
+Successfully installed pandas-2.2.2
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install opencv-python==4.9.0.80
+Collecting opencv-python==4.9.0.80
+  Downloading opencv_python-4.9.0.80-cp37-abi3-win_amd64.whl.metadata (20 kB)
+Requirement already satisfied: numpy>=1.21.2 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from opencv-python==4.9.0.80) (1.26.4)
+Downloading opencv_python-4.9.0.80-cp37-abi3-win_amd64.whl (38.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.6/38.6 MB 5.9 MB/s  0:00:06
+Installing collected packages: opencv-python
+Successfully installed opencv-python-4.9.0.80
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install openpyxl==3.1.3
+Collecting openpyxl==3.1.3
+  Using cached openpyxl-3.1.3-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting et-xmlfile (from openpyxl==3.1.3)
+  Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+Downloading openpyxl-3.1.3-py2.py3-none-any.whl (251 kB)
+Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Installing collected packages: et-xmlfile, openpyxl
+Successfully installed et-xmlfile-2.0.0 openpyxl-3.1.3
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install seaborn==0.13.2
+Collecting seaborn==0.13.2
+  Using cached seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Requirement already satisfied: numpy!=1.24.0,>=1.20 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from seaborn==0.13.2) (1.26.4)
+Requirement already satisfied: pandas>=1.2 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from seaborn==0.13.2) (2.2.2)
+Collecting matplotlib!=3.6.1,>=3.4 (from seaborn==0.13.2)
+  Downloading matplotlib-3.10.5-cp312-cp312-win_amd64.whl.metadata (11 kB)
+Collecting contourpy>=1.0.1 (from matplotlib!=3.6.1,>=3.4->seaborn==0.13.2)
+  Downloading contourpy-1.3.3-cp312-cp312-win_amd64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib!=3.6.1,>=3.4->seaborn==0.13.2)
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib!=3.6.1,>=3.4->seaborn==0.13.2)
+  Downloading fonttools-4.59.1-cp312-cp312-win_amd64.whl.metadata (111 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib!=3.6.1,>=3.4->seaborn==0.13.2)
+  Downloading kiwisolver-1.4.9-cp312-cp312-win_amd64.whl.metadata (6.4 kB)
+Requirement already satisfied: packaging>=20.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from matplotlib!=3.6.1,>=3.4->seaborn==0.13.2) (25.0)
+Collecting pillow>=8 (from matplotlib!=3.6.1,>=3.4->seaborn==0.13.2)
+  Downloading pillow-11.3.0-cp312-cp312-win_amd64.whl.metadata (9.2 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib!=3.6.1,>=3.4->seaborn==0.13.2)
+  Downloading pyparsing-3.2.3-py3-none-any.whl.metadata (5.0 kB)
+Requirement already satisfied: python-dateutil>=2.7 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from matplotlib!=3.6.1,>=3.4->seaborn==0.13.2) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from pandas>=1.2->seaborn==0.13.2) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from pandas>=1.2->seaborn==0.13.2) (2025.2)
+Requirement already satisfied: six>=1.5 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from python-dateutil>=2.7->matplotlib!=3.6.1,>=3.4->seaborn==0.13.2) (1.17.0)
+Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+Downloading matplotlib-3.10.5-cp312-cp312-win_amd64.whl (8.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.1/8.1 MB 3.0 MB/s  0:00:02
+Downloading contourpy-1.3.3-cp312-cp312-win_amd64.whl (226 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.59.1-cp312-cp312-win_amd64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 5.3 MB/s  0:00:00
+Downloading kiwisolver-1.4.9-cp312-cp312-win_amd64.whl (73 kB)
+Downloading pillow-11.3.0-cp312-cp312-win_amd64.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 5.4 MB/s  0:00:01
+Downloading pyparsing-3.2.3-py3-none-any.whl (111 kB)
+Installing collected packages: pyparsing, pillow, kiwisolver, fonttools, cycler, contourpy, matplotlib, seaborn
+Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.59.1 kiwisolver-1.4.9 matplotlib-3.10.5 pillow-11.3.0 pyparsing-3.2.3 seaborn-0.13.2
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install matplotlib==3.8.4
+Collecting matplotlib==3.8.4
+  Using cached matplotlib-3.8.4-cp312-cp312-win_amd64.whl.metadata (5.9 kB)
+Requirement already satisfied: contourpy>=1.0.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from matplotlib==3.8.4) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from matplotlib==3.8.4) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from matplotlib==3.8.4) (4.59.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from matplotlib==3.8.4) (1.4.9)
+Requirement already satisfied: numpy>=1.21 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from matplotlib==3.8.4) (1.26.4)
+Requirement already satisfied: packaging>=20.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from matplotlib==3.8.4) (25.0)
+Requirement already satisfied: pillow>=8 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from matplotlib==3.8.4) (11.3.0)
+Requirement already satisfied: pyparsing>=2.3.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from matplotlib==3.8.4) (3.2.3)
+Requirement already satisfied: python-dateutil>=2.7 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from matplotlib==3.8.4) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from python-dateutil>=2.7->matplotlib==3.8.4) (1.17.0)
+Downloading matplotlib-3.8.4-cp312-cp312-win_amd64.whl (7.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.7/7.7 MB 3.7 MB/s  0:00:02
+Installing collected packages: matplotlib
+  Attempting uninstall: matplotlib
+    Found existing installation: matplotlib 3.10.5
+    Uninstalling matplotlib-3.10.5:
+      Successfully uninstalled matplotlib-3.10.5
+Successfully installed matplotlib-3.8.4
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install confluent-kafka==2.4.0
+Collecting confluent-kafka==2.4.0
+  Using cached confluent_kafka-2.4.0-cp312-cp312-win_amd64.whl.metadata (2.4 kB)
+Downloading confluent_kafka-2.4.0-cp312-cp312-win_amd64.whl (3.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 4.9 MB/s  0:00:00
+Installing collected packages: confluent-kafka
+Successfully installed confluent-kafka-2.4.0
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install tqdm==4.66.2
+Collecting tqdm==4.66.2
+  Using cached tqdm-4.66.2-py3-none-any.whl.metadata (57 kB)
+Collecting colorama (from tqdm==4.66.2)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Downloading tqdm-4.66.2-py3-none-any.whl (78 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Installing collected packages: colorama, tqdm
+Successfully installed colorama-0.4.6 tqdm-4.66.2
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install scikit-learn==1.4.2
+Collecting scikit-learn==1.4.2
+  Using cached scikit_learn-1.4.2-cp312-cp312-win_amd64.whl.metadata (11 kB)
+Requirement already satisfied: numpy>=1.19.5 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from scikit-learn==1.4.2) (1.26.4)
+Collecting scipy>=1.6.0 (from scikit-learn==1.4.2)
+  Downloading scipy-1.16.1-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Collecting joblib>=1.2.0 (from scikit-learn==1.4.2)
+  Downloading joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting threadpoolctl>=2.0.0 (from scikit-learn==1.4.2)
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Downloading scikit_learn-1.4.2-cp312-cp312-win_amd64.whl (10.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.6/10.6 MB 4.9 MB/s  0:00:02
+Downloading joblib-1.5.1-py3-none-any.whl (307 kB)
+Downloading scipy-1.16.1-cp312-cp312-win_amd64.whl (38.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.5/38.5 MB 5.6 MB/s  0:00:06
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+Successfully installed joblib-1.5.1 scikit-learn-1.4.2 scipy-1.16.1 threadpoolctl-3.6.0
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install yt-dlp==2024.8.22
+ERROR: Ignored the following yanked versions: 2021.1.15, 2021.1.15.post1, 2021.3.3, 2021.3.3.1, 2021.3.24, 2021.6.8
+ERROR: Could not find a version that satisfies the requirement yt-dlp==2024.8.22 (from versions: 2021.1.16, 2021.1.20, 2021.1.24, 2021.1.24.post1, 2021.1.29, 2021.2.4, 2021.2.9, 2021.2.15, 2021.2.19, 2021.2.24, 2021.3.1, 2021.3.3.2, 2021.3.7, 2021.3.15, 2021.3.21, 2021.3.24.1, 2021.4.3, 2021.4.11, 2021.4.22, 2021.5.11, 2021.5.20, 2021.6.1, 2021.6.9, 2021.6.23, 2021.7.7, 2021.7.21, 2021.7.24, 2021.8.2, 2021.8.10, 2021.9.1, 2021.9.2, 2021.9.25, 2021.10.9, 2021.10.10, 2021.10.22, 2021.11.10, 2021.11.10.1, 2021.12.1, 2021.12.25, 2021.12.27, 2022.1.21, 2022.2.3, 2022.2.4, 2022.3.8, 2022.3.8.1, 2022.3.8.2, 2022.4.8, 2022.5.18, 2022.6.22, 2022.6.22.1, 2022.6.29, 2022.7.17, 2022.7.18, 2022.8.8, 2022.8.14, 2022.8.19, 2022.9.1, 2022.10.4, 2022.11.11, 2023.1.2, 2023.1.6, 2023.2.17, 2023.3.3, 2023.3.4, 2023.6.21, 2023.6.22, 2023.7.6, 2023.9.24, 2023.10.7, 2023.10.13, 2023.11.13.5826.dev0, 2023.11.13.232715.dev0, 2023.11.14, 2023.11.15.232826.dev0, 2023.11.16, 2023.11.16.232727.dev0, 2023.11.18.232705.dev0, 2023.11.19.232719.dev0, 2023.11.20.232729.dev0, 2023.11.26.232703.dev0, 2023.11.28.232715.dev0, 2023.11.29.232714.dev0, 2023.12.5.232702.dev0, 2023.12.6.232721.dev0, 2023.12.12.232727.dev0, 2023.12.13.232710.dev0, 2023.12.17.232710.dev0, 2023.12.18.232711.dev0, 2023.12.19.232701.dev0, 2023.12.20.232717.dev0, 2023.12.21.232720.dev0, 2023.12.22.232735.dev0, 2023.12.24.232657.dev0, 2023.12.26.232752.dev0, 2023.12.30, 2023.12.30.232719.dev0, 2023.12.31.232713.dev0, 2024.1.2.232714.dev0, 2024.1.5.232702.dev0, 2024.1.8.232709.dev0, 2024.1.9.232723.dev0, 2024.1.14.232710.dev0, 2024.1.18.232658.dev0, 2024.1.19.232708.dev0, 2024.1.20.232722.dev0, 2024.1.21.232719.dev0, 2024.1.22.232713.dev0, 2024.1.23.232723.dev0, 2024.1.28.232706.dev0, 2024.1.29.232706.dev0, 2024.1.31.232703.dev0, 2024.2.2.232707.dev0, 2024.2.3.232712.dev0, 2024.2.4.232659.dev0, 2024.2.5.232712.dev0, 2024.2.9.232659.dev0, 2024.2.13.232701.dev0, 2024.2.14.232704.dev0, 2024.2.15.232705.dev0, 2024.2.16.232705.dev0, 2024.2.17.232706.dev0, 2024.2.18.232707.dev0, 2024.2.19.232703.dev0, 2024.2.20.232712.dev0, 2024.2.21.232721.dev0, 2024.2.22.232849.dev0, 2024.2.23.232656.dev0, 2024.2.24.232815.dev0, 2024.2.25.232703.dev0, 2024.2.28.232744.dev0, 2024.2.29.232658.dev0, 2024.3.2.232720.dev0, 2024.3.3.232706.dev0, 2024.3.4.232716.dev0, 2024.3.6.232659.dev0, 2024.3.7.232716.dev0, 2024.3.8.232718.dev0, 2024.3.9.232714.dev0, 2024.3.10, 2024.3.10.232703.dev0, 2024.3.14.232657.dev0, 2024.3.17.232657.dev0, 2024.3.18.232707.dev0, 2024.3.19.232701.dev0, 2024.3.20.232704.dev0, 2024.3.22.232703.dev0, 2024.3.29.232706.dev0, 2024.3.30.232704.dev0, 2024.3.31.232706.dev0, 2024.4.1.232704.dev0, 2024.4.3.233315.dev0, 2024.4.4.232729.dev0, 2024.4.6.232655.dev0, 2024.4.7.232657.dev0, 2024.4.8.232708.dev0, 2024.4.9, 2024.4.9.232723.dev0, 2024.4.13.232802.dev0, 2024.4.18.232703.dev0, 2024.4.20.232659.dev0, 2024.4.21.232710.dev0, 2024.4.28.232723.dev0, 2024.5.4.232706.dev0, 2024.5.5.232701.dev0, 2024.5.8.232715.dev0, 2024.5.10.232705.dev0, 2024.5.11.232654.dev0, 2024.5.12.232709.dev0, 2024.5.13.232704.dev0, 2024.5.16.232713.dev0, 2024.5.17.232726.dev0, 2024.5.18.232655.dev0, 2024.5.20.232721.dev0, 2024.5.22.232749.dev0, 2024.5.23.232707.dev0, 2024.5.25.232709.dev0, 2024.5.26, 2024.5.26.232731.dev0, 2024.5.27, 2024.5.27.232744.dev0, 2024.5.29.232700.dev0, 2024.5.30.232720.dev0, 2024.6.1.232725.dev0, 2024.6.11.232712.dev0, 2024.6.13.232720.dev0, 2024.6.15.232712.dev0, 2024.6.16.232832.dev0, 2024.6.17.232743.dev0, 2024.6.20.232815.dev0, 2024.6.21.232706.dev0, 2024.6.22.232706.dev0, 2024.6.24.232830.dev0, 2024.6.27.232805.dev0, 2024.6.29.232730.dev0, 2024.6.30.232744.dev0, 2024.7.1, 2024.7.1.232715.dev0, 2024.7.2, 2024.7.2.232715.dev0, 2024.7.3.232825.dev0, 2024.7.5.232716.dev0, 2024.7.6.232701.dev0, 2024.7.7, 2024.7.7.232743.dev0, 2024.7.8, 2024.7.8.232708.dev0, 2024.7.9, 2024.7.9.232843.dev0, 2024.7.10.232707.dev0, 2024.7.11.232833.dev0, 2024.7.12.232729.dev0, 2024.7.13.232701.dev0, 2024.7.14.232743.dev0, 2024.7.15.232803.dev0, 2024.7.16, 2024.7.16.232919.dev0, 2024.7.19.25855.dev0, 2024.7.23.232906.dev0, 2024.7.24.232745.dev0, 2024.7.25, 2024.7.25.232820.dev0, 2024.7.29.232758.dev0, 2024.7.30.232707.dev0, 2024.7.31.232733.dev0, 2024.8.1, 2024.8.1.232808.dev0, 2024.8.4.232814.dev0, 2024.8.5.232823.dev0, 2024.8.6, 2024.8.6.232802.dev0, 2024.8.12.232840.dev0, 2024.8.13.232739.dev0, 2024.8.15.233031.dev0, 2024.8.18.232809.dev0, 2024.8.19.232821.dev0, 2024.8.21.232751.dev0, 2024.8.26.232811.dev0, 2024.9.1.235933.dev0, 2024.9.2.232855.dev0, 2024.9.5.232840.dev0, 2024.9.7.232731.dev0, 2024.9.8.232909.dev0, 2024.9.13.232912.dev0, 2024.9.14.232748.dev0, 2024.9.17.232940.dev0, 2024.9.24.232842.dev0, 2024.9.25.232842.dev0, 2024.9.26.232938.dev0, 2024.9.27, 2024.9.27.232842.dev0, 2024.9.29.232819.dev0, 2024.9.30.232929.dev0, 2024.10.1.232843.dev0, 2024.10.7, 2024.10.7.232845.dev0, 2024.10.10.232848.dev0, 2024.10.11.232837.dev0, 2024.10.12.232856.dev0, 2024.10.13.232959.dev0, 2024.10.14.232841.dev0, 2024.10.15.232919.dev0, 2024.10.16.232911.dev0, 2024.10.19.232833.dev0, 2024.10.20.232914.dev0, 2024.10.22, 2024.10.22.51025.dev0, 2024.10.22.232922.dev0, 2024.10.23.232902.dev0, 2024.10.24.232910.dev0, 2024.10.25.232902.dev0, 2024.10.26.232826.dev0, 2024.10.27.232921.dev0, 2024.10.28.232846.dev0, 2024.10.29.232854.dev0, 2024.10.31.232951.dev0, 2024.11.2.232942.dev0, 2024.11.3.232912.dev0, 2024.11.4, 2024.11.4.232933.dev0, 2024.11.6.232826.dev0, 2024.11.9.232836.dev0, 2024.11.10.232816.dev0, 2024.11.11.232805.dev0, 2024.11.12.232900.dev0, 2024.11.15.232903.dev0, 2024.11.16.232922.dev0, 2024.11.17.232856.dev0, 2024.11.18, 2024.11.18.232921.dev0, 2024.11.23.232923.dev0, 2024.11.24.232931.dev0, 2024.11.26.232922.dev0, 2024.11.27.232921.dev0, 2024.12.1.232904.dev0, 2024.12.2.233010.dev0, 2024.12.3, 2024.12.3.232932.dev0, 2024.12.4.232942.dev0, 2024.12.6, 2024.12.6.161513.dev0, 2024.12.12.232950.dev0, 2024.12.13, 2024.12.13.232928.dev0, 2024.12.15.232913.dev0, 2024.12.23, 2024.12.23.232812.dev0, 2024.12.26.232815.dev0, 2025.1.11.232806.dev0, 2025.1.12, 2025.1.12.232754.dev0, 2025.1.15, 2025.1.15.232837.dev0, 2025.1.16.232854.dev0, 2025.1.19.232735.dev0, 2025.1.20.232744.dev0, 2025.1.21.232800.dev0, 2025.1.23.232810.dev0, 2025.1.26, 2025.1.26.34637.dev0, 2025.1.28.232803.dev0, 2025.1.29.232818.dev0, 2025.1.30.232843.dev0, 2025.2.8.232844.dev0, 2025.2.9.232824.dev0, 2025.2.10.232934.dev0, 2025.2.11.232920.dev0, 2025.2.19, 2025.2.19.23542.dev0, 2025.2.20.232914.dev0, 2025.2.21.232913.dev0, 2025.2.22.232738.dev0, 2025.2.23.232748.dev0, 2025.2.26.232946.dev0, 2025.2.28.232826.dev0, 2025.3.2.232817.dev0, 2025.3.3.232847.dev0, 2025.3.4.232844.dev0, 2025.3.5.232947.dev0, 2025.3.7.232704.dev0, 2025.3.13.232844.dev0, 2025.3.15.232805.dev0, 2025.3.16.232921.dev0, 2025.3.21, 2025.3.21.232842.dev0, 2025.3.22.232834.dev0, 2025.3.23.232844.dev0, 2025.3.25, 2025.3.25.703.dev0, 2025.3.26, 2025.3.26.420.dev0, 2025.3.27, 2025.3.27.233514.dev0, 2025.3.28.232920.dev0, 2025.3.30.232927.dev0, 2025.3.31, 2025.3.31.214356.dev0, 2025.4.5.232914.dev0, 2025.4.6.232826.dev0, 2025.4.18.232954.dev0, 2025.4.19.232942.dev0, 2025.4.23.1659.dev0, 2025.4.23.232926.dev0, 2025.4.24.232927.dev0, 2025.4.25.232910.dev0, 2025.4.26.232923.dev0, 2025.4.27.233024.dev0, 2025.4.28.232934.dev0, 2025.4.29.232920.dev0, 2025.4.30, 2025.4.30.232944.dev0, 2025.5.3.232917.dev0, 2025.5.5.232943.dev0, 2025.5.6.232932.dev0, 2025.5.10.232848.dev0, 2025.5.11.232911.dev0, 2025.5.16.232928.dev0, 2025.5.17.232915.dev0, 2025.5.18.232948.dev0, 2025.5.20.232932.dev0, 2025.5.21.232935.dev0, 2025.5.22, 2025.5.22.93922.dev0, 2025.5.22.232956.dev0, 2025.5.23.233016.dev0, 2025.5.26.232937.dev0, 2025.5.27.232941.dev0, 2025.5.28.232948.dev0, 2025.5.30.233011.dev0, 2025.6.1.232947.dev0, 2025.6.3.233020.dev0, 2025.6.5.233116.dev0, 2025.6.6.233002.dev0, 2025.6.7.233023.dev0, 2025.6.8.232939.dev0, 2025.6.9, 2025.6.9.234059.dev0, 2025.6.12.233004.dev0, 2025.6.25, 2025.6.25.235247.dev0, 2025.6.26.233029.dev0, 2025.6.27.233026.dev0, 2025.6.28.234349.dev0, 2025.6.29.233002.dev0, 2025.6.30, 2025.6.30.233919.dev0, 2025.7.1.235725.dev0, 2025.7.2.233055.dev0, 2025.7.5.233013.dev0, 2025.7.6.233008.dev0, 2025.7.7.233044.dev0, 2025.7.8.233037.dev0, 2025.7.9.233050.dev0, 2025.7.11.233035.dev0, 2025.7.12.233122.dev0, 2025.7.13.233101.dev0, 2025.7.14.233051.dev0, 2025.7.16.233138.dev0, 2025.7.18.233100.dev0, 2025.7.19.233203.dev0, 2025.7.21, 2025.7.21.234438.dev0, 2025.7.22.233113.dev0, 2025.7.23.233136.dev0, 2025.7.24.233125.dev0, 2025.7.25.233059.dev0, 2025.7.26.233101.dev0, 2025.7.27.233142.dev0, 2025.7.29.233301.dev0, 2025.7.30.233130.dev0, 2025.7.31.233123.dev0, 2025.8.1.233124.dev0, 2025.8.2.233207.dev0, 2025.8.3.233131.dev0, 2025.8.5.233158.dev0, 2025.8.6.233141.dev0, 2025.8.7.233150.dev0, 2025.8.8.233030.dev0, 2025.8.11, 2025.8.11.34503.dev0, 2025.8.12.233030.dev0, 2025.8.13.233032.dev0, 2025.8.16.232932.dev0, 2025.8.18.232943.dev0, 2025.8.19.232936.dev0, 2025.8.20, 2025.8.20.24358.dev0, 2025.8.20.232911.dev0, 2025.8.21.235612.dev0, 2025.8.22, 2025.8.22.31729.dev0, 2025.8.22.235700.dev0, 2025.8.23.234735.dev0)
+ERROR: No matching distribution found for yt-dlp==2024.8.22
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install librosa==0.10.1
+Collecting librosa==0.10.1
+  Using cached librosa-0.10.1-py3-none-any.whl.metadata (8.3 kB)
+Collecting audioread>=2.1.9 (from librosa==0.10.1)
+  Downloading audioread-3.0.1-py3-none-any.whl.metadata (8.4 kB)
+Requirement already satisfied: numpy!=1.22.0,!=1.22.1,!=1.22.2,>=1.20.3 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from librosa==0.10.1) (1.26.4)
+Requirement already satisfied: scipy>=1.2.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from librosa==0.10.1) (1.16.1)
+Requirement already satisfied: scikit-learn>=0.20.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from librosa==0.10.1) (1.4.2)
+Requirement already satisfied: joblib>=0.14 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from librosa==0.10.1) (1.5.1)
+Collecting decorator>=4.3.0 (from librosa==0.10.1)
+  Using cached decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting numba>=0.51.0 (from librosa==0.10.1)
+  Downloading numba-0.61.2-cp312-cp312-win_amd64.whl.metadata (2.9 kB)
+Collecting soundfile>=0.12.1 (from librosa==0.10.1)
+  Downloading soundfile-0.13.1-py2.py3-none-win_amd64.whl.metadata (16 kB)
+Collecting pooch>=1.0 (from librosa==0.10.1)
+  Downloading pooch-1.8.2-py3-none-any.whl.metadata (10 kB)
+Collecting soxr>=0.3.2 (from librosa==0.10.1)
+  Downloading soxr-0.5.0.post1-cp312-abi3-win_amd64.whl.metadata (5.6 kB)
+Requirement already satisfied: typing-extensions>=4.1.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from librosa==0.10.1) (4.15.0)
+Collecting lazy-loader>=0.1 (from librosa==0.10.1)
+  Downloading lazy_loader-0.4-py3-none-any.whl.metadata (7.6 kB)
+Collecting msgpack>=1.0 (from librosa==0.10.1)
+  Downloading msgpack-1.1.1-cp312-cp312-win_amd64.whl.metadata (8.6 kB)
+Requirement already satisfied: packaging in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from lazy-loader>=0.1->librosa==0.10.1) (25.0)
+Collecting llvmlite<0.45,>=0.44.0dev0 (from numba>=0.51.0->librosa==0.10.1)
+  Downloading llvmlite-0.44.0-cp312-cp312-win_amd64.whl.metadata (5.0 kB)
+Collecting platformdirs>=2.5.0 (from pooch>=1.0->librosa==0.10.1)
+  Using cached platformdirs-4.3.8-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: requests>=2.19.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from pooch>=1.0->librosa==0.10.1) (2.32.5)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from requests>=2.19.0->pooch>=1.0->librosa==0.10.1) (3.4.3)
+Requirement already satisfied: idna<4,>=2.5 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from requests>=2.19.0->pooch>=1.0->librosa==0.10.1) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from requests>=2.19.0->pooch>=1.0->librosa==0.10.1) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from requests>=2.19.0->pooch>=1.0->librosa==0.10.1) (2025.8.3)
+Requirement already satisfied: threadpoolctl>=2.0.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from scikit-learn>=0.20.0->librosa==0.10.1) (3.6.0)
+Collecting cffi>=1.0 (from soundfile>=0.12.1->librosa==0.10.1)
+  Downloading cffi-1.17.1-cp312-cp312-win_amd64.whl.metadata (1.6 kB)
+Collecting pycparser (from cffi>=1.0->soundfile>=0.12.1->librosa==0.10.1)
+  Downloading pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Using cached librosa-0.10.1-py3-none-any.whl (253 kB)
+Downloading audioread-3.0.1-py3-none-any.whl (23 kB)
+Using cached decorator-5.2.1-py3-none-any.whl (9.2 kB)
+Downloading lazy_loader-0.4-py3-none-any.whl (12 kB)
+Downloading msgpack-1.1.1-cp312-cp312-win_amd64.whl (72 kB)
+Downloading numba-0.61.2-cp312-cp312-win_amd64.whl (2.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 1.6 MB/s  0:00:01
+Downloading llvmlite-0.44.0-cp312-cp312-win_amd64.whl (30.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 30.3/30.3 MB 5.5 MB/s  0:00:05
+Downloading pooch-1.8.2-py3-none-any.whl (64 kB)
+Using cached platformdirs-4.3.8-py3-none-any.whl (18 kB)
+Downloading soundfile-0.13.1-py2.py3-none-win_amd64.whl (1.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 5.4 MB/s  0:00:00
+Downloading cffi-1.17.1-cp312-cp312-win_amd64.whl (181 kB)
+Downloading soxr-0.5.0.post1-cp312-abi3-win_amd64.whl (164 kB)
+Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+Installing collected packages: soxr, pycparser, platformdirs, msgpack, llvmlite, lazy-loader, decorator, audioread, pooch, numba, cffi, soundfile, librosa
+Successfully installed audioread-3.0.1 cffi-1.17.1 decorator-5.2.1 lazy-loader-0.4 librosa-0.10.1 llvmlite-0.44.0 msgpack-1.1.1 numba-0.61.2 platformdirs-4.3.8 pooch-1.8.2 pycparser-2.22 soundfile-0.13.1 soxr-0.5.0.post1
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install tensorflow==2.16.1
+Collecting tensorflow==2.16.1
+  Using cached tensorflow-2.16.1-cp312-cp312-win_amd64.whl.metadata (3.5 kB)
+Requirement already satisfied: tensorflow-intel==2.16.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow==2.16.1) (2.16.1)
+Requirement already satisfied: absl-py>=1.0.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (2.3.1)
+Requirement already satisfied: astunparse>=1.6.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (1.6.3)
+Requirement already satisfied: flatbuffers>=23.5.26 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (25.2.10)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (0.6.0)
+Requirement already satisfied: google-pasta>=0.1.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (0.2.0)
+Requirement already satisfied: h5py>=3.10.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (3.14.0)
+Requirement already satisfied: libclang>=13.0.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (18.1.1)
+Requirement already satisfied: ml-dtypes~=0.3.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (0.3.2)
+Requirement already satisfied: opt-einsum>=2.3.2 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (3.4.0)
+Requirement already satisfied: packaging in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (25.0)
+Requirement already satisfied: protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<5.0.0dev,>=3.20.3 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (4.25.8)
+Requirement already satisfied: requests<3,>=2.21.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (2.32.5)
+Requirement already satisfied: setuptools in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (80.9.0)
+Requirement already satisfied: six>=1.12.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (1.17.0)
+Requirement already satisfied: termcolor>=1.1.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (3.1.0)
+Requirement already satisfied: typing-extensions>=3.6.6 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (4.15.0)
+Requirement already satisfied: wrapt>=1.11.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (1.17.3)
+Requirement already satisfied: grpcio<2.0,>=1.24.3 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (1.74.0)
+Requirement already satisfied: tensorboard<2.17,>=2.16 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (2.16.2)
+Requirement already satisfied: keras>=3.0.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (3.11.3)
+Requirement already satisfied: numpy<2.0.0,>=1.26.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorflow-intel==2.16.1->tensorflow==2.16.1) (1.26.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from requests<3,>=2.21.0->tensorflow-intel==2.16.1->tensorflow==2.16.1) (3.4.3)
+Requirement already satisfied: idna<4,>=2.5 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from requests<3,>=2.21.0->tensorflow-intel==2.16.1->tensorflow==2.16.1) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from requests<3,>=2.21.0->tensorflow-intel==2.16.1->tensorflow==2.16.1) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from requests<3,>=2.21.0->tensorflow-intel==2.16.1->tensorflow==2.16.1) (2025.8.3)
+Requirement already satisfied: markdown>=2.6.8 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorboard<2.17,>=2.16->tensorflow-intel==2.16.1->tensorflow==2.16.1) (3.8.2)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorboard<2.17,>=2.16->tensorflow-intel==2.16.1->tensorflow==2.16.1) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tensorboard<2.17,>=2.16->tensorflow-intel==2.16.1->tensorflow==2.16.1) (3.1.3)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from astunparse>=1.6.0->tensorflow-intel==2.16.1->tensorflow==2.16.1) (0.45.1)
+Requirement already satisfied: rich in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from keras>=3.0.0->tensorflow-intel==2.16.1->tensorflow==2.16.1) (14.1.0)
+Requirement already satisfied: namex in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from keras>=3.0.0->tensorflow-intel==2.16.1->tensorflow==2.16.1) (0.1.0)
+Requirement already satisfied: optree in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from keras>=3.0.0->tensorflow-intel==2.16.1->tensorflow==2.16.1) (0.17.0)
+Requirement already satisfied: MarkupSafe>=2.1.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from werkzeug>=1.0.1->tensorboard<2.17,>=2.16->tensorflow-intel==2.16.1->tensorflow==2.16.1) (3.0.2)
+Requirement already satisfied: markdown-it-py>=2.2.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from rich->keras>=3.0.0->tensorflow-intel==2.16.1->tensorflow==2.16.1) (4.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from rich->keras>=3.0.0->tensorflow-intel==2.16.1->tensorflow==2.16.1) (2.19.2)
+Requirement already satisfied: mdurl~=0.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.0.0->tensorflow-intel==2.16.1->tensorflow==2.16.1) (0.1.2)
+Using cached tensorflow-2.16.1-cp312-cp312-win_amd64.whl (2.1 kB)
+Installing collected packages: tensorflow
+Successfully installed tensorflow-2.16.1
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install yt-dlp==2024.8.6
+Collecting yt-dlp==2024.8.6
+  Downloading yt_dlp-2024.8.6-py3-none-any.whl.metadata (170 kB)
+Collecting brotli (from yt-dlp==2024.8.6)
+  Downloading Brotli-1.1.0-cp312-cp312-win_amd64.whl.metadata (5.6 kB)
+Requirement already satisfied: certifi in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from yt-dlp==2024.8.6) (2025.8.3)
+Collecting mutagen (from yt-dlp==2024.8.6)
+  Downloading mutagen-1.47.0-py3-none-any.whl.metadata (1.7 kB)
+Collecting pycryptodomex (from yt-dlp==2024.8.6)
+  Downloading pycryptodomex-3.23.0-cp37-abi3-win_amd64.whl.metadata (3.5 kB)
+Requirement already satisfied: requests<3,>=2.32.2 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from yt-dlp==2024.8.6) (2.32.5)
+Requirement already satisfied: urllib3<3,>=1.26.17 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from yt-dlp==2024.8.6) (2.5.0)
+Collecting websockets>=12.0 (from yt-dlp==2024.8.6)
+  Downloading websockets-15.0.1-cp312-cp312-win_amd64.whl.metadata (7.0 kB)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from requests<3,>=2.32.2->yt-dlp==2024.8.6) (3.4.3)
+Requirement already satisfied: idna<4,>=2.5 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from requests<3,>=2.32.2->yt-dlp==2024.8.6) (3.10)
+Downloading yt_dlp-2024.8.6-py3-none-any.whl (3.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 2.0 MB/s  0:00:01
+Downloading websockets-15.0.1-cp312-cp312-win_amd64.whl (176 kB)
+Downloading Brotli-1.1.0-cp312-cp312-win_amd64.whl (357 kB)
+Downloading mutagen-1.47.0-py3-none-any.whl (194 kB)
+Downloading pycryptodomex-3.23.0-cp37-abi3-win_amd64.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 3.5 MB/s  0:00:00
+Installing collected packages: brotli, websockets, pycryptodomex, mutagen, yt-dlp
+Successfully installed brotli-1.1.0 mutagen-1.47.0 pycryptodomex-3.23.0 websockets-15.0.1 yt-dlp-2024.8.6
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> yt-dlp --version
+2024.08.06
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> ffmpeg -version
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+libavutil      59. 39.100 / 59. 39.100
+libavcodec     61. 19.100 / 61. 19.100
+libavformat    61.  7.100 / 61.  7.100
+libavdevice    61.  3.100 / 61.  3.100
+libavfilter    10.  4.100 / 10.  4.100
+libswscale      8.  3.100 /  8.  3.100
+libswresample   5.  3.100 /  5.  3.100
+libpostproc    58.  3.100 / 58.  3.100
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Users\USER\Desktop\MySelf\Coding.Self\ffmpeg\ffmpeg-8.0-full_build\bin", "Machine")
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> ffmpeg -version
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+libavutil      59. 39.100 / 59. 39.100
+libavcodec     61. 19.100 / 61. 19.100
+libavformat    61.  7.100 / 61.  7.100
+libavdevice    61.  3.100 / 61.  3.100
+libavfilter    10.  4.100 / 10.  4.100
+libswscale      8.  3.100 /  8.  3.100
+libswresample   5.  3.100 /  5.  3.100
+libpostproc    58.  3.100 / 58.  3.100
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> yt-dlp --version
+2024.08.06
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> python -m src.data_preparation.video_downloader --max-videos 803
+ERROR: File train_parsed.csv tidak ditemukan di C:\laragon\www\Project.Self\data\train_parsed.csv
+Jalankan data_parser.py terlebih dahulu
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> python -m src.data_preparation.data_parser
+
+Jumlah data train yang berhasil diparse: 794
+Distribusi emosi:
+emotion
+Surprise    319
+Trust       181
+Proud       154
+Joy          57
+Anger        34
+Sadness      16
+Fear         16
+Neutral       8
+Terkjut       3
+Trkejut       2
+Bangga        2
+Sad           1
+Trekejut      1
+Name: count, dtype: int64
+Hasil parsing train disimpan di: C:\laragon\www\Project.Self\satria-data-bdc\data\train_parsed.csv
+
+Jumlah data test yang berhasil diparse: 0
+Tidak ada data test yang berhasil diparse.
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> dir data\*.csv
+
+
+    Directory: C:\laragon\www\Project.Self\satria-data-bdc\data
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        08/22/2025  07:37 PM          33641 datatest.csv
+-a----        08/22/2025  07:37 PM         128950 datatrain.csv
+-a----        08/26/2025  10:10 AM              0 test_parsed.csv
+-a----        08/26/2025  12:48 PM          90457 train_parsed.csv
+
+
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> python -m src.data_preparation.data_parser
+
+Jumlah data train yang berhasil diparse: 789
+Distribusi emosi:
+emotion
+Surprise    319
+Trust       181
+Proud       154
+Joy          57
+Anger        34
+Sadness      16
+Fear         16
+Terkjut       3
+Trkejut       2
+Kaget         2
+Bangga        2
+Marah         1
+Sad           1
+Trekejut      1
+Name: count, dtype: int64
+Hasil parsing train disimpan di: C:\laragon\www\Project.Self\satria-data-bdc\data\train_parsed.csv
+
+Jumlah data test yang berhasil diparse: 212
+Hasil parsing test disimpan di: C:\laragon\www\Project.Self\satria-data-bdc\data\test_parsed.csv
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> type data\test_parsed.csv | find /c ","
+FIND: Parameter format not correct
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> python -m src.data_preparation.video_downloader --test-data --max-videos 803
+usage: video_downloader.py [-h] [--max-videos MAX_VIDEOS]
+video_downloader.py: error: unrecognized arguments: --test-data
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> pip install pandas tqdm yt-dlp
+Requirement already satisfied: pandas in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (2.2.2)
+Requirement already satisfied: tqdm in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (4.66.2)
+Requirement already satisfied: yt-dlp in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (2024.8.6)
+Requirement already satisfied: numpy>=1.26.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from pandas) (1.26.4)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: colorama in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from tqdm) (0.4.6)
+Requirement already satisfied: brotli in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from yt-dlp) (1.1.0)
+Requirement already satisfied: certifi in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from yt-dlp) (2025.8.3)
+Requirement already satisfied: mutagen in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from yt-dlp) (1.47.0)
+Requirement already satisfied: pycryptodomex in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from yt-dlp) (3.23.0)
+Requirement already satisfied: requests<3,>=2.32.2 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from yt-dlp) (2.32.5)
+Requirement already satisfied: urllib3<3,>=1.26.17 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from yt-dlp) (2.5.0)
+Requirement already satisfied: websockets>=12.0 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from yt-dlp) (15.0.1)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from requests<3,>=2.32.2->yt-dlp) (3.4.3)
+Requirement already satisfied: idna<4,>=2.5 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from requests<3,>=2.32.2->yt-dlp) (3.10)
+Requirement already satisfied: six>=1.5 in c:\laragon\www\project.self\satria-data-bdc\bdc_env\lib\site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> python -m pip list
+Package                 Version
+----------------------- -----------
+absl-py                 2.3.1
+astunparse              1.6.3
+audioread               3.0.1
+Brotli                  1.1.0
+certifi                 2025.8.3
+cffi                    1.17.1
+charset-normalizer      3.4.3
+colorama                0.4.6
+confluent-kafka         2.4.0
+contourpy               1.3.3
+cycler                  0.12.1
+decorator               5.2.1
+et_xmlfile              2.0.0
+flatbuffers             25.2.10
+fonttools               4.59.1
+gast                    0.6.0
+google-pasta            0.2.0
+grpcio                  1.74.0
+h5py                    3.14.0
+idna                    3.10
+joblib                  1.5.1
+keras                   3.11.3
+kiwisolver              1.4.9
+lazy_loader             0.4
+libclang                18.1.1
+librosa                 0.10.1
+llvmlite                0.44.0
+Markdown                3.8.2
+markdown-it-py          4.0.0
+MarkupSafe              3.0.2
+matplotlib              3.8.4
+mdurl                   0.1.2
+ml-dtypes               0.3.2
+msgpack                 1.1.1
+mutagen                 1.47.0
+namex                   0.1.0
+numba                   0.61.2
+numpy                   1.26.4
+opencv-python           4.9.0.80
+openpyxl                3.1.3
+opt_einsum              3.4.0
+optree                  0.17.0
+packaging               25.0
+pandas                  2.2.2
+pillow                  11.3.0
+pip                     25.2
+platformdirs            4.3.8
+pooch                   1.8.2
+protobuf                4.25.8
+pycparser               2.22
+pycryptodomex           3.23.0
+Pygments                2.19.2
+pyparsing               3.2.3
+python-dateutil         2.9.0.post0
+pytz                    2025.2
+requests                2.32.5
+rich                    14.1.0
+scikit-learn            1.4.2
+scipy                   1.16.1
+seaborn                 0.13.2
+setuptools              80.9.0
+six                     1.17.0
+soundfile               0.13.1
+soxr                    0.5.0.post1
+tensorboard             2.16.2
+tensorboard-data-server 0.7.2
+tensorflow              2.16.1
+tensorflow-intel        2.16.1
+termcolor               3.1.0
+threadpoolctl           3.6.0
+tqdm                    4.66.2
+typing_extensions       4.15.0
+tzdata                  2025.2
+urllib3                 2.5.0
+websockets              15.0.1
+Werkzeug                3.1.3
+wheel                   0.45.1
+wrapt                   1.17.3
+yt-dlp                  2024.8.6
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> .\bdc_env\Scripts\activate
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> python -m src.data_preparation.data_parser
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc> python -m src.data_preparation.video_downloader --max-videos 794
+(bdc_env) PS C:\laragon\www\Project.Self\satria-data-bdc>

@@ -1,112 +1,112 @@
-"""
-Script untuk mengunduh video dari berbagai sumber (Google Drive, Instagram)
-"""
+# src/data_preparation/video_downloader.py
 import os
-import re
-import yt_dlp
 import argparse
-from tqdm import tqdm
-import time
 import pandas as pd
-import sys
+from tqdm import tqdm
+import yt_dlp
 
 def download_video(url, output_path=None):
     """
-    Download video dari berbagai sumber
-    
+    Unduh video dari URL yang diberikan
+
     Args:
         url (str): URL video
-        output_path (str, optional): Path output file
-        
+        output_path (str, optional): Path untuk menyimpan video. Defaults to None.
+
     Returns:
-        str: Path ke file video yang diunduh, atau None jika gagal
+        str: Path ke file video yang diunduh atau None jika gagal
     """
-    if output_path is None:
-        # Buat nama file berdasarkan URL
-        video_id = re.search(r'[a-zA-Z0-9_-]{11,}', url)
-        if video_id:
-            output_path = f"../data/raw_videos/{video_id.group()}.mp4"
-        else:
-            output_path = f"../data/raw_videos/video_{int(time.time())}.mp4"
-    
+    if not url or 'http' not in url:
+        return None
+
     # Pastikan direktori output ada
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    
+    if output_path and not os.path.exists(os.path.dirname(output_path)):
+        os.makedirs(os.path.dirname(output_path))
+
     # Konfigurasi yt-dlp
     ydl_opts = {
         'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
-        'outtmpl': output_path,
-        'merge_output_format': 'mp4',
-        'quiet': False,  # Set ke False untuk melihat progress
-        'no_warnings': False,
+        'outtmpl': output_path if output_path else 'video.%(ext)s',
+        'quiet': True,
+        'no_warnings': True,
+        'extract_flat': True,
+        'nocheckcertificate': True,
         'retries': 3,
-        'fragment-retries': 5,
-        'extractor-retries': 3,
+        'fragment-retries': 10,
+        'continuedl': True,
+        'postprocessors': [{
+            'key': 'FFmpegVideoConvertor',
+            'preferedformat': 'mp4',
+        }]
     }
-    
+
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            ydl.download([url])
-        return output_path
+            info = ydl.extract_info(url, download=True)
+            if output_path:
+                return output_path % {'id': info.get('id', 'video')}
+            else:
+                return ydl.prepare_filename(info)
     except Exception as e:
-        print(f"Error downloading {url}: {str(e)}", file=sys.stderr)
+        print(f"  Gagal mengunduh {url}: {str(e)}")
         return None
 
-def download_all_videos(df, max_videos=None):
-    """
-    Download semua video dalam DataFrame
-    
-    Args:
-        df (pd.DataFrame): DataFrame dengan kolom 'video_url'
-        max_videos (int, optional): Batas jumlah video yang diunduh
-        
-    Returns:
-        list: Daftar path ke file video yang berhasil diunduh
-    """
-    video_paths = []
-    
-    # Batasi jumlah video jika diperlukan
-    videos = df['video_url'].head(max_videos) if max_videos else df['video_url']
-    
-    for url in tqdm(videos, desc="Downloading videos"):
-        path = download_video(url)
-        if path:
-            video_paths.append(path)
-    
-    return video_paths
+def main():
+    parser = argparse.ArgumentParser(description='Unduh video dari dataset')
+    parser.add_argument('--max-videos', type=int, default=5, help='Jumlah maksimum video yang akan diunduh')
+    parser.add_argument('--test-data', action='store_true', help='Unduh data test (default: data train)')
+    args = parser.parse_args()
+
+    # Tentukan path file CSV yang akan diparse
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    data_dir = os.path.join(project_root, 'data')
+
+    # Tentukan file CSV berdasarkan apakah ini data test atau train
+    if args.test_data:
+        csv_path = os.path.join(data_dir, 'test_parsed.csv')
+        output_dir = os.path.join(data_dir, 'test_videos')
+        print("Mengunduh data test...")
+    else:
+        csv_path = os.path.join(data_dir, 'train_parsed.csv')
+        output_dir = os.path.join(data_dir, 'train_videos')
+        print("Mengunduh data train...")
+
+    # Pastikan file CSV ada
+    if not os.path.exists(csv_path):
+        print(f"ERROR: File {csv_path} tidak ditemukan. Jalankan data_parser.py terlebih dahulu.")
+        return
+
+    # Muat data
+    df = pd.read_csv(csv_path)
+    print(f"Jumlah data yang ditemukan: {len(df)}")
+
+    # Batasi jumlah video yang diunduh
+    max_videos = min(args.max_videos, len(df))
+    print(f"Mengunduh {max_videos} dari {len(df)} video...")
+
+    # Buat direktori output jika belum ada
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Unduh video
+    failed_downloads = 0
+    for i, row in tqdm(df.head(max_videos).iterrows(), total=max_videos):
+        video_id = row['id']
+        url = row['video_url']
+
+        # Tentukan path output
+        output_path = os.path.join(output_dir, f"{video_id}.%(ext)s")
+
+        # Unduh video
+        video_path = download_video(url, output_path)
+        if not video_path or not os.path.exists(video_path):
+            failed_downloads += 1
+
+    # Tampilkan ringkasan
+    print(f"\nProses unduh selesai!")
+    print(f"Berhasil: {max_videos - failed_downloads}")
+    print(f"Gagal: {failed_downloads}")
+    print(f"Total: {max_videos}")
+    print(f"Video disimpan di: {output_dir}")
 
 if __name__ == "__main__":
-    # Dapatkan path absolut
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
-    
-    # Parse argumen
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--max-videos', type=int, default=None, help='Maksimal jumlah video yang diunduh')
-    args = parser.parse_args()
-    
-    # Pastikan folder raw_videos ada
-    raw_videos_dir = os.path.join(project_root, 'data', 'raw_videos')
-    os.makedirs(raw_videos_dir, exist_ok=True)
-    
-    # Muat data yang sudah diparse
-    train_parsed_path = os.path.join(project_root, 'data', 'train_parsed.csv')
-    
-    if not os.path.exists(train_parsed_path):
-        print(f"ERROR: File train_parsed.csv tidak ditemukan di {train_parsed_path}")
-        print("Jalankan data_parser.py terlebih dahulu")
-        sys.exit(1)
-    
-    train_df = pd.read_csv(train_parsed_path)
-    
-    print(f"Menemukan {len(train_df)} video dalam dataset")
-    if args.max_videos:
-        print(f"Mengunduh {args.max_videos} video pertama")
-    else:
-        print("Mengunduh semua video")
-    
-    # Unduh video
-    downloaded_videos = download_all_videos(train_df, max_videos=args.max_videos)
-    
-    print(f"\nBerhasil mengunduh {len(downloaded_videos)} video")
-    print(f"Video disimpan di: {raw_videos_dir}")
+    main()

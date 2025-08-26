@@ -5,3 +5,12 @@ pip install confluent-kafka matplotlib seaborn
 #library tambahan
 pip install yt-dlp
 pip install ffmpeg-python
+#install dari requirements.txt
+pip install -r requirements.txt
+#install python 3.11.x
+Set-ExecutionPolicy Bypass -Scope Process -Force; .\install_bdc.ps1
+
+#activate the environment
+python --version
+python -m venv bdc_env
+bdc_env\Scripts\activate
